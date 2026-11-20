@@ -77,6 +77,7 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "yuanbao-web": "ybw",
   "zai-web": "zw",
   "notion-web": "nw",
+  "uc-web": "uc",
   "arena-ai": "arena",
   "grok-cli": "gcli",
   "grok-web": "gw",
@@ -2679,6 +2680,224 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "deepseek-r1",
       "name": "DeepSeek R1"
+    }
+  ],
+  "uc-web": [
+    {
+      "id": "seedream-v4.5",
+      "name": "seedream-v4.5"
+    },
+    {
+      "id": "seedream-v5",
+      "name": "seedream-v5"
+    },
+    {
+      "id": "seedream-v5-flash",
+      "name": "seedream-v5-flash"
+    },
+    {
+      "id": "nano-banana-pro-ultra",
+      "name": "nano-banana-pro-ultra"
+    },
+    {
+      "id": "nano-banana-pro",
+      "name": "nano-banana-pro"
+    },
+    {
+      "id": "nano-banana",
+      "name": "nano-banana"
+    },
+    {
+      "id": "nano-banana-2",
+      "name": "nano-banana-2"
+    },
+    {
+      "id": "gpt-image",
+      "name": "gpt-image"
+    },
+    {
+      "id": "gpt-image-2",
+      "name": "gpt-image-2"
+    },
+    {
+      "id": "gpt-image-2.5-flare",
+      "name": "gpt-image-2.5-flare"
+    },
+    {
+      "id": "gpt-image-2.5-sunburst",
+      "name": "gpt-image-2.5-sunburst"
+    },
+    {
+      "id": "wan-2.6-image",
+      "name": "wan-2.6-image"
+    },
+    {
+      "id": "wan-2.7-text-to-image",
+      "name": "wan-2.7-text-to-image"
+    },
+    {
+      "id": "wan-2.7-text-to-image-pro",
+      "name": "wan-2.7-text-to-image-pro"
+    },
+    {
+      "id": "prefect-pony-xl",
+      "name": "prefect-pony-xl"
+    },
+    {
+      "id": "1.0",
+      "name": "1.0"
+    },
+    {
+      "id": "1.1",
+      "name": "1.1"
+    },
+    {
+      "id": "2.0",
+      "name": "2.0"
+    },
+    {
+      "id": "flux-2-max",
+      "name": "flux-2-max"
+    },
+    {
+      "id": "SDXL",
+      "name": "SDXL"
+    },
+    {
+      "id": "realism",
+      "name": "realism"
+    },
+    {
+      "id": "realism-2",
+      "name": "realism-2"
+    },
+    {
+      "id": "z-image-turbo",
+      "name": "z-image-turbo"
+    },
+    {
+      "id": "default",
+      "name": "default"
+    },
+    {
+      "id": "turbo",
+      "name": "turbo"
+    },
+    {
+      "id": "wan-2.2-uncensored-v2",
+      "name": "wan-2.2-uncensored-v2"
+    },
+    {
+      "id": "wan-2.2-uncensored",
+      "name": "wan-2.2-uncensored"
+    },
+    {
+      "id": "wan-2.6",
+      "name": "wan-2.6"
+    },
+    {
+      "id": "wan-2.6-ultra",
+      "name": "wan-2.6-ultra"
+    },
+    {
+      "id": "wan-2.7",
+      "name": "wan-2.7"
+    },
+    {
+      "id": "wan-2.7-pro",
+      "name": "wan-2.7-pro"
+    },
+    {
+      "id": "wan-2.7-uncensored",
+      "name": "wan-2.7-uncensored"
+    },
+    {
+      "id": "wan-2.7-uncensored-v2",
+      "name": "wan-2.7-uncensored-v2"
+    },
+    {
+      "id": "wan-3.0",
+      "name": "wan-3.0"
+    },
+    {
+      "id": "wan-3.0-uncensored",
+      "name": "wan-3.0-uncensored"
+    },
+    {
+      "id": "wan-3.0-uncensored-pro",
+      "name": "wan-3.0-uncensored-pro"
+    },
+    {
+      "id": "sora-2",
+      "name": "sora-2"
+    },
+    {
+      "id": "sora-2-pro",
+      "name": "sora-2-pro"
+    },
+    {
+      "id": "grok-imagine-video",
+      "name": "grok-imagine-video"
+    },
+    {
+      "id": "bytedance-seedance-2.0",
+      "name": "bytedance-seedance-2.0"
+    },
+    {
+      "id": "seedance-2.0-fast",
+      "name": "seedance-2.0-fast"
+    },
+    {
+      "id": "seedance-2.0-uncensored",
+      "name": "seedance-2.0-uncensored"
+    },
+    {
+      "id": "seedance-2.0-fast-uncensored",
+      "name": "seedance-2.0-fast-uncensored"
+    },
+    {
+      "id": "seedance-2.0-mini-uncensored",
+      "name": "seedance-2.0-mini-uncensored"
+    },
+    {
+      "id": "seedance-2.0-mini-turbo",
+      "name": "seedance-2.0-mini-turbo"
+    },
+    {
+      "id": "seedance-v1.5-pro-uncensored",
+      "name": "seedance-v1.5-pro-uncensored"
+    },
+    {
+      "id": "seedance-2.5-uncensored",
+      "name": "seedance-2.5-uncensored"
+    },
+    {
+      "id": "seedance-2.5",
+      "name": "seedance-2.5"
+    },
+    {
+      "id": "vidu-q3-uncensored",
+      "name": "vidu-q3-uncensored"
+    },
+    {
+      "id": "av-gen-v2",
+      "name": "av-gen-v2"
+    },
+    {
+      "id": "cosmos-predict",
+      "name": "cosmos-predict"
+    },
+    {
+      "id": "minimax-h3",
+      "name": "minimax-h3"
+    },
+    {
+      "id": "happyhorse-1.0",
+      "name": "happyhorse-1.0"
+    },
+    {
+      "id": "wan/v2.2-a14b",
+      "name": "wan/v2.2-a14b"
     }
   ],
   "grok-web": [

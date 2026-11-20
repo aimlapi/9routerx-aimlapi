@@ -2001,6 +2001,24 @@ var ProviderRegistry = map[string]ProviderMeta{
 		ServiceKinds: []string{"llm"},
 		Website:      "https://arena.ai",
 	},
+	"uc-web": {
+		// uc-web is a historical-compatibility id — the hidden image/video
+		// media lane shipped under this name (executor in
+		// internal/handlers/media/uc_web.go, ported from open-sse's uc-web
+		// executor) before the registry listed it; "uc" resolves here as the
+		// wire alias. The provider is uncensored.com, so — like muse-web —
+		// the AuthHint carries the historical explanation.
+		ID:           "uc-web",
+		Name:         "UC Web (uncensored.com)",
+		Alias:        "uc",
+		Category:     CategoryWebCookie,
+		AuthType:     "cookie",
+		Color:        "#111827",
+		Icon:         "auto_awesome",
+		AuthHint:     "uc-web is a historical-compatibility id — this provider is uncensored.com (UC), not a product named \"UC\" elsewhere. Paste your uncensored.com credential — the durable Clerk token or the full Cookie header; the media executor mints a short-lived session from __client on every request.",
+		ServiceKinds: []string{"image", "video"},
+		Website:      "https://uncensored.com",
+	},
 	"gemini-web": {
 		ID:           "gemini-web",
 		Name:         "Gemini Web",

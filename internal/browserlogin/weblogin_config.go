@@ -164,6 +164,18 @@ var webLoginConfigs = map[string]WebLoginConfig{
 		},
 		PersistentProfile: true,
 	},
+	"uc-web": {
+		// The UC (uncensored.com) session mints per-request Clerk sessions
+		// from __client (see providers.go); the durable sign-in cookie is
+		// what the capture needs.
+		ProviderID:   "uc-web",
+		LoginURL:     "https://uncensored.com/",
+		CookieDomain: "uncensored.com",
+		TokenSources: []TokenSource{
+			{Kind: TokenSourceCookie, Name: "__client", Domain: "uncensored.com"},
+		},
+		PersistentProfile: true,
+	},
 }
 
 // ConfigFor returns the provider's web-login config and whether one exists.
