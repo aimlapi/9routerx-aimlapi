@@ -1918,6 +1918,22 @@ var ProviderRegistry = map[string]ProviderMeta{
 		ServiceKinds: []string{"llm"},
 		Website:      "https://chat.deepseek.com",
 	},
+	"copilot-web": {
+		// OpenAI-format passthrough over the Copilot web /c/api with the
+		// browser cookie as the credential (xrouter registry transport,
+		// pinned 7fd5698). The executor is the generic forwarder behind the
+		// web-executor policy gate.
+		ID:           "copilot-web",
+		Name:         "Microsoft Copilot Web",
+		Alias:        "cpw",
+		Category:     CategoryWebCookie,
+		AuthType:     "cookie",
+		Color:        "#0078D4",
+		Icon:         "bolt",
+		AuthHint:     "Paste the full Cookie header from copilot.microsoft.com (DevTools → Network → a chat request → Cookie), or at least _U=... — the value is sent verbatim as the Cookie header.",
+		ServiceKinds: []string{"llm"},
+		Website:      "https://copilot.microsoft.com",
+	},
 	"gemini-web": {
 		ID:           "gemini-web",
 		Name:         "Gemini Web",

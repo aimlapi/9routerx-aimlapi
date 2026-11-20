@@ -161,6 +161,7 @@ var ProviderAliasMap = map[string]string{
 	"blackbox-web":       "blackbox",
 	"xai-oauth":          "xai",
 	"kimi-coding-apikey": "kimi-coding",
+	"cpw":                "copilot-web",
 }
 
 // ResolveAlias returns the canonical provider ID for an alias, or the alias itself if not found.

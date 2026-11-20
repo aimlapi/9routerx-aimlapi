@@ -1242,6 +1242,14 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 	},
+	// Microsoft Copilot web: OpenAI-format passthrough over the Copilot web
+	// /c/api (xrouter registry transport, pinned 7fd5698). The stored
+	// credential is the browser Cookie header, sent verbatim (scheme raw).
+	"copilot-web": {
+		BaseURL:    "https://copilot.microsoft.com/c/api/chat/completions",
+		AuthHeader: "Cookie",
+		AuthScheme: "raw",
+	},
 	// UC web (uncensored.com persona): image + video over the un-metered
 	// internal API; the credential is the full uncensored.com Cookie header
 	// and every request mints a short-lived Clerk session from __client.

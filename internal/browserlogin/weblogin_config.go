@@ -108,6 +108,17 @@ var webLoginConfigs = map[string]WebLoginConfig{
 		},
 		PersistentProfile: true,
 	},
+	"copilot-web": {
+		// The Copilot session rides the _U cookie (OmniRoute capture metadata:
+		// credentialName "p-b"-style single cookie, acceptsFullCookieHeader).
+		ProviderID:   "copilot-web",
+		LoginURL:     "https://copilot.microsoft.com/",
+		CookieDomain: "copilot.microsoft.com",
+		TokenSources: []TokenSource{
+			{Kind: TokenSourceCookie, Name: "_U", Domain: "copilot.microsoft.com"},
+		},
+		PersistentProfile: true,
+	},
 }
 
 // ConfigFor returns the provider's web-login config and whether one exists.

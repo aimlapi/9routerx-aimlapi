@@ -73,6 +73,7 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "gitlab": "gitlab",
   "glm": "glm",
   "glm-cn": "glm-cn",
+  "copilot-web": "cpw",
   "grok-cli": "gcli",
   "grok-web": "gw",
   "groq": "groq",
@@ -2556,6 +2557,20 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
       "id": "grok-4.5-low",
       "name": "Grok 4.5 (Low)",
       "upstreamModelId": "grok-4.5"
+    }
+  ],
+  "copilot-web": [
+    {
+      "id": "copilot-pro",
+      "name": "Copilot Pro (web)"
+    },
+    {
+      "id": "gpt-4o",
+      "name": "GPT-4o (via Copilot)"
+    },
+    {
+      "id": "gpt-4-turbo",
+      "name": "GPT-4 Turbo (via Copilot)"
     }
   ],
   "grok-web": [

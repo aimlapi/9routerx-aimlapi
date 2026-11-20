@@ -92,6 +92,11 @@ func RegisterAll() {
 	// account that uses it. It ships OFF behind CLAUDE_WEB_ENABLED / the
 	// dashboard toggle; it is not part of the free-tier catalog marketing.
 	Register("claude-web", func() Executor { return ForwardClaudeWeb })
+	// copilot-web is an OpenAI-format passthrough over copilot.microsoft.com's
+	// /c/api with the browser Cookie header as the credential (xrouter
+	// registry transport, pinned 7fd5698); the wrapper only adds the
+	// web-executor policy gate around the generic forwarder.
+	Register("copilot-web", func() Executor { return ForwardCopilotWeb })
 	// One executor serves both Bedrock entries: the registry entry's Format picks the
 	// wire shape (Anthropic Messages vs OpenAI Chat Completions), the way one Vertex
 	// executor serves vertex and vertex-partner.

@@ -169,6 +169,9 @@ var ProviderModels = map[string][]string{
 	"uc-web":        {"seedream-v4.5", "seedream-v5", "seedream-v5-flash", "nano-banana-pro-ultra", "nano-banana-pro", "nano-banana", "nano-banana-2", "gpt-image", "gpt-image-2", "gpt-image-2.5-flare", "gpt-image-2.5-sunburst", "wan-2.6-image", "wan-2.7-text-to-image", "wan-2.7-text-to-image-pro", "prefect-pony-xl", "1.0", "1.1", "2.0", "flux-2-max", "SDXL", "realism", "realism-2", "z-image-turbo", "default", "turbo", "wan-2.2-uncensored-v2", "wan-2.2-uncensored", "wan-2.6", "wan-2.6-ultra", "wan-2.7", "wan-2.7-pro", "wan-2.7-uncensored", "wan-2.7-uncensored-v2", "wan-3.0", "wan-3.0-uncensored", "wan-3.0-uncensored-pro", "sora-2", "sora-2-pro", "grok-imagine-video", "bytedance-seedance-2.0", "seedance-2.0-fast", "seedance-2.0-uncensored", "seedance-2.0-fast-uncensored", "seedance-2.0-mini-uncensored", "seedance-2.0-mini-turbo", "seedance-v1.5-pro-uncensored", "seedance-2.5-uncensored", "seedance-2.5", "vidu-q3-uncensored", "av-gen-v2", "cosmos-predict", "minimax-h3", "happyhorse-1.0", "wan/v2.2-a14b"},
 	"veoaifree-web": {"veo", "seedance", "nano-banana"},
 	"grok-web":      {"grok-3", "grok-3-mini", "grok-3-thinking", "grok-4", "grok-4-mini", "grok-4-thinking", "grok-4-heavy", "grok-4.1-mini", "grok-4.1-fast", "grok-4.1-expert", "grok-4.1-thinking", "grok-4.2", "grok-4.20", "grok-4.20-beta", "grok-image", "grok-video"},
+	// copilot-web: passthrough lane (xrouter registry, pinned 7fd5698) — the
+	// web /c/api serves whatever the signed-in Copilot subscription allows.
+	"copilot-web":     {"copilot-pro", "gpt-4o", "gpt-4-turbo"},
 	// claude-web: one passthrough model id; the web lane picks its own model
 	// server-side (TODO_OWNER in the executor) — no free-catalog headline row.
 	"claude-web":          {"claude-web"},
