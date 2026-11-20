@@ -108,6 +108,11 @@ func RegisterAll() {
 	// automated AI lanes violate Notion's terms; the operator risks an
 	// account ban.
 	Register("notion-web", func() Executor { return ForwardNotionWeb })
+	// arena-ai owns its wire protocol: arena.ai's direct-evaluation endpoint
+	// takes a UUID-addressed payload and answers with a text-delta stream
+	// (ported from the xrouter executor, pinned 7fd5698). "lmarena" and
+	// "arena" resolve here as wire aliases.
+	Register("arena-ai", func() Executor { return ForwardArenaAI })
 	// One executor serves both Bedrock entries: the registry entry's Format picks the
 	// wire shape (Anthropic Messages vs OpenAI Chat Completions), the way one Vertex
 	// executor serves vertex and vertex-partner.

@@ -153,6 +153,17 @@ var webLoginConfigs = map[string]WebLoginConfig{
 		},
 		PersistentProfile: true,
 	},
+	"arena-ai": {
+		// xrouter authHint: the arena.ai credential is the user token /
+		// evaluation_session cookie.
+		ProviderID:   "arena-ai",
+		LoginURL:     "https://arena.ai/",
+		CookieDomain: "arena.ai",
+		TokenSources: []TokenSource{
+			{Kind: TokenSourceCookie, Name: "evaluation_session", Domain: "arena.ai"},
+		},
+		PersistentProfile: true,
+	},
 }
 
 // ConfigFor returns the provider's web-login config and whether one exists.

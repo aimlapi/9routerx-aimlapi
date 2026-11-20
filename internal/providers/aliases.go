@@ -165,6 +165,8 @@ var ProviderAliasMap = map[string]string{
 	"ybw":                "yuanbao-web",
 	"zw":                 "zai-web",
 	"nw":                 "notion-web",
+	"arena":              "arena-ai",
+	"lmarena":            "arena-ai",
 }
 
 // ResolveAlias returns the canonical provider ID for an alias, or the alias itself if not found.

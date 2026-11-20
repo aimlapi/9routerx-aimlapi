@@ -77,6 +77,7 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "yuanbao-web": "ybw",
   "zai-web": "zw",
   "notion-web": "nw",
+  "arena-ai": "arena",
   "grok-cli": "gcli",
   "grok-web": "gw",
   "groq": "groq",
@@ -2620,6 +2621,64 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "gpt-4o",
       "name": "GPT-4o (via Notion AI)"
+    }
+  ],
+  "arena-ai": [
+    {
+      "id": "gpt-5.5-instant",
+      "name": "GPT-5.5 Instant (OpenAI)"
+    },
+    {
+      "id": "gemini-3.1-pro-preview",
+      "name": "Gemini 3.1 Pro Preview (Google)"
+    },
+    {
+      "id": "gemini-3.6-flash",
+      "name": "Gemini 3.6 Flash (Google)"
+    },
+    {
+      "id": "gemini-3-flash",
+      "name": "Gemini 3 Flash (Google)"
+    },
+    {
+      "id": "grok-4.20-beta-0309-reasoning",
+      "name": "Grok 4.20 Reasoning (xAI)"
+    },
+    {
+      "id": "glm-5",
+      "name": "GLM-5 (Zhipu AI)"
+    },
+    {
+      "id": "qwen3.7-plus",
+      "name": "Qwen 3.7 Plus (Alibaba)"
+    },
+    {
+      "id": "gpt-5.1-high",
+      "name": "GPT-5.1 High Reasoning (OpenAI)"
+    },
+    {
+      "id": "minimax-m3",
+      "name": "MiniMax M3"
+    },
+    {
+      "id": "kimi-k2-thinking-turbo",
+      "name": "Kimi K2 Thinking Turbo (Moonshot)"
+    },
+    {
+      "id": "o3-2025-04-16",
+      "name": "OpenAI o3"
+    },
+    {
+      "id": "claude-haiku-4-5-20251001",
+      "name": "Claude 4.5 Haiku (Anthropic)"
+    },
+    {
+      "id": "deepseek-v3",
+      "name": "DeepSeek V3"
+    },
+    {
+      "id": "deepseek-r1",
+      "name": "DeepSeek R1"
     }
   ],
   "grok-web": [

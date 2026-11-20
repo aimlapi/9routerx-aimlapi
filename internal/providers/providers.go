@@ -1272,6 +1272,13 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Cookie",
 		AuthScheme: "raw",
 	},
+	// arena.ai evaluation lane: the executor owns the wire protocol; the
+	// BaseURL only lets an operator repoint the endpoint.
+	"arena-ai": {
+		BaseURL:    "https://arena.ai/nextjs-api/stream/create-evaluation",
+		AuthHeader: "Cookie",
+		AuthScheme: "raw",
+	},
 	// UC web (uncensored.com persona): image + video over the un-metered
 	// internal API; the credential is the full uncensored.com Cookie header
 	// and every request mints a short-lived Clerk session from __client.

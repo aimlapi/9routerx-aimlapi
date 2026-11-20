@@ -1984,6 +1984,23 @@ var ProviderRegistry = map[string]ProviderMeta{
 		ServiceKinds: []string{"llm"},
 		Website:      "https://www.notion.so",
 	},
+	"arena-ai": {
+		// arena.ai's direct-evaluation lane (xrouter registry + executor,
+		// pinned 7fd5698): one POST opens an evaluation against the chosen
+		// model and answers with a text-delta stream. "lmarena" resolves here
+		// as a wire alias (task decision: one executor, canonical id
+		// arena-ai).
+		ID:           "arena-ai",
+		Name:         "Arena AI",
+		Alias:        "arena",
+		Category:     CategoryWebCookie,
+		AuthType:     "cookie",
+		Color:        "#E56A4A",
+		Icon:         "bolt",
+		AuthHint:     "Paste your arena.ai user token or evaluation_session cookie — a bare token is sent as the evaluation_session/agentic_session cookie pair plus a Bearer header, a full Cookie header rides verbatim.",
+		ServiceKinds: []string{"llm"},
+		Website:      "https://arena.ai",
+	},
 	"gemini-web": {
 		ID:           "gemini-web",
 		Name:         "Gemini Web",

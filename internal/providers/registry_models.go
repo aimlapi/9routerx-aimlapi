@@ -175,6 +175,9 @@ var ProviderModels = map[string][]string{
 	"yuanbao-web":     {"deepseek-v3", "deepseek-r1", "hunyuan", "hunyuan-t1"},
 	"zai-web":         {"glm-5.3-flash", "glm-5.3", "glm-5.2", "glm-4-plus"},
 	"notion-web":      {"claude-3-5-sonnet", "gpt-4o"},
+	"arena-ai":        {"gpt-5.5-instant", "gemini-3.1-pro-preview", "gemini-3.6-flash", "gemini-3-flash", "grok-4.20-beta-0309-reasoning", "glm-5", "qwen3.7-plus", "gpt-5.1-high", "minimax-m3", "kimi-k2-thinking-turbo", "o3-2025-04-16", "claude-haiku-4-5-20251001", "deepseek-v3", "deepseek-r1"},
+	"arena":           {"gpt-5.5-instant", "gemini-3.1-pro-preview", "gemini-3.6-flash", "gemini-3-flash", "grok-4.20-beta-0309-reasoning", "glm-5", "qwen3.7-plus", "gpt-5.1-high", "minimax-m3", "kimi-k2-thinking-turbo", "o3-2025-04-16", "claude-haiku-4-5-20251001", "deepseek-v3", "deepseek-r1"},
+	"lmarena":         {"gpt-5.5-instant", "gemini-3.1-pro-preview", "gemini-3.6-flash", "gemini-3-flash", "grok-4.20-beta-0309-reasoning", "glm-5", "qwen3.7-plus", "gpt-5.1-high", "minimax-m3", "kimi-k2-thinking-turbo", "o3-2025-04-16", "claude-haiku-4-5-20251001", "deepseek-v3", "deepseek-r1"},
 	// claude-web: one passthrough model id; the web lane picks its own model
 	// server-side (TODO_OWNER in the executor) — no free-catalog headline row.
 	"claude-web":          {"claude-web"},

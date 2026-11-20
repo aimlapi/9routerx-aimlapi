@@ -34,6 +34,7 @@ var webCookieBrandExpectations = map[string]struct {
 	"yuanbao-web":    {mustContain: "Yuanbao"},
 	"zai-web":        {mustContain: "Z.ai"},
 	"notion-web":     {mustContain: "Notion"},
+	"arena-ai":       {mustContain: "Arena"},
 }
 
 // TestWebCookieProviders_KeepTheirBrand walks every web-cookie entry in the
