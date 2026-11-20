@@ -1966,6 +1966,24 @@ var ProviderRegistry = map[string]ProviderMeta{
 		ServiceKinds: []string{"llm"},
 		Website:      "https://chat.z.ai",
 	},
+	"notion-web": {
+		// OpenAI-format passthrough over notion.so's internal /api/v3 with the
+		// browser cookie as the credential (xrouter registry transport,
+		// pinned 7fd5698). Unofficial/experimental: Notion's ToS does not
+		// sanction automated AI lanes, so the AuthHint carries the account
+		// risk. The executor is the generic forwarder behind the
+		// web-executor policy gate.
+		ID:           "notion-web",
+		Name:         "Notion AI Web (Unofficial/Experimental)",
+		Alias:        "nw",
+		Category:     CategoryWebCookie,
+		AuthType:     "cookie",
+		Color:        "#000000",
+		Icon:         "bolt",
+		AuthHint:     "Unofficial/experimental — may violate Notion's terms and risk an account ban. Paste the full Cookie header from notion.so (DevTools → Network → a request → Cookie); it must include token_v2 — the value is sent verbatim as the Cookie header.",
+		ServiceKinds: []string{"llm"},
+		Website:      "https://www.notion.so",
+	},
 	"gemini-web": {
 		ID:           "gemini-web",
 		Name:         "Gemini Web",

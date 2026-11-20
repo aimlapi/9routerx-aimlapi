@@ -174,6 +174,7 @@ var ProviderModels = map[string][]string{
 	"copilot-web":     {"copilot-pro", "gpt-4o", "gpt-4-turbo"},
 	"yuanbao-web":     {"deepseek-v3", "deepseek-r1", "hunyuan", "hunyuan-t1"},
 	"zai-web":         {"glm-5.3-flash", "glm-5.3", "glm-5.2", "glm-4-plus"},
+	"notion-web":      {"claude-3-5-sonnet", "gpt-4o"},
 	// claude-web: one passthrough model id; the web lane picks its own model
 	// server-side (TODO_OWNER in the executor) — no free-catalog headline row.
 	"claude-web":          {"claude-web"},

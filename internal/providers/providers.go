@@ -1264,6 +1264,14 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 	},
+	// Notion AI web: OpenAI-format passthrough over notion.so's internal
+	// /api/v3 (xrouter registry transport, pinned 7fd5698); the credential is
+	// the browser Cookie header carrying token_v2, sent verbatim.
+	"notion-web": {
+		BaseURL:    "https://www.notion.so/api/v3/chat/completions",
+		AuthHeader: "Cookie",
+		AuthScheme: "raw",
+	},
 	// UC web (uncensored.com persona): image + video over the un-metered
 	// internal API; the credential is the full uncensored.com Cookie header
 	// and every request mints a short-lived Clerk session from __client.

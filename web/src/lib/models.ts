@@ -76,6 +76,7 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "copilot-web": "cpw",
   "yuanbao-web": "ybw",
   "zai-web": "zw",
+  "notion-web": "nw",
   "grok-cli": "gcli",
   "grok-web": "gw",
   "groq": "groq",
@@ -2609,6 +2610,16 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "glm-4-plus",
       "name": "GLM-4 Plus (web)"
+    }
+  ],
+  "notion-web": [
+    {
+      "id": "claude-3-5-sonnet",
+      "name": "Claude 3.5 Sonnet (via Notion AI)"
+    },
+    {
+      "id": "gpt-4o",
+      "name": "GPT-4o (via Notion AI)"
     }
   ],
   "grok-web": [

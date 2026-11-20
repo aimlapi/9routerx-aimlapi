@@ -103,6 +103,11 @@ func RegisterAll() {
 	// zai-web is the same passthrough shape over chat.z.ai, with the Local
 	// Storage "token" value sent as the Bearer credential.
 	Register("zai-web", func() Executor { return ForwardZaiWeb })
+	// notion-web is the same passthrough shape over notion.so's internal
+	// /api/v3 (Cookie header carrying token_v2). UNOFFICIAL/EXPERIMENTAL:
+	// automated AI lanes violate Notion's terms; the operator risks an
+	// account ban.
+	Register("notion-web", func() Executor { return ForwardNotionWeb })
 	// One executor serves both Bedrock entries: the registry entry's Format picks the
 	// wire shape (Anthropic Messages vs OpenAI Chat Completions), the way one Vertex
 	// executor serves vertex and vertex-partner.

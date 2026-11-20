@@ -164,6 +164,7 @@ var ProviderAliasMap = map[string]string{
 	"cpw":                "copilot-web",
 	"ybw":                "yuanbao-web",
 	"zw":                 "zai-web",
+	"nw":                 "notion-web",
 }
 
 // ResolveAlias returns the canonical provider ID for an alias, or the alias itself if not found.

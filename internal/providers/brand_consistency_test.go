@@ -33,6 +33,7 @@ var webCookieBrandExpectations = map[string]struct {
 	"copilot-web":    {mustContain: "Copilot"},
 	"yuanbao-web":    {mustContain: "Yuanbao"},
 	"zai-web":        {mustContain: "Z.ai"},
+	"notion-web":     {mustContain: "Notion"},
 }
 
 // TestWebCookieProviders_KeepTheirBrand walks every web-cookie entry in the

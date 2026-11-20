@@ -142,6 +142,17 @@ var webLoginConfigs = map[string]WebLoginConfig{
 		},
 		PersistentProfile: true,
 	},
+	"notion-web": {
+		// OmniRoute capture metadata: the Notion session rides token_v2
+		// (space_id / notion_browser_id ride the same Cookie header).
+		ProviderID:   "notion-web",
+		LoginURL:     "https://www.notion.so/",
+		CookieDomain: "notion.so",
+		TokenSources: []TokenSource{
+			{Kind: TokenSourceCookie, Name: "token_v2", Domain: ".notion.so"},
+		},
+		PersistentProfile: true,
+	},
 }
 
 // ConfigFor returns the provider's web-login config and whether one exists.
