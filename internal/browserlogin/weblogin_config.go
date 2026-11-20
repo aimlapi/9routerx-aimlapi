@@ -131,6 +131,17 @@ var webLoginConfigs = map[string]WebLoginConfig{
 		},
 		PersistentProfile: true,
 	},
+	"zai-web": {
+		// OmniRoute + xrouter capture metadata: the Z.ai credential is the
+		// "token" value in the site's Local Storage, not a cookie.
+		ProviderID:   "zai-web",
+		LoginURL:     "https://chat.z.ai/",
+		CookieDomain: "chat.z.ai",
+		TokenSources: []TokenSource{
+			{Kind: TokenSourceLocalStorage, Name: "token"},
+		},
+		PersistentProfile: true,
+	},
 }
 
 // ConfigFor returns the provider's web-login config and whether one exists.

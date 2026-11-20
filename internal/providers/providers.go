@@ -1257,6 +1257,13 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Cookie",
 		AuthScheme: "raw",
 	},
+	// Z.ai web (chat.z.ai): the credential is the Local Storage "token" JWT,
+	// sent as Bearer (xrouter registry transport, pinned 7fd5698).
+	"zai-web": {
+		BaseURL:    "https://chat.z.ai/openai/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
 	// UC web (uncensored.com persona): image + video over the un-metered
 	// internal API; the credential is the full uncensored.com Cookie header
 	// and every request mints a short-lived Clerk session from __client.

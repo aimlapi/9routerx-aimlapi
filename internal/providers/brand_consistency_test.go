@@ -32,6 +32,7 @@ var webCookieBrandExpectations = map[string]struct {
 	"claude-web":     {mustContain: "Claude"},
 	"copilot-web":    {mustContain: "Copilot"},
 	"yuanbao-web":    {mustContain: "Yuanbao"},
+	"zai-web":        {mustContain: "Z.ai"},
 }
 
 // TestWebCookieProviders_KeepTheirBrand walks every web-cookie entry in the

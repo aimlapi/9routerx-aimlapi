@@ -1950,6 +1950,22 @@ var ProviderRegistry = map[string]ProviderMeta{
 		ServiceKinds: []string{"llm"},
 		Website:      "https://yuanbao.tencent.com",
 	},
+	"zai-web": {
+		// OpenAI-format passthrough over chat.z.ai's web completions endpoint
+		// (xrouter registry transport, pinned 7fd5698): the credential is the
+		// "token" value from the site's Local Storage, sent as Bearer. The
+		// executor is the generic forwarder behind the web-executor gate.
+		ID:           "zai-web",
+		Name:         "Z.ai Web",
+		Alias:        "zw",
+		Category:     CategoryWebCookie,
+		AuthType:     "cookie",
+		Color:        "#3B82F6",
+		Icon:         "bolt",
+		AuthHint:     "Paste the \"token\" value from chat.z.ai — DevTools → Application → Local Storage → token — it is sent as the Bearer credential.",
+		ServiceKinds: []string{"llm"},
+		Website:      "https://chat.z.ai",
+	},
 	"gemini-web": {
 		ID:           "gemini-web",
 		Name:         "Gemini Web",

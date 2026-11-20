@@ -100,6 +100,9 @@ func RegisterAll() {
 	// yuanbao-web is the same passthrough shape over yuanbao.tencent.com's
 	// /api (Cookie header carrying hy_user + hy_token).
 	Register("yuanbao-web", func() Executor { return ForwardYuanbaoWeb })
+	// zai-web is the same passthrough shape over chat.z.ai, with the Local
+	// Storage "token" value sent as the Bearer credential.
+	Register("zai-web", func() Executor { return ForwardZaiWeb })
 	// One executor serves both Bedrock entries: the registry entry's Format picks the
 	// wire shape (Anthropic Messages vs OpenAI Chat Completions), the way one Vertex
 	// executor serves vertex and vertex-partner.

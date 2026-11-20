@@ -75,6 +75,7 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "glm-cn": "glm-cn",
   "copilot-web": "cpw",
   "yuanbao-web": "ybw",
+  "zai-web": "zw",
   "grok-cli": "gcli",
   "grok-web": "gw",
   "groq": "groq",
@@ -2590,6 +2591,24 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "hunyuan-t1",
       "name": "Hunyuan T1 (via Yuanbao)"
+    }
+  ],
+  "zai-web": [
+    {
+      "id": "glm-5.3-flash",
+      "name": "GLM-5.3 Flash (web)"
+    },
+    {
+      "id": "glm-5.3",
+      "name": "GLM-5.3 (web)"
+    },
+    {
+      "id": "glm-5.2",
+      "name": "GLM-5.2 (web)"
+    },
+    {
+      "id": "glm-4-plus",
+      "name": "GLM-4 Plus (web)"
     }
   ],
   "grok-web": [
