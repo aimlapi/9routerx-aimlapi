@@ -97,6 +97,9 @@ func RegisterAll() {
 	// registry transport, pinned 7fd5698); the wrapper only adds the
 	// web-executor policy gate around the generic forwarder.
 	Register("copilot-web", func() Executor { return ForwardCopilotWeb })
+	// yuanbao-web is the same passthrough shape over yuanbao.tencent.com's
+	// /api (Cookie header carrying hy_user + hy_token).
+	Register("yuanbao-web", func() Executor { return ForwardYuanbaoWeb })
 	// One executor serves both Bedrock entries: the registry entry's Format picks the
 	// wire shape (Anthropic Messages vs OpenAI Chat Completions), the way one Vertex
 	// executor serves vertex and vertex-partner.

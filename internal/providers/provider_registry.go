@@ -1934,6 +1934,22 @@ var ProviderRegistry = map[string]ProviderMeta{
 		ServiceKinds: []string{"llm"},
 		Website:      "https://copilot.microsoft.com",
 	},
+	"yuanbao-web": {
+		// OpenAI-format passthrough over Tencent Yuanbao's web /api with the
+		// browser cookie as the credential (xrouter registry transport,
+		// pinned 7fd5698). The executor is the generic forwarder behind the
+		// web-executor policy gate.
+		ID:           "yuanbao-web",
+		Name:         "Tencent Yuanbao (Free)",
+		Alias:        "ybw",
+		Category:     CategoryWebCookie,
+		AuthType:     "cookie",
+		Color:        "#0052D9",
+		Icon:         "bolt",
+		AuthHint:     "Paste the full Cookie header from yuanbao.tencent.com (DevTools → Network → a chat request → Cookie) — it must include hy_user and hy_token; the value is sent verbatim as the Cookie header.",
+		ServiceKinds: []string{"llm"},
+		Website:      "https://yuanbao.tencent.com",
+	},
 	"gemini-web": {
 		ID:           "gemini-web",
 		Name:         "Gemini Web",

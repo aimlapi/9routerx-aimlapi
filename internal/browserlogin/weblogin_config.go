@@ -119,6 +119,18 @@ var webLoginConfigs = map[string]WebLoginConfig{
 		},
 		PersistentProfile: true,
 	},
+	"yuanbao-web": {
+		// OmniRoute capture metadata: the Yuanbao session is the full Cookie
+		// header, of which hy_user + hy_token are the load-bearing pair.
+		ProviderID:   "yuanbao-web",
+		LoginURL:     "https://yuanbao.tencent.com/",
+		CookieDomain: "yuanbao.tencent.com",
+		TokenSources: []TokenSource{
+			{Kind: TokenSourceCookie, Name: "hy_token", Domain: "yuanbao.tencent.com"},
+			{Kind: TokenSourceCookie, Name: "hy_user", Domain: "yuanbao.tencent.com"},
+		},
+		PersistentProfile: true,
+	},
 }
 
 // ConfigFor returns the provider's web-login config and whether one exists.

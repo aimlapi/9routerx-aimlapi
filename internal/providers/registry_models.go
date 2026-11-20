@@ -172,6 +172,7 @@ var ProviderModels = map[string][]string{
 	// copilot-web: passthrough lane (xrouter registry, pinned 7fd5698) — the
 	// web /c/api serves whatever the signed-in Copilot subscription allows.
 	"copilot-web":     {"copilot-pro", "gpt-4o", "gpt-4-turbo"},
+	"yuanbao-web":     {"deepseek-v3", "deepseek-r1", "hunyuan", "hunyuan-t1"},
 	// claude-web: one passthrough model id; the web lane picks its own model
 	// server-side (TODO_OWNER in the executor) — no free-catalog headline row.
 	"claude-web":          {"claude-web"},

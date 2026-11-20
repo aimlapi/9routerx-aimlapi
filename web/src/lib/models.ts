@@ -74,6 +74,7 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "glm": "glm",
   "glm-cn": "glm-cn",
   "copilot-web": "cpw",
+  "yuanbao-web": "ybw",
   "grok-cli": "gcli",
   "grok-web": "gw",
   "groq": "groq",
@@ -2571,6 +2572,24 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "gpt-4-turbo",
       "name": "GPT-4 Turbo (via Copilot)"
+    }
+  ],
+  "yuanbao-web": [
+    {
+      "id": "deepseek-v3",
+      "name": "DeepSeek V3 (via Yuanbao)"
+    },
+    {
+      "id": "deepseek-r1",
+      "name": "DeepSeek R1 (via Yuanbao)"
+    },
+    {
+      "id": "hunyuan",
+      "name": "Hunyuan (via Yuanbao)"
+    },
+    {
+      "id": "hunyuan-t1",
+      "name": "Hunyuan T1 (via Yuanbao)"
     }
   ],
   "grok-web": [

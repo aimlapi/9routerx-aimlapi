@@ -1250,6 +1250,13 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Cookie",
 		AuthScheme: "raw",
 	},
+	// Tencent Yuanbao web: same passthrough shape (xrouter registry transport,
+	// pinned 7fd5698) over yuanbao.tencent.com's /api.
+	"yuanbao-web": {
+		BaseURL:    "https://yuanbao.tencent.com/api/chat/completions",
+		AuthHeader: "Cookie",
+		AuthScheme: "raw",
+	},
 	// UC web (uncensored.com persona): image + video over the un-metered
 	// internal API; the credential is the full uncensored.com Cookie header
 	// and every request mints a short-lived Clerk session from __client.
