@@ -151,6 +151,16 @@ var ProviderAliasMap = map[string]string{
 	"atmo":     "atmorouter",
 	"rc":       "runcrate",
 	"hc":       "hcnsec",
+	// Lane names other routers publish as separate providers that this
+	// registry already covers through the parent provider (dedup pre-check,
+	// TASK-9RX-PROVIDERS): the -web/-oauth/-apikey suffix only names the
+	// access mode, and the parent already serves that mode. Wire-compat
+	// aliases, NOT new providers.
+	"kimi-web":           "kimi",
+	"venice-web":         "venice",
+	"blackbox-web":       "blackbox",
+	"xai-oauth":          "xai",
+	"kimi-coding-apikey": "kimi-coding",
 }
 
 // ResolveAlias returns the canonical provider ID for an alias, or the alias itself if not found.

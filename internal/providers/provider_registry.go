@@ -1277,6 +1277,10 @@ var ProviderRegistry = map[string]ProviderMeta{
 		Category:     CategoryOAuth,
 		Color:        "#888888",
 		Icon:         "dns",
+		// The apikey lane (kimi-coding-apikey in upstream catalogs) is the same
+		// product behind a console key; the mode rides on this entry rather
+		// than a separate provider (dedup pre-check, TASK-9RX-PROVIDERS).
+		AuthModes:    []string{"oauth", "apikey"},
 		ServiceKinds: []string{"llm"},
 	},
 	"linkup": {
