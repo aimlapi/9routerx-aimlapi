@@ -338,6 +338,25 @@ var ProviderRegistry = map[string]ProviderMeta{
 		Notice:            &Notice{SignupURL: "https://openference.com"},
 		ModelsFetcher:     &Fetcher{URL: "https://api.openference.com/v1/models", Type: "openai"},
 	},
+	"workbuddy": {
+		// Tencent WorkBuddy — a separate product from CodeBuddy CN (own host
+		// www.workbuddy.ai and account system; a CodeBuddy account does not
+		// work here). Same plugin-auth protocol shape: POST state?platform=CLI
+		// -> GET token?state= (OmniRoute workbuddy.ts, pinned 632d84f5;
+		// state request verified live today: code 0 + authUrl). The model
+		// roster is served by the authenticated catalogue and discovered
+		// live; WorkBuddy only accepts streaming requests.
+		ID:                "workbuddy",
+		Name:              "WorkBuddy",
+		Alias:             "wb",
+		Category:          CategoryOAuth,
+		Color:             "#1A73E8",
+		Icon:              "smart_toy",
+		ServiceKinds:      []string{"llm"},
+		Website:           "https://www.workbuddy.ai",
+		AuthHint:          "Tencent WorkBuddy (www.workbuddy.ai). Authorize the CLI device flow in the popup; the gateway then polls for the one-shot token and attaches the required X-Product: SaaS header. The model roster is discovered live from the authenticated catalogue. WorkBuddy only accepts streaming requests, which the gateway accumulates back into a JSON response for non-streaming callers.",
+		PassthroughModels: true,
+	},
 	// ZCode (zcode.z.ai) rides the same Z.ai account as glm-coding but is its
 	// own gateway: it serves the Start Plan / Weekend Build quota, which the
 	// coding-plan lane does not. Registered here because the catalog the

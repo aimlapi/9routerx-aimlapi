@@ -83,6 +83,7 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "megabrain": "mb",
   "gitlab-duo": "gitlab",
   "openference": "of",
+  "workbuddy": "wb",
   "aihorde": "horde",
   "arena-ai": "arena",
   "grok-cli": "gcli",

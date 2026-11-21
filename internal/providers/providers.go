@@ -686,6 +686,13 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 	},
+	// WorkBuddy: streaming-only gateway on www.workbuddy.ai (OmniRoute
+	// open-sse registry n/workbuddy family, pinned 632d84f5).
+	"workbuddy": {
+		BaseURL:    "https://www.workbuddy.ai/v2/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
 	"nanobanana": {
 		BaseURL:    "https://api.nanobananaapi.ai/v1/chat/completions",
 		AuthHeader: "Authorization",

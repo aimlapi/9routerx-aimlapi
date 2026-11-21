@@ -22,7 +22,7 @@ import (
 // deviceProviders lists providers supporting the device-code family.
 // kimi-coding aliases to kimi (dual-auth merge, like upstream).
 var deviceProviders = []string{
-	"qoder", "qoder-cn", "kilocode", "megabrain", "grok-cli", "github", "kiro", "kimi", "kimi-coding",
+	"qoder", "qoder-cn", "kilocode", "megabrain", "workbuddy", "grok-cli", "github", "kiro", "kimi", "kimi-coding",
 	"codebuddy-cn", "codebuddy-intl", "muse", "minimax-code", "minimax-code-global", "nous",
 	"glm", "zcode",
 }
@@ -193,6 +193,8 @@ func deviceStart(ctx context.Context, provider, region, startURL, authMethod str
 		return kilocodeStart(ctx)
 	case "megabrain":
 		return megabrainStart(ctx)
+	case "workbuddy":
+		return workbuddyStart(ctx)
 	case "grok-cli":
 		return grokcliStart(ctx)
 	case "github":
@@ -272,6 +274,38 @@ func kilocodeStart(ctx context.Context) (map[string]any, error) {
 		"verification_uri":          strVal(data, "verificationUrl"),
 		"verification_uri_complete": strVal(data, "verificationUrl"),
 		"expires_in":                300, "interval": 3,
+		"session": map[string]any{},
+	}, nil
+}
+
+// --- workbuddy: Tencent WorkBuddy's own plugin-auth protocol (OmniRoute
+// workbuddy.ts, pinned 632d84f5, verified live against the gateway): POST
+// state?platform=CLI -> {code:0,data:{state,authUrl}}, then the browser
+// sign-in, then GET token?state=... until code 0 (11217 = login in
+// progress). X-Product: SaaS is the only documented header; CodeBuddy's
+// X-Domain family is intentionally absent.
+
+func workbuddyStart(ctx context.Context) (map[string]any, error) {
+	headers := map[string]string{"X-Product": "SaaS"}
+	data, status, err := postJSON(ctx,
+		"https://www.workbuddy.ai/v2/plugin/auth/state?platform=CLI",
+		map[string]string{"platform": "CLI"}, headers)
+	if err != nil || status != http.StatusOK {
+		return nil, fmt.Errorf("WorkBuddy state request failed: %v status=%d", err, status)
+	}
+	inner, _ := data["data"].(map[string]any)
+	state, authURL := strVal(inner, "state"), strVal(inner, "authUrl")
+	var code float64
+	if c, ok := data["code"].(float64); ok {
+		code = c
+	}
+	if code != 0 || state == "" || authURL == "" {
+		return nil, fmt.Errorf("WorkBuddy state error: %v", strVal(data, "msg"))
+	}
+	return map[string]any{
+		"device_code": state, "user_code": state,
+		"verification_uri": authURL, "verification_uri_complete": authURL,
+		"expires_in": 600, "interval": 5,
 		"session": map[string]any{},
 	}, nil
 }
@@ -501,6 +535,8 @@ func devicePoll(ctx context.Context, provider, code string, session map[string]a
 		t, err = kilocodePoll(ctx, code)
 	case "megabrain":
 		t, err = megabrainPoll(ctx, code)
+	case "workbuddy":
+		t, err = workbuddyPoll(ctx, code)
 	case "grok-cli":
 		t, err = grokcliPoll(ctx, code)
 	case "github":
@@ -548,7 +584,7 @@ func (h *OAuthHandler) saveDeviceConnection(provider string, t deviceTokens) sav
 		email = extractEmailFromJWT(t.access)
 	}
 	name := connectionDisplayName(provider, t.name, email, map[string]string{
-		"qoder": "Qoder", "qoder-cn": "Qoder CN", "kilocode": "KiloCode", "megabrain": "MegaBrain", "grok-cli": "Grok CLI",
+		"qoder": "Qoder", "qoder-cn": "Qoder CN", "kilocode": "KiloCode", "megabrain": "MegaBrain", "workbuddy": "WorkBuddy", "grok-cli": "Grok CLI",
 		"github": "GitHub", "kiro": "Kiro", "kimi": "Kimi", "muse": "Muse",
 		"codebuddy-cn": "CodeBuddy", "codebuddy-intl": "CodeBuddy",
 		"zcode": "ZCode",
@@ -768,6 +804,44 @@ func megabrainPoll(ctx context.Context, code string) (deviceTokens, error) {
 	}
 	t.access = strVal(data, "token")
 	t.email = strVal(data, "userEmail")
+	return t, nil
+}
+
+func workbuddyPoll(ctx context.Context, state string) (deviceTokens, error) {
+	var t deviceTokens
+	req, _ := http.NewRequestWithContext(ctx, http.MethodGet,
+		"https://www.workbuddy.ai/v2/plugin/auth/token?state="+url.QueryEscape(state), nil)
+	req.Header.Set("Accept", "application/json")
+	req.Header.Set("X-Product", "SaaS")
+	resp, err := deviceClient.Do(req)
+	if err != nil {
+		return t, fmt.Errorf("poll_failed: %v", err)
+	}
+	defer resp.Body.Close()
+	out, _ := io.ReadAll(io.LimitReader(resp.Body, 1<<20))
+	var data struct {
+		Code float64 `json:"code"`
+		Msg  string  `json:"msg"`
+		Data struct {
+			AccessToken string `json:"accessToken"`
+		} `json:"data"`
+	}
+	if json.Unmarshal(out, &data) != nil {
+		return t, fmt.Errorf("poll_failed: invalid JSON")
+	}
+	// The token is one-shot: the first successful poll returns it and a
+	// second poll reverts to 11217, so it must be consumed once and stored.
+	if data.Code == 11217 {
+		return t, fmt.Errorf("authorization_pending")
+	}
+	if data.Code != 0 || data.Data.AccessToken == "" {
+		return t, fmt.Errorf("poll_failed: code %v: %s", data.Code, data.Msg)
+	}
+	t.access = data.Data.AccessToken
+	// The gateway issues a long-lived token (~361 days) and does not always
+	// report expiresIn; a long default keeps the connection out of a
+	// refresh loop it does not need.
+	t.expiresIn = 31104000
 	return t, nil
 }
 
