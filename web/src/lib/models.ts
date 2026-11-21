@@ -15,6 +15,10 @@ export interface ProviderModel {
 }
 
 export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
+  "volcengine-agent-plan": "veap",
+  "volcengine-coding-plan": "vecp",
+  "agnes-cn": "agnescn",
+  "alibaba-cn": "ali-cn",
   "zcode": "zcode",
   "agnes": "agnes",
   "bai": "bai",
@@ -342,6 +346,166 @@ const FREEBUFF_MODELS: ProviderModel[] = [
 ];
 
 export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
+  "volcengine-agent-plan": [
+  {
+    "id": "doubao-seed-evolving",
+    "name": "Doubao Seed Evolving (Agent Plan)"
+  },
+  {
+    "id": "doubao-seed-2-1-turbo-260628",
+    "name": "Doubao Seed 2.1 Turbo (Agent Plan)"
+  },
+  {
+    "id": "doubao-seed-2-0-lite-260215",
+    "name": "Doubao Seed 2.0 Lite (Agent Plan)"
+  },
+  {
+    "id": "doubao-seed-2-0-mini-260215",
+    "name": "Doubao Seed 2.0 Mini (Agent Plan)"
+  },
+  {
+    "id": "deepseek-v4-flash-ga-260731",
+    "name": "DeepSeek V4 Flash GA (Agent Plan)"
+  },
+  {
+    "id": "kimi-k3",
+    "name": "Kimi K3 (Agent Plan)"
+  },
+  {
+    "id": "glm-5-2-260617",
+    "name": "GLM 5.2 (Agent Plan)"
+  },
+  {
+    "id": "kimi-k2.7-code",
+    "name": "Kimi K2.7 Code (Agent Plan)"
+  },
+  {
+    "id": "minimax-m3",
+    "name": "MiniMax M3 (Agent Plan)"
+  },
+  {
+    "id": "deepseek-v4-pro-260425",
+    "name": "DeepSeek V4 Pro (Agent Plan)"
+  },
+  {
+    "id": "minimax-m2.7",
+    "name": "MiniMax M2.7 (Agent Plan)"
+  },
+  {
+    "id": "kimi-k2.6",
+    "name": "Kimi K2.6 (Agent Plan)"
+  }
+],
+  "volcengine-coding-plan": [
+  {
+    "id": "doubao-seed-2-1-turbo",
+    "name": "Doubao Seed 2.1 Turbo (Coding Plan)"
+  },
+  {
+    "id": "doubao-seed-2.0-lite",
+    "name": "Doubao Seed 2.0 Lite (Coding Plan)"
+  },
+  {
+    "id": "deepseek-v4-flash",
+    "name": "DeepSeek V4 Flash (Coding Plan)"
+  },
+  {
+    "id": "glm-5.2",
+    "name": "GLM 5.2 (Coding Plan)"
+  },
+  {
+    "id": "kimi-k2.7-code",
+    "name": "Kimi K2.7 Code (Coding Plan)"
+  },
+  {
+    "id": "minimax-m3",
+    "name": "MiniMax M3 (Coding Plan)"
+  },
+  {
+    "id": "deepseek-v4-pro",
+    "name": "DeepSeek V4 Pro (Coding Plan)"
+  },
+  {
+    "id": "minimax-m2.7",
+    "name": "MiniMax M2.7 (Coding Plan)"
+  },
+  {
+    "id": "kimi-k2.6",
+    "name": "Kimi K2.6 (Coding Plan)"
+  }
+],
+  "agnes-cn": [
+  {
+    "id": "agnes-2.0-flash",
+    "name": "Agnes 2.0 Flash"
+  },
+  {
+    "id": "agnes-2.5-flash",
+    "name": "Agnes 2.5 Flash"
+  },
+  {
+    "id": "agnes-3.0-flash",
+    "name": "Agnes 3.0 Flash"
+  }
+],
+  "alibaba-cn": [
+  {
+    "id": "qwen3.8-max",
+    "name": "Qwen3.8 Max"
+  },
+  {
+    "id": "qwen3.7-max",
+    "name": "Qwen3.7 Max"
+  },
+  {
+    "id": "qwen3.7-plus",
+    "name": "Qwen3.7 Plus"
+  },
+  {
+    "id": "qwen3.6-plus",
+    "name": "Qwen3.6 Plus"
+  },
+  {
+    "id": "qwen3.6-27b",
+    "name": "Qwen3.6 27B"
+  },
+  {
+    "id": "qwen3.6-35b-a3b",
+    "name": "Qwen3.6 35B A3B"
+  },
+  {
+    "id": "qwen3.5-plus",
+    "name": "Qwen3.5 Plus"
+  },
+  {
+    "id": "qwen3.5-122b-a10b",
+    "name": "Qwen3.5 122B A10B"
+  },
+  {
+    "id": "qwen3.5-397b-a17b",
+    "name": "Qwen3.5 397B A17B"
+  },
+  {
+    "id": "glm-5.2",
+    "name": "GLM 5.2"
+  },
+  {
+    "id": "glm-5.2-fast-preview",
+    "name": "GLM 5.2 Fast Preview"
+  },
+  {
+    "id": "deepseek-v4-pro",
+    "name": "DeepSeek V4 Pro"
+  },
+  {
+    "id": "deepseek-v4-flash",
+    "name": "DeepSeek V4 Flash"
+  },
+  {
+    "id": "kimi-k2.7-code",
+    "name": "Kimi K2.7 Code"
+  }
+],
   "river": [
     {
       "id": "deepseek-ai/DeepSeek-V4.1-Flash",

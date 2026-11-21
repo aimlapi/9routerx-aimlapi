@@ -382,6 +382,26 @@ func ApplyHeaderOverrides(headers, overrides map[string]string) map[string]strin
 
 // KnownProviders maps provider IDs to their upstream configuration.
 var KnownProviders = map[string]ProviderConfig{
+	"volcengine-agent-plan": {
+		BaseURL: "https://ark.cn-beijing.volces.com/api/plan/v3/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	"volcengine-coding-plan": {
+		BaseURL: "https://ark.cn-beijing.volces.com/api/coding/v3/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	"agnes-cn": {
+		BaseURL: "https://api.agnes-ai.cn/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	"alibaba-cn": {
+		BaseURL: "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
 	"openai": {
 		BaseURL:    "https://api.openai.com/v1/chat/completions",
 		AuthHeader: "Authorization",

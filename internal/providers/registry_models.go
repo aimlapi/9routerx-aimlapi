@@ -16,6 +16,10 @@ const CodexImagesMainModel = "gpt-5.6-terra"
 // Ported verbatim from open-sse/providers/registry (registry/{id}.js models arrays,
 // keyed by uiAlias/alias and by provider id so both lookups resolve).
 var ProviderModels = map[string][]string{
+	"volcengine-agent-plan": {"doubao-seed-evolving", "doubao-seed-2-1-turbo-260628", "doubao-seed-2-0-lite-260215", "doubao-seed-2-0-mini-260215", "deepseek-v4-flash-ga-260731", "kimi-k3", "glm-5-2-260617", "kimi-k2.7-code", "minimax-m3", "deepseek-v4-pro-260425", "minimax-m2.7", "kimi-k2.6"},
+	"volcengine-coding-plan": {"doubao-seed-2-1-turbo", "doubao-seed-2.0-lite", "deepseek-v4-flash", "glm-5.2", "kimi-k2.7-code", "minimax-m3", "deepseek-v4-pro", "minimax-m2.7", "kimi-k2.6"},
+	"agnes-cn": {"agnes-2.0-flash", "agnes-2.5-flash", "agnes-3.0-flash"},
+	"alibaba-cn": {"qwen3.8-max", "qwen3.7-max", "qwen3.7-plus", "qwen3.6-plus", "qwen3.6-27b", "qwen3.6-35b-a3b", "qwen3.5-plus", "qwen3.5-122b-a10b", "qwen3.5-397b-a17b", "glm-5.2", "glm-5.2-fast-preview", "deepseek-v4-pro", "deepseek-v4-flash", "kimi-k2.7-code"},
 	"river": {"deepseek-ai/DeepSeek-V4.1-Flash", "zai-org/GLM-5.3-Flash", "deepseek-ai/DeepSeek-V4-Flash-0731", "nvidia/GLM-5.2-NVFP4", "nvidia/GLM-5.2-NVFP4-262K", "nvidia/Kimi-K2.6-NVFP4", "nvidia/Kimi-K2.6-NVFP4-262K", "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4", "Qwen/Qwen3.5-9B", "Qwen/Qwen3.5-122B-A10B-FP8", "Qwen/Qwen3.5-397B-A17B-FP8", "Qwen/Qwen3.6-35B-A3B-FP8", "Qwen/Qwen3.8-27B-FP8", "XiaomiMiMo/MiMo-V2.6-Flash-RL", "XiaomiMiMo/MiMo-V2.6-Pro-RL"},
 	"nace": {"drex-max", "drex-v2.0"},
 	"aai":               {"universal-3-pro", "universal-2", "best", "nano"},

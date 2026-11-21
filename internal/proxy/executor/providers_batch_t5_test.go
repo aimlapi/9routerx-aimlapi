@@ -23,6 +23,10 @@ func TestPendingT5ChatProvidersWireContract(t *testing.T) {
 		{"uc-direct", "/api/v1/chat/completions", "X-API-Key", "fixture-key", "glm-5.2"},
 		{"synthetic", "/openai/v1/chat/completions", "Authorization", "Bearer fixture-key", "hf:openai/gpt-oss-120b"},
 		{"river", "/v1/chat/completions", "Authorization", "Bearer fixture-key", "Qwen/Qwen3.5-9B"},
+		{"alibaba-cn", "/compatible-mode/v1/chat/completions", "Authorization", "Bearer fixture-key", "qwen3.8-max"},
+		{"agnes-cn", "/v1/chat/completions", "Authorization", "Bearer fixture-key", "agnes-2.5-flash"},
+		{"volcengine-coding-plan", "/api/coding/v3/chat/completions", "Authorization", "Bearer fixture-key", "fixture-model"},
+		{"volcengine-agent-plan", "/api/plan/v3/chat/completions", "Authorization", "Bearer fixture-key", "fixture-model"},
 	} {
 		t.Run(tc.provider, func(t *testing.T) {
 			server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {

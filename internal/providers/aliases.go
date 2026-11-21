@@ -9,6 +9,10 @@ package providers
 // "veo-free" → veoaifree-web. ResolveAlias returns unknown aliases unchanged,
 // and the web executor for each of these targets ships in the weblogin layer.
 var ProviderAliasMap = map[string]string{
+	"veap": "volcengine-agent-plan",
+	"vecp": "volcengine-coding-plan",
+	"agnescn": "agnes-cn",
+	"ali-cn": "alibaba-cn",
 	"b-ai":           "bai",
 	"agnes-ai":       "agnes",
 	"atria-asi":      "atria",
