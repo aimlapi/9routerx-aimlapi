@@ -115,6 +115,22 @@ var pkceProviders = map[string]*pkceConfig{
 		connPrefix:   "gld-",
 		display:      "GitLab Duo",
 	},
+	// openference: public PKCE client (clientId "omniroute", no secret —
+	// OmniRoute OPENFERENCE_CONFIG + resolvePublicCred("openference_id"),
+	// pinned 632d84f5). Identity comes from the id_token claims. OmniRoute
+	// pins its loopback callback to 127.0.0.1:56123/callback; the dashboard
+	// flow hands the operator the callback URL to paste, matching the
+	// authorize step verified live (200).
+	"openference": {
+		providers:      []string{"openference"},
+		clientID:       "omniroute",
+		authorizeURL:   "https://openference.com/app/oauth/authorize",
+		tokenURL:       "https://openference.com/oauth/token",
+		scope:          "openid profile email model:invoke offline_access",
+		connPrefix:     "of-",
+		display:        "Openference",
+		emailFromIDTok: true,
+	},
 }
 
 func pkceLookup(provider string) *pkceConfig {

@@ -679,6 +679,13 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 	},
+	// Openference: OpenAI-compatible gateway (OmniRoute open-sse registry,
+	// pinned 632d84f5).
+	"openference": {
+		BaseURL:    "https://api.openference.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
 	"nanobanana": {
 		BaseURL:    "https://api.nanobananaapi.ai/v1/chat/completions",
 		AuthHeader: "Authorization",

@@ -171,6 +171,7 @@ var ProviderAliasMap = map[string]string{
 	"arena":              "arena-ai",
 	"mb":                 "megabrain",
 	"gld":                "gitlab",
+	"of":                 "openference",
 	"gitlab-duo":         "gitlab",
 	"lmarena":            "arena-ai",
 }

@@ -82,6 +82,7 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "ovh": "ovh",
   "megabrain": "mb",
   "gitlab-duo": "gitlab",
+  "openference": "of",
   "aihorde": "horde",
   "arena-ai": "arena",
   "grok-cli": "gcli",
@@ -2961,6 +2962,20 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "claude-haiku-4-5",
       "name": "Claude Haiku 4.5 (GitLab Duo)"
+    }
+  ],
+  "openference": [
+    {
+      "id": "GLM-5.2",
+      "name": "GLM 5.2"
+    },
+    {
+      "id": "Qwen3.8 27b",
+      "name": "Qwen3.8 27B"
+    },
+    {
+      "id": "Llama 3.2 3B",
+      "name": "Llama 3.2 3B"
     }
   ],
   "grok-web": [

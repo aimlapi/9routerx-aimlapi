@@ -318,6 +318,26 @@ var ProviderRegistry = map[string]ProviderMeta{
 		AuthHint:     "Sign in with your MegaBrain account (device code), or paste an mb-v1-... MegaBrain API key. A paid plan covers the included models (Auto, GLM, Kimi, MiniMax, Grok, DeepSeek, Qwen) within its session and weekly limits; Claude, GPT and Gemini are paid from the account's credits.",
 		ModelsFetcher: &Fetcher{URL: "https://api.getmegabrain.com/api/openrouter/models", Type: "openrouter-free"},
 	},
+	"openference": {
+		// OpenAI-compatible gateway (OmniRoute open-sse registry openference,
+		// pinned 632d84f5): ES256 JWT access tokens as Bearer on
+		// api.openference.com/v1. Public PKCE client "omniroute"; identity
+		// rides the id_token. Live model discovery with the seed trio as
+		// fallback. Endpoints verified live today (authorize 200,
+		// /v1/models 200).
+		ID:                "openference",
+		Name:              "Openference",
+		Alias:             "of",
+		Category:          CategoryOAuth,
+		Color:             "#0EA5E9",
+		Icon:              "hub",
+		ServiceKinds:      []string{"llm"},
+		Website:           "https://openference.com",
+		AuthHint:          "Sign in with your Openference account (OAuth PKCE). The login redirects to 127.0.0.1:56123/callback — paste the callback URL if your browser does not hand it to the dashboard automatically.",
+		PassthroughModels: true,
+		Notice:            &Notice{SignupURL: "https://openference.com"},
+		ModelsFetcher:     &Fetcher{URL: "https://api.openference.com/v1/models", Type: "openai"},
+	},
 	// ZCode (zcode.z.ai) rides the same Z.ai account as glm-coding but is its
 	// own gateway: it serves the Start Plan / Weekend Build quota, which the
 	// coding-plan lane does not. Registered here because the catalog the
