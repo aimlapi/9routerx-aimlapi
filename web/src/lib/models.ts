@@ -109,7 +109,6 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "opper": "opper",
   "openference-api": "ofa",
   "onomeo": "onomeo",
-  "oneminai": "1min",
   "ofoxai": "ofoxai",
   "navy": "navy",
   "nara": "nara",
@@ -166,15 +165,9 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "nube": "nube",
   "scaleway": "scw",
   "openvecta": "openvecta",
-  "udio": "udio",
-  "dify": "dify",
-  "nlpcloud": "nlpc",
   "kie": "kie",
-  "haiper": "hp",
-  "leonardo": "leo",
-  "ideogram": "ideo",
-  "ovhcloud": "ovh",
-  "featherless-ai": "featherless",
+  "ovhcloud": "ovhcloud",
+  "featherless-ai": "featherless-ai",
   "grokified": "grokified",
   "predibase": "predibase",
   "modal": "mdl",
@@ -199,9 +192,8 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "baichuan": "baichuan",
   "xiaomi-mimo-token-plan": "mimotp",
   "qwen-cloud-token-plan": "qct",
-  "alibaba": "ali",
+  "alibaba": "alibaba",
   "qwen-cloud": "qwc",
-  "gigachat": "gigachat",
   "typhoon": "typhoon",
   "sarvam": "sarvam",
   "plamo": "plamo",
@@ -229,7 +221,6 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "openference": "of",
   "workbuddy": "wb",
   "amazon-q": "aq",
-  "arcee-ai": "arcee",
   "maritalk": "maritalk",
   "aihorde": "horde",
   "arena-ai": "arena",
@@ -3446,20 +3437,6 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
       "name": "Typhoon v2.5 30b a3b Instruct"
     }
   ],
-  "gigachat": [
-    {
-      "id": "GigaChat-2-Max",
-      "name": "GigaChat 2 Max"
-    },
-    {
-      "id": "GigaChat-2-Pro",
-      "name": "GigaChat 2 Pro"
-    },
-    {
-      "id": "GigaChat-2-Lite",
-      "name": "GigaChat 2 Lite"
-    }
-  ],
   "qwen-cloud": [
     {
       "id": "qwen3.8-max",
@@ -4292,36 +4269,6 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
       "name": "Mistral Small 3.2 24B Instruct 2506"
     }
   ],
-  "ideogram": [
-    {
-      "id": "V_3",
-      "name": "V 3"
-    },
-    {
-      "id": "V_2A",
-      "name": "V 2A"
-    }
-  ],
-  "leonardo": [
-    {
-      "id": "phoenix",
-      "name": "Phoenix"
-    },
-    {
-      "id": "sdxl",
-      "name": "Sdxl"
-    }
-  ],
-  "haiper": [
-    {
-      "id": "gen2",
-      "name": "gen2"
-    },
-    {
-      "id": "gen2-image",
-      "name": "gen2 Image"
-    }
-  ],
   "kie": [
     {
       "id": "claude-fable-5",
@@ -4362,40 +4309,6 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "grok-4-6",
       "name": "Grok 4 6"
-    }
-  ],
-  "nlpcloud": [
-    {
-      "id": "chatdolphin",
-      "name": "Chatdolphin"
-    },
-    {
-      "id": "dolphin",
-      "name": "Dolphin"
-    },
-    {
-      "id": "finetuned-llama-3-70b",
-      "name": "Finetuned Llama 3 70b"
-    },
-    {
-      "id": "llama-3-1-405b",
-      "name": "Llama 3 1 405b"
-    },
-    {
-      "id": "llama-3-8b-instruct",
-      "name": "Llama 3 8b Instruct"
-    }
-  ],
-  "dify": [
-    {
-      "id": "auto",
-      "name": "Auto"
-    }
-  ],
-  "udio": [
-    {
-      "id": "udio-default",
-      "name": "Udio Default"
     }
   ],
   "openvecta": [
@@ -5156,12 +5069,6 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "llama-4-scout",
       "name": "Llama 4 Scout"
-    }
-  ],
-  "oneminai": [
-    {
-      "id": "gpt-4o-mini",
-      "name": "Gpt 4o Mini"
     }
   ],
   "openference-api": [

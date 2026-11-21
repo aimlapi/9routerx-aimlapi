@@ -306,7 +306,7 @@ func (h *ChatHandler) getBestConnectionWithContext(ctx context.Context, provider
 			}
 		}
 		if len(connections) == 0 {
-			if cfg, ok := providers.KnownProviders[provider]; ok && cfg.NoAuth {
+			if cfg, ok := providers.KnownProviders[provider]; ok && (cfg.NoAuth || cfg.AuthOptional) {
 				// Inject virtual connection for no-auth provider with optional proxy pool strategy from settings
 				connData := &ConnectionData{
 					AccessToken: "public",

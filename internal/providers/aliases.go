@@ -165,6 +165,7 @@ var ProviderAliasMap = map[string]string{
 	"kepler-ai":          "ovh",
 	"ovh-kepler":         "ovh",
 	"cpw":                "copilot-web",
+	"horde":           "aihorde",
 	"ooba":            "oobabooga",
 	"lmstudio":        "lm-studio",
 	"llamacpp":        "llama-cpp",
@@ -173,7 +174,6 @@ var ProviderAliasMap = map[string]string{
 	"zm":              "zenmux",
 	"paralon":         "paraloncloud",
 	"ofa":             "openference-api",
-	"1min":            "oneminai",
 	"naga":            "naga-ac",
 	"llmkiwi":         "llm-kiwi",
 	"glb":             "gitlawb",
@@ -189,10 +189,6 @@ var ProviderAliasMap = map[string]string{
 	"aiml":            "aimlapi",
 	"ska":             "seekai",
 	"scw":             "scaleway",
-	"nlpc":            "nlpcloud",
-	"hp":              "haiper",
-	"leo":             "leonardo",
-	"ideo":            "ideogram",
 	"mdl":             "modal",
 	"inet":            "inference-net",
 	"lambda":          "lambda-ai",
@@ -233,7 +229,7 @@ func ResolveAlias(alias string) string {
 func IsNoAuthProvider(providerID string) bool {
 	canon := ResolveAlias(providerID)
 	if cfg, ok := KnownProviders[canon]; ok {
-		return cfg.NoAuth
+		return cfg.NoAuth || cfg.AuthOptional
 	}
 	return false
 }

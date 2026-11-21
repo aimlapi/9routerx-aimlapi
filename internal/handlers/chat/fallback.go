@@ -136,7 +136,7 @@ func (h *ChatHandler) handleAccountFallback(
 				log.Debug("fallback", "no zen key to borrow for opencode-go", "error", bErr)
 			}
 		}
-		if cfg, ok := providers.KnownProviders[provider]; ok && (cfg.NoAuth || cfg.DefaultAPIKey != "") {
+		if cfg, ok := providers.KnownProviders[provider]; ok && (cfg.NoAuth || cfg.AuthOptional || cfg.DefaultAPIKey != "") {
 			apiKey := cfg.DefaultAPIKey
 			if apiKey == "" {
 				apiKey = "public"
@@ -701,6 +701,8 @@ func (h *ChatHandler) tryForwardWithConnection(f forwardRequestParams) error {
 	if apiKey == "" {
 		if providerCfg.DefaultAPIKey != "" {
 			apiKey = providerCfg.DefaultAPIKey
+		} else if providerCfg.AuthOptional {
+			apiKey = "public"
 		} else {
 			return &upstreamError{StatusCode: http.StatusUnauthorized, Body: []byte(`{"error":{"message":"no API key found","type":"auth_error","code":401}}`)}
 		}

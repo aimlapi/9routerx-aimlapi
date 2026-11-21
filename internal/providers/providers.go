@@ -12,7 +12,8 @@ type ProviderConfig struct {
 	BaseURL       string
 	AuthHeader    string            // "Authorization" or "x-api-key"
 	AuthScheme    string            // "bearer" or "raw"
-	NoAuth        bool              // true = no API key required
+	NoAuth        bool              // true = never send credentials
+	AuthOptional  bool              // anonymous access is allowed; supplied credentials are preserved
 	DefaultAPIKey string            // fallback API key when none provided
 	StaticHeaders map[string]string // extra headers to set on every request
 	Format        string            // "" (OpenAI standard), "gemini-native"
@@ -679,12 +680,12 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 	},
-	// Maritalk: the credential rides a literal header named "key" (OmniRoute
-	// registry authHeader "key", pinned 632d84f5).
+	// Maritalk uses Authorization: Key <token> (OmniRoute's authHeader
+	// "key" names the scheme, not an HTTP header; pinned 632d84f5).
 	"maritalk": {
 		BaseURL:    "https://chat.maritaca.ai/api/chat/completions",
-		AuthHeader: "key",
-		AuthScheme: "raw",
+		AuthHeader: "Authorization",
+		AuthScheme: "key",
 	},
 	// Openference: OpenAI-compatible gateway (OmniRoute open-sse registry,
 	// pinned 632d84f5).
@@ -971,13 +972,6 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 	},
-	// GigaChat (Sber): mechanical passthrough from the OmniRoute open-sse registry
-	// (pinned 632d84f5).
-	"gigachat": {
-		BaseURL:    "https://gigachat.devices.sberbank.ru/api/v1/chat/completions",
-		AuthHeader: "Authorization",
-		AuthScheme: "bearer",
-	},
 	// Qwen Cloud: mechanical passthrough from the OmniRoute open-sse registry
 	// (pinned 632d84f5).
 	"qwen-cloud": {
@@ -1033,7 +1027,9 @@ var KnownProviders = map[string]ProviderConfig{
 		BaseURL:    "https://api.z.ai/api/anthropic/v1/messages?beta=true",
 		AuthHeader: "x-api-key",
 		AuthScheme: "raw",
+		Format: FormatClaude,
 		UpstreamIsAnthropic: true,
+		StaticHeaders: map[string]string{"Anthropic-Version": "2023-06-01"},
 	},
 	// SEA-LION: mechanical passthrough from the OmniRoute open-sse registry
 	// (pinned 632d84f5).
@@ -1174,27 +1170,7 @@ var KnownProviders = map[string]ProviderConfig{
 		BaseURL:    "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
-	},
-	// Ideogram: mechanical passthrough from the OmniRoute open-sse registry
-	// (pinned 632d84f5).
-	"ideogram": {
-		BaseURL:    "https://api.ideogram.ai/chat/completions",
-		AuthHeader: "Api-Key",
-		AuthScheme: "raw",
-	},
-	// Leonardo AI: mechanical passthrough from the OmniRoute open-sse registry
-	// (pinned 632d84f5).
-	"leonardo": {
-		BaseURL:    "https://cloud.leonardo.ai/api/rest/v1/chat/completions",
-		AuthHeader: "Authorization",
-		AuthScheme: "bearer",
-	},
-	// Haiper: mechanical passthrough from the OmniRoute open-sse registry
-	// (pinned 632d84f5).
-	"haiper": {
-		BaseURL:    "https://api.haiper.ai/v1/chat/completions",
-		AuthHeader: "HAIPER_KEY",
-		AuthScheme: "raw",
+		AuthOptional: true,
 	},
 	// KIE.AI: mechanical passthrough from the OmniRoute open-sse registry
 	// (pinned 632d84f5).
@@ -1202,27 +1178,6 @@ var KnownProviders = map[string]ProviderConfig{
 		BaseURL:    "https://api.kie.ai/v1/chat/completions",
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
-	},
-	// NLP Cloud: mechanical passthrough from the OmniRoute open-sse registry
-	// (pinned 632d84f5).
-	"nlpcloud": {
-		BaseURL:    "https://api.nlpcloud.io/v1/gpu/chat/completions",
-		AuthHeader: "Authorization",
-		AuthScheme: "bearer",
-	},
-	// Dify: mechanical passthrough from the OmniRoute open-sse registry
-	// (pinned 632d84f5).
-	"dify": {
-		BaseURL:    "https://api.dify.ai/chat/completions",
-		AuthHeader: "Authorization",
-		AuthScheme: "bearer",
-	},
-	// Udio: mechanical passthrough from the OmniRoute open-sse registry
-	// (pinned 632d84f5).
-	"udio": {
-		BaseURL:    "https://www.udio.com/api/generate-proxy/chat/completions",
-		AuthHeader: "cookie",
-		AuthScheme: "raw",
 	},
 	// OpenVecta: mechanical passthrough from the OmniRoute open-sse registry
 	// (pinned 632d84f5).
@@ -1265,7 +1220,9 @@ var KnownProviders = map[string]ProviderConfig{
 		BaseURL:    "https://tabitoken.com/v1/messages",
 		AuthHeader: "x-api-key",
 		AuthScheme: "raw",
+		Format: FormatClaude,
 		UpstreamIsAnthropic: true,
+		StaticHeaders: map[string]string{"Anthropic-Version": "2023-06-01"},
 	},
 	// Speka AI: mechanical passthrough from the OmniRoute open-sse registry
 	// (pinned 632d84f5).
@@ -1287,7 +1244,9 @@ var KnownProviders = map[string]ProviderConfig{
 		BaseURL:    "https://agentrouter.org/v1/messages",
 		AuthHeader: "x-api-key",
 		AuthScheme: "raw",
+		Format: FormatClaude,
 		UpstreamIsAnthropic: true,
+		StaticHeaders: map[string]string{"Anthropic-Version": "2023-06-01"},
 	},
 	// AI/ML API: mechanical passthrough from the OmniRoute open-sse registry
 	// (pinned 632d84f5).
@@ -1524,9 +1483,8 @@ var KnownProviders = map[string]ProviderConfig{
 	// (pinned 632d84f5).
 	"helixmind": {
 		BaseURL:    "https://helixmind.online/v1/chat/completions",
-		AuthHeader: "x-api-key",
-		AuthScheme: "raw",
-		UpstreamIsAnthropic: true,
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
 	},
 	// Helyx AI: mechanical passthrough from the OmniRoute open-sse registry
 	// (pinned 632d84f5).
@@ -1619,13 +1577,6 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 	},
-	// 1min.AI: mechanical passthrough from the OmniRoute open-sse registry
-	// (pinned 632d84f5).
-	"oneminai": {
-		BaseURL:    "https://api.1min.ai/api/chat-with-ai/chat/completions",
-		AuthHeader: "api-key",
-		AuthScheme: "raw",
-	},
 	// onomeo: mechanical passthrough from the OmniRoute open-sse registry
 	// (pinned 632d84f5).
 	"onomeo": {
@@ -1709,7 +1660,9 @@ var KnownProviders = map[string]ProviderConfig{
 		BaseURL:    "https://pass.wafer.ai/v1/messages",
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
+		Format: FormatClaude,
 		UpstreamIsAnthropic: true,
+		StaticHeaders: map[string]string{"Anthropic-Version": "2023-06-01"},
 	},
 	// xKiro: mechanical passthrough from the OmniRoute open-sse registry
 	// (pinned 632d84f5).
@@ -1774,6 +1727,7 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 		LocalByDesign: true,
+		AuthOptional: true,
 	},
 	// Lemonade Server: local self-host lane from the OmniRoute open-sse registry
 	// (pinned 632d84f5).
@@ -1782,6 +1736,7 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 		LocalByDesign: true,
+		AuthOptional: true,
 	},
 	// llama.cpp: local self-host lane from the OmniRoute open-sse registry
 	// (pinned 632d84f5).
@@ -1790,6 +1745,7 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 		LocalByDesign: true,
+		AuthOptional: true,
 	},
 	// Llamafile: local self-host lane from the OmniRoute open-sse registry
 	// (pinned 632d84f5).
@@ -1798,6 +1754,7 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 		LocalByDesign: true,
+		AuthOptional: true,
 	},
 	// LM Studio: local self-host lane from the OmniRoute open-sse registry
 	// (pinned 632d84f5).
@@ -1806,6 +1763,7 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 		LocalByDesign: true,
+		AuthOptional: true,
 	},
 	// MLX Gemma 26B: local self-host lane from the OmniRoute open-sse registry
 	// (pinned 632d84f5).
@@ -1814,6 +1772,7 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 		LocalByDesign: true,
+		AuthOptional: true,
 	},
 	// MLX Qwen 3.8 27B: local self-host lane from the OmniRoute open-sse registry
 	// (pinned 632d84f5).
@@ -1822,6 +1781,7 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 		LocalByDesign: true,
+		AuthOptional: true,
 	},
 	// oobabooga: local self-host lane from the OmniRoute open-sse registry
 	// (pinned 632d84f5).
@@ -1830,6 +1790,7 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 		LocalByDesign: true,
+		AuthOptional: true,
 	},
 	// NVIDIA Triton: local self-host lane from the OmniRoute open-sse registry
 	// (pinned 632d84f5).
@@ -1838,6 +1799,7 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 		LocalByDesign: true,
+		AuthOptional: true,
 	},
 	// XInference: local self-host lane from the OmniRoute open-sse registry
 	// (pinned 632d84f5).
@@ -1846,6 +1808,7 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 		LocalByDesign: true,
+		AuthOptional: true,
 	},
 	"zcode": {
 		BaseURL: "https://zcode.z.ai/api/v1/zcode-plan/anthropic/v1/messages",
@@ -2346,7 +2309,7 @@ var KnownProviders = map[string]ProviderConfig{
 		BaseURL:    "https://oai.aihorde.net/v1/chat/completions",
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
-		NoAuth:     true,
+		AuthOptional: true,
 	},
 	// arena.ai evaluation lane: the executor owns the wire protocol; the
 	// BaseURL only lets an operator repoint the endpoint.
