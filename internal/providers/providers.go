@@ -1035,6 +1035,13 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthScheme: "raw",
 		UpstreamIsAnthropic: true,
 	},
+	// SEA-LION: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"sealion": {
+		BaseURL:    "https://api.sea-lion.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
 	"zcode": {
 		BaseURL: "https://zcode.z.ai/api/v1/zcode-plan/anthropic/v1/messages",
 		Format:  FormatClaude,

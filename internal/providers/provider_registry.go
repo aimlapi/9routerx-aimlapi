@@ -735,6 +735,17 @@ var ProviderRegistry = map[string]ProviderMeta{
 		ServiceKinds: []string{"llm"},
 		Website:      "https://z.ai/model-api",
 	},
+	"sealion": {
+		ID:           "sealion",
+		Name:         "SEA-LION",
+		Alias:        "sealion",
+		Category:     CategoryAPIKey,
+		AuthType:     "apikey",
+		Color:        "#0D9488",
+		Icon:         "public",
+		ServiceKinds: []string{"llm"},
+		Website:      "https://sea-lion.ai",
+	},
 	"zcode": {
 		ID:           "zcode",
 		Name:         "ZCode (Z.ai)",

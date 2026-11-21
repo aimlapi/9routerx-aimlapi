@@ -209,6 +209,7 @@ var ProviderModels = map[string][]string{
 	"volcengine": {"deepseek-v3-2-251201", "doubao-seed-2-0-pro-260215", "doubao-seed-2-0-code-preview-260215", "kimi-k2-5-260127", "glm-4-7-251222", "DeepSeek-V4-Flash", "DeepSeek-V4-Pro"},
 	"doubao": {"doubao-seed-2-0-pro-260215", "doubao-seed-2-0-lite-260215", "doubao-seed-2-0-mini-260215", "doubao-seed-2-0-code-preview-260215", "doubao-seed-1-8-251228", "doubao-seed-1-6-251015", "doubao-seed-1-6-flash-250828", "doubao-1-5-pro-32k-250115", "doubao-pro-32k"},
 	"zai": {"glm-5.3", "glm-5.3-flash", "glm-5.2", "glm-5.1", "glm-5", "glm-5-turbo", "glm-4.7-flash", "glm-4.7"},
+	"sealion": {"aisingapore/Llama-SEA-LION-v3.5-70B-R", "aisingapore/Llama-SEA-LION-v3-70B-IT", "aisingapore/Gemma-SEA-LION-v4-27B-IT", "aisingapore/Qwen-SEA-LION-v4.5-27B-IT", "aisingapore/Qwen-SEA-LION-v4-32B-IT"},
 	"copilot-web":     {"copilot-pro", "gpt-4o", "gpt-4-turbo"},
 	"yuanbao-web":     {"deepseek-v3", "deepseek-r1", "hunyuan", "hunyuan-t1"},
 	"zai-web":         {"glm-5.3-flash", "glm-5.3", "glm-5.2", "glm-4-plus"},

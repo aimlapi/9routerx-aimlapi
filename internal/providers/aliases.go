@@ -181,6 +181,7 @@ var ProviderAliasMap = map[string]string{
 	"of":                 "openference",
 	"wb":                 "workbuddy",
 	"aq":                 "amazon-q",
+	"iflytek":            "sparkdesk",
 	"gitlab-duo":         "gitlab",
 	"lmarena":            "arena-ai",
 }

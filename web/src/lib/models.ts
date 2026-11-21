@@ -79,6 +79,7 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "notion-web": "nw",
   "uc-web": "uc",
   "veoaifree-web": "veo-free",
+  "sealion": "sealion",
   "zai": "zai",
   "doubao": "doubao",
   "volcengine": "volcengine",
@@ -3620,6 +3621,28 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "glm-4.7",
       "name": "Glm 4.7"
+    }
+  ],
+  "sealion": [
+    {
+      "id": "aisingapore/Llama-SEA-LION-v3.5-70B-R",
+      "name": "Llama SEA LION v3.5 70B R"
+    },
+    {
+      "id": "aisingapore/Llama-SEA-LION-v3-70B-IT",
+      "name": "Llama SEA LION v3 70B IT"
+    },
+    {
+      "id": "aisingapore/Gemma-SEA-LION-v4-27B-IT",
+      "name": "Gemma SEA LION v4 27B IT"
+    },
+    {
+      "id": "aisingapore/Qwen-SEA-LION-v4.5-27B-IT",
+      "name": "Qwen SEA LION v4.5 27B IT"
+    },
+    {
+      "id": "aisingapore/Qwen-SEA-LION-v4-32B-IT",
+      "name": "Qwen SEA LION v4 32B IT"
     }
   ],
   "grok-web": [
