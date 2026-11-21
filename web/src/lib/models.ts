@@ -79,6 +79,16 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "notion-web": "nw",
   "uc-web": "uc",
   "veoaifree-web": "veo-free",
+  "nube": "nube",
+  "scaleway": "scw",
+  "openvecta": "openvecta",
+  "udio": "udio",
+  "dify": "dify",
+  "nlpcloud": "nlpc",
+  "kie": "kie",
+  "haiper": "hp",
+  "leonardo": "leo",
+  "ideogram": "ideo",
   "ovhcloud": "ovh",
   "featherless-ai": "featherless",
   "grokified": "grokified",
@@ -4196,6 +4206,176 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "Mistral-Small-3.2-24B-Instruct-2506",
       "name": "Mistral Small 3.2 24B Instruct 2506"
+    }
+  ],
+  "ideogram": [
+    {
+      "id": "V_3",
+      "name": "V 3"
+    },
+    {
+      "id": "V_2A",
+      "name": "V 2A"
+    }
+  ],
+  "leonardo": [
+    {
+      "id": "phoenix",
+      "name": "Phoenix"
+    },
+    {
+      "id": "sdxl",
+      "name": "Sdxl"
+    }
+  ],
+  "haiper": [
+    {
+      "id": "gen2",
+      "name": "gen2"
+    },
+    {
+      "id": "gen2-image",
+      "name": "gen2 Image"
+    }
+  ],
+  "kie": [
+    {
+      "id": "claude-fable-5",
+      "name": "Claude Fable 5"
+    },
+    {
+      "id": "claude-opus-5",
+      "name": "Claude Opus 5"
+    },
+    {
+      "id": "claude-sonnet-5",
+      "name": "Claude Sonnet 5"
+    },
+    {
+      "id": "claude-haiku-4-5",
+      "name": "Claude Haiku 4 5"
+    },
+    {
+      "id": "gpt-5-6-sol",
+      "name": "Gpt 5 6 Sol"
+    },
+    {
+      "id": "gpt-5-6-terra",
+      "name": "Gpt 5 6 Terra"
+    },
+    {
+      "id": "gpt-5-6-luna",
+      "name": "Gpt 5 6 Luna"
+    },
+    {
+      "id": "gemini-3-1-pro",
+      "name": "Gemini 3 1 Pro"
+    },
+    {
+      "id": "gemini-3-7-flash",
+      "name": "Gemini 3 7 Flash"
+    },
+    {
+      "id": "grok-4-6",
+      "name": "Grok 4 6"
+    }
+  ],
+  "nlpcloud": [
+    {
+      "id": "chatdolphin",
+      "name": "Chatdolphin"
+    },
+    {
+      "id": "dolphin",
+      "name": "Dolphin"
+    },
+    {
+      "id": "finetuned-llama-3-70b",
+      "name": "Finetuned Llama 3 70b"
+    },
+    {
+      "id": "llama-3-1-405b",
+      "name": "Llama 3 1 405b"
+    },
+    {
+      "id": "llama-3-8b-instruct",
+      "name": "Llama 3 8b Instruct"
+    }
+  ],
+  "dify": [
+    {
+      "id": "auto",
+      "name": "Auto"
+    }
+  ],
+  "udio": [
+    {
+      "id": "udio-default",
+      "name": "Udio Default"
+    }
+  ],
+  "openvecta": [
+    {
+      "id": "glm-4.7-flash",
+      "name": "Glm 4.7 Flash"
+    },
+    {
+      "id": "claude-sonnet-4.6",
+      "name": "Claude Sonnet 4.6"
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "Deepseek v4 Flash"
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "Gpt Oss 120b"
+    },
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31b"
+    },
+    {
+      "id": "kimi-k2.6",
+      "name": "Kimi k2.6"
+    },
+    {
+      "id": "llama-3.3-70b-instruct",
+      "name": "Llama 3.3 70b Instruct"
+    },
+    {
+      "id": "llama-4-maverick",
+      "name": "Llama 4 Maverick"
+    },
+    {
+      "id": "nemotron-3-super-120b",
+      "name": "Nemotron 3 Super 120b"
+    }
+  ],
+  "scaleway": [
+    {
+      "id": "qwen3-235b-a22b-instruct-2507",
+      "name": "qwen3 235b a22b Instruct 2507"
+    },
+    {
+      "id": "llama-3.1-70b-instruct",
+      "name": "Llama 3.1 70b Instruct"
+    },
+    {
+      "id": "llama-3.1-8b-instruct",
+      "name": "Llama 3.1 8b Instruct"
+    },
+    {
+      "id": "mistral-small-3.2-24b-instruct-2506",
+      "name": "Mistral Small 3.2 24b Instruct 2506"
+    },
+    {
+      "id": "deepseek-v3-0324",
+      "name": "Deepseek v3 0324"
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "Gpt Oss 120b"
     }
   ],
   "grok-web": [

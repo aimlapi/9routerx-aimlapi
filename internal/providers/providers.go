@@ -1175,6 +1175,76 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 	},
+	// Ideogram: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"ideogram": {
+		BaseURL:    "https://api.ideogram.ai/chat/completions",
+		AuthHeader: "Api-Key",
+		AuthScheme: "raw",
+	},
+	// Leonardo AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"leonardo": {
+		BaseURL:    "https://cloud.leonardo.ai/api/rest/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Haiper: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"haiper": {
+		BaseURL:    "https://api.haiper.ai/v1/chat/completions",
+		AuthHeader: "HAIPER_KEY",
+		AuthScheme: "raw",
+	},
+	// KIE.AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"kie": {
+		BaseURL:    "https://api.kie.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// NLP Cloud: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"nlpcloud": {
+		BaseURL:    "https://api.nlpcloud.io/v1/gpu/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Dify: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"dify": {
+		BaseURL:    "https://api.dify.ai/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Udio: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"udio": {
+		BaseURL:    "https://www.udio.com/api/generate-proxy/chat/completions",
+		AuthHeader: "cookie",
+		AuthScheme: "raw",
+	},
+	// OpenVecta: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"openvecta": {
+		BaseURL:    "https://api.openvecta.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Scaleway AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"scaleway": {
+		BaseURL:    "https://api.scaleway.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Nube.sh: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"nube": {
+		BaseURL:    "https://ai.nube.sh/api/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
 	"zcode": {
 		BaseURL: "https://zcode.z.ai/api/v1/zcode-plan/anthropic/v1/messages",
 		Format:  FormatClaude,
