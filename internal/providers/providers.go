@@ -901,6 +901,76 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 	},
+	// BigModel.cn (Zhipu): mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"bigmodel": {
+		BaseURL:    "https://open.bigmodel.cn/api/paas/v4/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// StepFun: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"stepfun": {
+		BaseURL:    "https://api.stepfun.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// SparkDesk: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"sparkdesk": {
+		BaseURL:    "https://spark-api-open.xf-yun.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// InternLM (Intern-S1): mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"internlm": {
+		BaseURL:    "https://chat.intern-ai.org.cn/api/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// LongCat AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"longcat": {
+		BaseURL:    "https://api.longcat.chat/openai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Ant Ling / Ring (inclusionAI): mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"ant-ling": {
+		BaseURL:    "https://api.ant-ling.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Coze: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"coze": {
+		BaseURL:    "https://api.coze.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// PLaMo: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"plamo": {
+		BaseURL:    "https://api.platform.preferredai.jp/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Sarvam AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"sarvam": {
+		BaseURL:    "https://api.sarvam.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Typhoon: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"typhoon": {
+		BaseURL:    "https://api.opentyphoon.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
 	"zcode": {
 		BaseURL: "https://zcode.z.ai/api/v1/zcode-plan/anthropic/v1/messages",
 		Format:  FormatClaude,

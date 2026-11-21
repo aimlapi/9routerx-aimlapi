@@ -79,6 +79,16 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "notion-web": "nw",
   "uc-web": "uc",
   "veoaifree-web": "veo-free",
+  "typhoon": "typhoon",
+  "sarvam": "sarvam",
+  "plamo": "plamo",
+  "coze": "coze",
+  "ant-ling": "ling",
+  "longcat": "lc",
+  "internlm": "internlm",
+  "sparkdesk": "sparkdesk",
+  "stepfun": "stepfun",
+  "bigmodel": "bigmodel",
   "arcee-ai": "arcee",
   "yi": "yi",
   "pioneer": "pn",
@@ -3135,6 +3145,182 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "sabiazinho-4",
       "name": "Sabiazinho 4"
+    }
+  ],
+  "bigmodel": [
+    {
+      "id": "glm-5.3",
+      "name": "Glm 5.3"
+    },
+    {
+      "id": "glm-5.3-flash",
+      "name": "Glm 5.3 Flash"
+    },
+    {
+      "id": "glm-5.2",
+      "name": "Glm 5.2"
+    },
+    {
+      "id": "glm-5.1",
+      "name": "Glm 5.1"
+    },
+    {
+      "id": "glm-5-turbo",
+      "name": "Glm 5 Turbo"
+    },
+    {
+      "id": "glm-5",
+      "name": "Glm 5"
+    },
+    {
+      "id": "glm-4.7",
+      "name": "Glm 4.7"
+    },
+    {
+      "id": "glm-4.7-flash",
+      "name": "Glm 4.7 Flash"
+    },
+    {
+      "id": "glm-4.7-flashx",
+      "name": "Glm 4.7 Flashx"
+    },
+    {
+      "id": "glm-4.6",
+      "name": "Glm 4.6"
+    },
+    {
+      "id": "glm-4.5-air",
+      "name": "Glm 4.5 Air"
+    },
+    {
+      "id": "glm-4.5-airx",
+      "name": "Glm 4.5 Airx"
+    },
+    {
+      "id": "glm-4.5-flash",
+      "name": "Glm 4.5 Flash"
+    },
+    {
+      "id": "glm-4-flash-250414",
+      "name": "Glm 4 Flash 250414"
+    },
+    {
+      "id": "glm-4-flashx-250414",
+      "name": "Glm 4 Flashx 250414"
+    }
+  ],
+  "stepfun": [
+    {
+      "id": "step-5-preview",
+      "name": "Step 5 Preview"
+    },
+    {
+      "id": "step-3.7-flash",
+      "name": "Step 3.7 Flash"
+    },
+    {
+      "id": "step-3.5-flash",
+      "name": "Step 3.5 Flash"
+    },
+    {
+      "id": "step-3.5-flash-2603",
+      "name": "Step 3.5 Flash 2603"
+    },
+    {
+      "id": "step-1o-turbo-vision",
+      "name": "Step 1o Turbo Vision"
+    },
+    {
+      "id": "step-1v",
+      "name": "Step 1v"
+    }
+  ],
+  "sparkdesk": [
+    {
+      "id": "4.0Ultra",
+      "name": "4.0Ultra"
+    },
+    {
+      "id": "generalv3",
+      "name": "generalv3"
+    },
+    {
+      "id": "pro-128k",
+      "name": "Pro 128k"
+    },
+    {
+      "id": "lite",
+      "name": "Lite"
+    }
+  ],
+  "internlm": [
+    {
+      "id": "intern-s1-pro",
+      "name": "Intern s1 Pro"
+    },
+    {
+      "id": "intern-s1",
+      "name": "Intern s1"
+    },
+    {
+      "id": "intern-s1-mini",
+      "name": "Intern s1 Mini"
+    },
+    {
+      "id": "internvl3.5-latest",
+      "name": "internvl3.5 Latest"
+    },
+    {
+      "id": "intern-latest",
+      "name": "Intern Latest"
+    }
+  ],
+  "longcat": [
+    {
+      "id": "LongCat-2.0",
+      "name": "LongCat 2.0"
+    }
+  ],
+  "ant-ling": [
+    {
+      "id": "Ling-2.6-1T",
+      "name": "Ling 2.6 1T"
+    },
+    {
+      "id": "Ring-2.6-1T",
+      "name": "Ring 2.6 1T"
+    },
+    {
+      "id": "Ling-2.6-flash",
+      "name": "Ling 2.6 Flash"
+    }
+  ],
+  "coze": [
+    {
+      "id": "claude-3-7-sonnet-20250514",
+      "name": "Claude 3 7 Sonnet 20250514"
+    }
+  ],
+  "plamo": [
+    {
+      "id": "plamo-3.0-prime",
+      "name": "Plamo 3.0 Prime"
+    }
+  ],
+  "sarvam": [
+    {
+      "id": "sarvam-105b",
+      "name": "Sarvam 105b"
+    },
+    {
+      "id": "sarvam-30b",
+      "name": "Sarvam 30b"
+    }
+  ],
+  "typhoon": [
+    {
+      "id": "typhoon-v2.5-30b-a3b-instruct",
+      "name": "Typhoon v2.5 30b a3b Instruct"
     }
   ],
   "grok-web": [

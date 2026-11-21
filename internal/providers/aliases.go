@@ -165,6 +165,8 @@ var ProviderAliasMap = map[string]string{
 	"kepler-ai":          "ovh",
 	"ovh-kepler":         "ovh",
 	"cpw":                "copilot-web",
+	"ling":            "ant-ling",
+	"lc":              "longcat",
 	"arcee":           "arcee-ai",
 	"pn":              "pioneer",
 	"ybw":                "yuanbao-web",
