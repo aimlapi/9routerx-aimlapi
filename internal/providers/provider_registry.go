@@ -250,16 +250,21 @@ var ProviderRegistry = map[string]ProviderMeta{
 		Notice:       &Notice{SignupURL: "https://github.com/features/copilot"},
 	},
 	"gitlab": {
-		ID:           "gitlab",
-		Name:         "GitLab Duo",
-		Alias:        "gitlab",
-		Category:     CategoryOAuth,
-		Color:        "#FC6D26",
-		Icon:         "code",
-		Hidden:       true,
+		// The GitLab Duo lane (TASK-9RX-PROVIDERS dedup: the T1-oauth
+		// "gitlab-duo" entry is this provider — the Name, the PKCE login and
+		// the Duo chat endpoint all shipped hidden under the gitlab id, which
+		// stays the canonical id for wire compatibility). "gld" and
+		// "gitlab-duo" resolve here as wire aliases.
+		ID:       "gitlab",
+		Name:     "GitLab Duo",
+		Alias:    "gitlab",
+		Category: CategoryOAuth,
+		Color:    "#FC6D26",
+		Icon:     "code",
 		ServiceKinds: []string{"llm"},
-		Website:      "https://gitlab.com",
-		Notice:       &Notice{SignupURL: "https://gitlab.com"},
+		Website:  "https://gitlab.com",
+		AuthHint: "Register an OAuth application on your GitLab instance (redirect URI: this dashboard's /callback), then sign in — the flow requests the api, read_user and ai_features scopes so Duo Workflow models answer. Self-hosted instances work too: set the instance base URL during login.",
+		Notice:   &Notice{SignupURL: "https://gitlab.com"},
 	},
 	"grok-cli": {
 		ID:           "grok-cli",

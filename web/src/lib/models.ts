@@ -81,6 +81,7 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "veoaifree-web": "veo-free",
   "ovh": "ovh",
   "megabrain": "mb",
+  "gitlab-duo": "gitlab",
   "aihorde": "horde",
   "arena-ai": "arena",
   "grok-cli": "gcli",
@@ -2950,6 +2951,16 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "Qwen2.5-VL-72B-Instruct",
       "name": "Qwen2.5 VL 72B (Vision)"
+    }
+  ],
+  "gitlab": [
+    {
+      "id": "claude-sonnet-4-6",
+      "name": "Claude Sonnet 4.6 (GitLab Duo)"
+    },
+    {
+      "id": "claude-haiku-4-5",
+      "name": "Claude Haiku 4.5 (GitLab Duo)"
     }
   ],
   "grok-web": [

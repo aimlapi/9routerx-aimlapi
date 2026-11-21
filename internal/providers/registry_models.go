@@ -172,6 +172,10 @@ var ProviderModels = map[string][]string{
 	// copilot-web: passthrough lane (xrouter registry, pinned 7fd5698) — the
 	// web /c/api serves whatever the signed-in Copilot subscription allows.
 	// ovh: OVH Kepler AI keyless endpoint (xrouter registry, pinned 7fd5698).
+	// gitlab-duo models served by the GitLab Duo chat endpoint (OmniRoute
+	// open-sse registry gitlab-duo, pinned 632d84f5).
+	"gitlab": {"claude-sonnet-4-6", "claude-haiku-4-5"},
+	"gld":    {"claude-sonnet-4-6", "claude-haiku-4-5"},
 	"ovh": {"Qwen3.6-27B", "Qwen3.8-27B", "Qwen3.5-397B-A17B", "gpt-oss-120b", "gpt-oss-20b", "Mistral-Small-3.2-24B-Instruct-2506", "Meta-Llama-3_3-70B-Instruct", "Qwen2.5-VL-72B-Instruct"},
 	"copilot-web":     {"copilot-pro", "gpt-4o", "gpt-4-turbo"},
 	"yuanbao-web":     {"deepseek-v3", "deepseek-r1", "hunyuan", "hunyuan-t1"},

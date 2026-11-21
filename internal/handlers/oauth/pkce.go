@@ -102,6 +102,19 @@ var pkceProviders = map[string]*pkceConfig{
 		connPrefix:   "gl-",
 		display:      "GitLab",
 	},
+	// gitlab-duo is the same GitLab PKCE flow with the ai_features scope the
+	// Duo Workflow models need (OmniRoute gitlab-duo.ts, pinned 632d84f5) —
+	// the api scope rides along so existing GitLab connections keep working.
+	// The registry surfaces this lane as the "gitlab" provider.
+	"gitlab-duo": {
+		providers:    []string{"gitlab-duo"},
+		authorizeURL: "https://gitlab.com/oauth/authorize",
+		tokenURL:     "https://gitlab.com/oauth/token",
+		scope:        "api read_user ai_features",
+		userInfoPath: "/api/v4/user",
+		connPrefix:   "gld-",
+		display:      "GitLab Duo",
+	},
 }
 
 func pkceLookup(provider string) *pkceConfig {
@@ -137,9 +150,9 @@ func (h *OAuthHandler) HandlePKCEAuthorize(w http.ResponseWriter, r *http.Reques
 		"code_challenge_method": {"S256"},
 		"state":                 {state},
 	}
-	// GitLab: allow self-hosted base + user OAuth app credentials.
+	// GitLab (incl. gitlab-duo): allow self-hosted base + user OAuth app credentials.
 	authorizeURL, tokenURL := cfg.authorizeURL, cfg.tokenURL
-	if provider == "gitlab" {
+	if provider == "gitlab" || provider == "gitlab-duo" {
 		base := strings.TrimSuffix(r.URL.Query().Get("baseUrl"), "/")
 		if base == "" {
 			base = "https://gitlab.com"
@@ -268,7 +281,7 @@ func resolvePKCEExchange(body pkceExchangeBody, r *http.Request) (*pkceExchange,
 		clientSecret: body.ClientSecret,
 		tokenURL:     cfg.tokenURL,
 	}
-	if body.Provider == "gitlab" {
+	if body.Provider == "gitlab" || body.Provider == "gitlab-duo" {
 		ex.base = strings.TrimSuffix(body.BaseURL, "/")
 		if ex.base == "" {
 			ex.base = "https://gitlab.com"

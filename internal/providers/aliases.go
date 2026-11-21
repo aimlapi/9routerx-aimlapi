@@ -170,6 +170,8 @@ var ProviderAliasMap = map[string]string{
 	"nw":                 "notion-web",
 	"arena":              "arena-ai",
 	"mb":                 "megabrain",
+	"gld":                "gitlab",
+	"gitlab-duo":         "gitlab",
 	"lmarena":            "arena-ai",
 }
 
