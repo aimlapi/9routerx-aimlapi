@@ -139,7 +139,7 @@
   let providerNoticeApiKeyUrl = $derived(selectedCatalogItem?.notice?.apiKeyUrl || '')
   let isOAuth = $derived(selectedCatalogItem?.category === 'oauth')
   let isClineOAuth = $derived(providerId === 'cline' || providerId === 'clinepass')
-  let isPKCEOAuth = $derived(providerId === 'claude' || providerId === 'codex' || providerId === 'xai' || providerId === 'gitlab')
+  let isPKCEOAuth = $derived(providerId === 'claude' || providerId === 'codex' || providerId === 'xai' || providerId === 'gitlab' || providerId === 'openference')
   let isAuthCodeOAuth = $derived(providerId === 'gemini-cli' || providerId === 'iflow')
   let isCustomOAuth = $derived(providerId === 'trae' || providerId === 'windsurf' || providerId === 'zed')
   // Upstream parity: providers with authModes ["apikey","oauth"] offer both an
@@ -1564,7 +1564,7 @@
     try {
       // Codex cannot use the dashboard callback: OpenAI only accepts the
       // redirect URI registered for the Codex CLI client.
-      const cb = providerId === 'codex' ? CODEX_REDIRECT_URI : dashboardCallback()
+      const cb = providerId === 'codex' ? CODEX_REDIRECT_URI : providerId === 'openference' ? 'http://127.0.0.1:56123/callback' : dashboardCallback()
       const res = await api.pkceAuthorize(
         providerId,
         providerId === 'gitlab'
@@ -1581,6 +1581,14 @@
       pkceRedirectUri = res.redirectUri || cb
       if (providerId === 'codex') {
         await startCodexLoopback()
+      } else if (providerId === 'openference') {
+        const proxy = await api.openferenceStartProxy({ appPort: window.location.port || (window.location.protocol === 'https:' ? '443' : '80'), state: pkceState, codeVerifier: pkceCodeVerifier, redirectUri: pkceRedirectUri })
+        if (proxy.success) {
+          stopCodexPoll()
+          codexPollTimer = setInterval(pollOpenferenceStatus, 1500)
+        } else {
+          oauthError = 'The local login listener could not start. After signing in, paste the callback URL here to complete authorization.'
+        }
       }
       rememberPending({
         state: pkceState,
@@ -1646,6 +1654,22 @@
     }
   }
 
+  async function pollOpenferenceStatus() {
+    try {
+      const res = await api.openferencePollStatus(pkceState)
+      if (res.status === 'done') {
+        stopCodexPoll()
+        showOAuthModal = false
+        onRefresh()
+      } else if (res.status === 'error' || res.status === 'unknown') {
+        stopCodexPoll()
+        oauthError = res.error || 'The local listener is unavailable. Paste the callback URL to complete authorization.'
+      }
+    } catch {
+      // A transient network failure leaves manual callback exchange available.
+    }
+  }
+
   function stopCodexPoll() {
     if (codexPollTimer) {
       clearInterval(codexPollTimer)
@@ -1661,6 +1685,8 @@
     stopCodexPoll()
     if (providerId === 'codex') {
       void api.codexStopProxy().catch(() => {})
+    } else if (providerId === 'openference') {
+      void api.openferenceStopProxy().catch(() => {})
     }
   }
 

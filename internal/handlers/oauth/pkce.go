@@ -130,6 +130,8 @@ var pkceProviders = map[string]*pkceConfig{
 		connPrefix:     "of-",
 		display:        "Openference",
 		emailFromIDTok: true,
+		fixedRedirectURI: openferenceRedirectURI,
+		fixedPort: openferenceLoopbackPort,
 	},
 }
 
