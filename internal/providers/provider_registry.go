@@ -2037,6 +2037,22 @@ var ProviderRegistry = map[string]ProviderMeta{
 		ServiceKinds: []string{"image", "video"},
 		Website:      "https://veoaifree.com",
 	},
+	"ovh": {
+		// OVH Kepler AI keyless endpoint (xrouter registry transport, pinned
+		// 7fd5698): OpenAI format, no credential — the endpoint answers
+		// anonymous requests (verified live: POST /v1/chat/completions → 200).
+		ID:           "ovh",
+		Name:         "OVH AI Endpoints (Free tier)",
+		Alias:        "ovh",
+		Category:     CategoryFree,
+		AuthType:     "none",
+		Color:        "#0052D4",
+		Icon:         "cloud",
+		NoAuth:       true,
+		ServiceKinds: []string{"llm"},
+		Website:      "https://endpoints.kepler.ai.cloud.ovh.net",
+		Notice:       &Notice{Text: "Keyless OVH Kepler AI endpoint — anonymous OpenAI-compatible chat. Free tier; rate limits apply per IP.", APIKeyURL: "https://endpoints.kepler.ai.cloud.ovh.net"},
+	},
 	"gemini-web": {
 		ID:           "gemini-web",
 		Name:         "Gemini Web",

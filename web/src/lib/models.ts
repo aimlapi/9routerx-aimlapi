@@ -79,6 +79,7 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "notion-web": "nw",
   "uc-web": "uc",
   "veoaifree-web": "veo-free",
+  "ovh": "ovh",
   "arena-ai": "arena",
   "grok-cli": "gcli",
   "grok-web": "gw",
@@ -2913,6 +2914,40 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "nano-banana",
       "name": "Nano Banana (image)"
+    }
+  ],
+  "ovh": [
+    {
+      "id": "Qwen3.6-27B",
+      "name": "Qwen3.6 27B (262K)"
+    },
+    {
+      "id": "Qwen3.8-27B",
+      "name": "Qwen3.8 27B (262K)"
+    },
+    {
+      "id": "Qwen3.5-397B-A17B",
+      "name": "Qwen3.5 397B A17B (262K)"
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B (131K)"
+    },
+    {
+      "id": "gpt-oss-20b",
+      "name": "GPT-OSS 20B (131K)"
+    },
+    {
+      "id": "Mistral-Small-3.2-24B-Instruct-2506",
+      "name": "Mistral Small 3.2 24B (131K)"
+    },
+    {
+      "id": "Meta-Llama-3_3-70B-Instruct",
+      "name": "Llama 3.3 70B (131K)"
+    },
+    {
+      "id": "Qwen2.5-VL-72B-Instruct",
+      "name": "Qwen2.5 VL 72B (Vision)"
     }
   ],
   "grok-web": [

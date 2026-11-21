@@ -171,6 +171,8 @@ var ProviderModels = map[string][]string{
 	"grok-web":      {"grok-3", "grok-3-mini", "grok-3-thinking", "grok-4", "grok-4-mini", "grok-4-thinking", "grok-4-heavy", "grok-4.1-mini", "grok-4.1-fast", "grok-4.1-expert", "grok-4.1-thinking", "grok-4.2", "grok-4.20", "grok-4.20-beta", "grok-image", "grok-video"},
 	// copilot-web: passthrough lane (xrouter registry, pinned 7fd5698) — the
 	// web /c/api serves whatever the signed-in Copilot subscription allows.
+	// ovh: OVH Kepler AI keyless endpoint (xrouter registry, pinned 7fd5698).
+	"ovh": {"Qwen3.6-27B", "Qwen3.8-27B", "Qwen3.5-397B-A17B", "gpt-oss-120b", "gpt-oss-20b", "Mistral-Small-3.2-24B-Instruct-2506", "Meta-Llama-3_3-70B-Instruct", "Qwen2.5-VL-72B-Instruct"},
 	"copilot-web":     {"copilot-pro", "gpt-4o", "gpt-4-turbo"},
 	"yuanbao-web":     {"deepseek-v3", "deepseek-r1", "hunyuan", "hunyuan-t1"},
 	"zai-web":         {"glm-5.3-flash", "glm-5.3", "glm-5.2", "glm-4-plus"},

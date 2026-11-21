@@ -1272,6 +1272,15 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Cookie",
 		AuthScheme: "raw",
 	},
+	// OVH Kepler AI keyless endpoint (xrouter registry transport, pinned
+	// 7fd5698): anonymous OpenAI chat; the transport sends an empty
+	// Authorization header, which the NoAuth config expresses by sending none.
+	"ovh": {
+		BaseURL:    "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+		NoAuth:     true,
+	},
 	// arena.ai evaluation lane: the executor owns the wire protocol; the
 	// BaseURL only lets an operator repoint the endpoint.
 	"arena-ai": {
