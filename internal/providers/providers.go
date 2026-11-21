@@ -1042,6 +1042,76 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 	},
+	// DeepInfra: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"deepinfra": {
+		BaseURL:    "https://api.deepinfra.com/v1/openai/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Baseten: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"baseten": {
+		BaseURL:    "https://inference.baseten.co/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Heroku AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"heroku": {
+		BaseURL:    "https://us.inference.heroku.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Novita AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"novita": {
+		BaseURL:    "https://api.novita.ai/openai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// nScale: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"nscale": {
+		BaseURL:    "https://inference.api.nscale.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// PublicAI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"publicai": {
+		BaseURL:    "https://api.publicai.co/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Weights & Biases Inference: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"wandb": {
+		BaseURL:    "https://api.inference.wandb.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Ollama Cloud: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"ollama-cloud": {
+		BaseURL:    "https://ollama.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// ModelScope: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"modelscope": {
+		BaseURL:    "https://api-inference.modelscope.cn/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// DigitalOcean: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"digitalocean": {
+		BaseURL:    "https://inference.do-ai.run/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
 	"zcode": {
 		BaseURL: "https://zcode.z.ai/api/v1/zcode-plan/anthropic/v1/messages",
 		Format:  FormatClaude,

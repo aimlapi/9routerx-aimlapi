@@ -165,6 +165,8 @@ var ProviderAliasMap = map[string]string{
 	"kepler-ai":          "ovh",
 	"ovh-kepler":         "ovh",
 	"cpw":                "copilot-web",
+	"ms":              "modelscope",
+	"ollamacloud":     "ollama-cloud",
 	"mimotp":          "xiaomi-mimo-token-plan",
 	"qct":             "qwen-cloud-token-plan",
 	"qwc":             "qwen-cloud",
