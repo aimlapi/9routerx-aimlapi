@@ -78,6 +78,7 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "zai-web": "zw",
   "notion-web": "nw",
   "uc-web": "uc",
+  "veoaifree-web": "veo-free",
   "arena-ai": "arena",
   "grok-cli": "gcli",
   "grok-web": "gw",
@@ -2898,6 +2899,20 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "wan/v2.2-a14b",
       "name": "wan/v2.2-a14b"
+    }
+  ],
+  "veoaifree-web": [
+    {
+      "id": "veo",
+      "name": "Veo (video)"
+    },
+    {
+      "id": "seedance",
+      "name": "Seedance (video)"
+    },
+    {
+      "id": "nano-banana",
+      "name": "Nano Banana (image)"
     }
   ],
   "grok-web": [

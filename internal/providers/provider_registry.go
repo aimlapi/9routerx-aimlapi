@@ -2019,6 +2019,24 @@ var ProviderRegistry = map[string]ProviderMeta{
 		ServiceKinds: []string{"image", "video"},
 		Website:      "https://uncensored.com",
 	},
+	"veoaifree-web": {
+		// Historical hidden lane made visible: the free veoaifree.com image
+		// and video executor shipped under this name
+		// (internal/handlers/media/veoaifree_web.go — WordPress AJAX with a
+		// scraped CSRF nonce, ~6 requests/hour/IP) before the registry listed
+		// it; "veo-free" resolves here as the wire alias. NoAuth: the
+		// endpoint needs no credential at all.
+		ID:           "veoaifree-web",
+		Name:         "Veo AI Free",
+		Alias:        "veo-free",
+		Category:     CategoryFree,
+		AuthType:     "none",
+		Color:        "#3B82F6",
+		Icon:         "movie",
+		NoAuth:       true,
+		ServiceKinds: []string{"image", "video"},
+		Website:      "https://veoaifree.com",
+	},
 	"gemini-web": {
 		ID:           "gemini-web",
 		Name:         "Gemini Web",
