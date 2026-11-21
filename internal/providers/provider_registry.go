@@ -357,6 +357,39 @@ var ProviderRegistry = map[string]ProviderMeta{
 		AuthHint:          "Tencent WorkBuddy (www.workbuddy.ai). Authorize the CLI device flow in the popup; the gateway then polls for the one-shot token and attaches the required X-Product: SaaS header. The model roster is discovered live from the authenticated catalogue. WorkBuddy only accepts streaming requests, which the gateway accumulates back into a JSON response for non-streaming callers.",
 		PassthroughModels: true,
 	},
+	"river": {
+		// OpenAI-compatible gateway (xrouter registry river.js, pinned 7fd5698)
+		// with a live /v1/models fetcher and the seed catalog as fallback.
+		ID:            "river",
+		Name:          "River",
+		Alias:         "river",
+		Category:      CategoryAPIKey,
+		AuthType:      "apikey",
+		Color:         "#0284C7",
+		Icon:          "water",
+		ServiceKinds:  []string{"llm"},
+		Website:       "https://river.ai",
+		Notice:        &Notice{APIKeyURL: "https://console.river.ai/keys"},
+		PassthroughModels: true,
+		ModelsFetcher: &Fetcher{URL: "https://api.river.ai/v1/models", Type: "openai"},
+	},
+	"nace": {
+		// Nace Drex — decision models on the System One protocol (decolua
+		// registry nace.js, pinned 1855aa4): a state plus typed questions in,
+		// calibrated probabilities out; the lane forwards the body and reply
+		// untouched. Catalog verified live 2026-10-26 upstream.
+		ID:           "nace",
+		Name:         "Nace Drex",
+		Alias:        "nace",
+		Category:     CategoryAPIKey,
+		AuthType:     "apikey",
+		Color:        "#1D1D16",
+		Icon:         "psychology",
+		ServiceKinds: []string{"systemone"},
+		Website:      "https://console.nace.ai",
+		AuthHint:     "Drex decision models on the System One protocol (noul / choice / score questions, calibrated probabilities). drex-max also accepts a top-level images array; drex-v2.0 is text-only. Paste a console.nace.ai API key (sent as a Bearer token).",
+		Notice:       &Notice{Text: "Drex decision models on the System One protocol (noul / choice / score questions, calibrated probabilities). drex-max also accepts a top-level images array; drex-v2.0 is text-only.", APIKeyURL: "https://console.nace.ai/dashboard/api-keys"},
+	},
 	"amazon-q": {
 		// Amazon Q Developer shares the Kiro executor and its AWS Builder ID /
 		// IDC device flow (OmniRoute providers/index.ts + oauth.ts, pinned
@@ -2058,6 +2091,32 @@ var ProviderRegistry = map[string]ProviderMeta{
 		Website:      "https://inference.readthedocs.io",
 		NoAuth: true,
 		AuthHint: "Runs locally with an optional API key. Leave the key empty for an unauthenticated server; a supplied key is forwarded as Bearer authentication.",
+	},
+	"uc-direct": {
+		ID:           "uc-direct",
+		Name:         "UC Direct (uncensored.com)",
+		Alias:        "ucd",
+		Category:     CategoryAPIKey,
+		AuthType:     "apikey",
+		Color:        "#111827",
+		Icon:         "auto_awesome",
+		ServiceKinds: []string{"llm"},
+		Website:      "https://uncensored.com",
+		AuthHint: "Use an uncensored.com Developer API key. Unofficial automation may violate service terms and risk an account ban.",
+		ModelsFetcher: &Fetcher{URL: "https://api.uncensored.com/api/v1/models", Type: "openai"},
+	},
+	"synthetic": {
+		ID:           "synthetic",
+		Name:         "Synthetic",
+		Alias:        "synthetic",
+		Category:     CategoryAPIKey,
+		AuthType:     "apikey",
+		Color:        "#6366F1",
+		Icon:         "verified_user",
+		ServiceKinds: []string{"llm"},
+		Website:      "https://synthetic.new",
+		PassthroughModels: true,
+		ModelsFetcher: &Fetcher{URL: "https://api.synthetic.new/openai/v1/models", Type: "openai"},
 	},
 	"zcode": {
 		ID:           "zcode",

@@ -4,7 +4,7 @@ package providers
 import "testing"
 
 func TestProviderBatchAliasesRoundTrip(t *testing.T) {
-	for _, id := range []string{"alibaba", "featherless-ai", "ovhcloud", "aihorde"} {
+	for _, id := range []string{"alibaba", "featherless-ai", "ovhcloud", "aihorde", "uc-direct", "synthetic", "river", "nace"} {
 		meta := ProviderRegistry[id]
 		if got := ResolveAlias(meta.Alias); got != id {
 			t.Errorf("%s publishes alias %q resolving to %q", id, meta.Alias, got)
@@ -12,6 +12,9 @@ func TestProviderBatchAliasesRoundTrip(t *testing.T) {
 	}
 	if got := ResolveAlias("ali"); got != "alicode" {
 		t.Errorf("existing ali alias was changed to %q", got)
+	}
+	if got := GetProviderModelKind("drex", "drex-max"); got != "systemone" {
+		t.Errorf("Drex kind = %q, want systemone", got)
 	}
 }
 

@@ -79,6 +79,10 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "notion-web": "nw",
   "uc-web": "uc",
   "veoaifree-web": "veo-free",
+  "synthetic": "synthetic",
+  "river": "river",
+  "nace": "nace",
+  "uc-direct": "ucd",
   "xinference": "xinference",
   "triton": "triton",
   "oobabooga": "ooba",
@@ -338,6 +342,80 @@ const FREEBUFF_MODELS: ProviderModel[] = [
 ];
 
 export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
+  "river": [
+    {
+      "id": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "name": "DeepSeek V4.1 Flash"
+    },
+    {
+      "id": "zai-org/GLM-5.3-Flash",
+      "name": "GLM 5.3 Flash"
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "name": "DeepSeek V4 Flash 0731"
+    },
+    {
+      "id": "nvidia/GLM-5.2-NVFP4",
+      "name": "GLM 5.2 NVFP4"
+    },
+    {
+      "id": "nvidia/GLM-5.2-NVFP4-262K",
+      "name": "GLM 5.2 NVFP4 262K"
+    },
+    {
+      "id": "nvidia/Kimi-K2.6-NVFP4",
+      "name": "Kimi K2.6 NVFP4"
+    },
+    {
+      "id": "nvidia/Kimi-K2.6-NVFP4-262K",
+      "name": "Kimi K2.6 NVFP4 262K"
+    },
+    {
+      "id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
+      "name": "Nemotron 3.5 Lightning 30B"
+    },
+    {
+      "id": "Qwen/Qwen3.5-9B",
+      "name": "Qwen 3.5 9B"
+    },
+    {
+      "id": "Qwen/Qwen3.5-122B-A10B-FP8",
+      "name": "Qwen 3.5 122B A10B"
+    },
+    {
+      "id": "Qwen/Qwen3.5-397B-A17B-FP8",
+      "name": "Qwen 3.5 397B A17B"
+    },
+    {
+      "id": "Qwen/Qwen3.6-35B-A3B-FP8",
+      "name": "Qwen 3.6 35B A3B"
+    },
+    {
+      "id": "Qwen/Qwen3.8-27B-FP8",
+      "name": "Qwen 3.8 27B"
+    },
+    {
+      "id": "XiaomiMiMo/MiMo-V2.6-Flash-RL",
+      "name": "MiMo V2.6 Flash RL"
+    },
+    {
+      "id": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
+      "name": "MiMo V2.6 Pro RL"
+    }
+  ],
+  "nace": [
+    {
+      "id": "drex-max",
+      "name": "Drex Max",
+      "kind": "systemone"
+    },
+    {
+      "id": "drex-v2.0",
+      "name": "Drex 2.0",
+      "kind": "systemone"
+    }
+  ],
   "fb": FREEBUFF_MODELS,
   "br": [
     {
@@ -5381,6 +5459,366 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "qwen/qwen3.7-max",
       "name": "qwen3.7 Max"
+    }
+  ],
+  "uc-direct": [
+    {
+      "id": "claude-opus-5",
+      "name": "Claude Opus 5"
+    },
+    {
+      "id": "claude-opus-5-fast",
+      "name": "Claude Opus 5 Fast"
+    },
+    {
+      "id": "claude-fable-5",
+      "name": "Claude Fable 5"
+    },
+    {
+      "id": "claude-opus-4.8",
+      "name": "Claude Opus 4.8"
+    },
+    {
+      "id": "claude-opus-4.5",
+      "name": "Claude Opus 4.5"
+    },
+    {
+      "id": "claude-sonnet-4.5",
+      "name": "Claude Sonnet 4.5"
+    },
+    {
+      "id": "claude-haiku-4.5",
+      "name": "Claude Haiku 4.5"
+    },
+    {
+      "id": "claude-opus-4.7",
+      "name": "Claude Opus 4.7"
+    },
+    {
+      "id": "claude-opus-4.6",
+      "name": "Claude Opus 4.6"
+    },
+    {
+      "id": "claude-sonnet-4.6",
+      "name": "Claude Sonnet 4.6"
+    },
+    {
+      "id": "gpt-5.6-sol",
+      "name": "Gpt 5.6 Sol"
+    },
+    {
+      "id": "gpt-5.6-terra",
+      "name": "Gpt 5.6 Terra"
+    },
+    {
+      "id": "gpt-5.6-luna",
+      "name": "Gpt 5.6 Luna"
+    },
+    {
+      "id": "gpt-4o",
+      "name": "Gpt 4o"
+    },
+    {
+      "id": "gpt-4o-mini",
+      "name": "Gpt 4o Mini"
+    },
+    {
+      "id": "gpt-5.2",
+      "name": "Gpt 5.2"
+    },
+    {
+      "id": "gpt-5.2-codex",
+      "name": "Gpt 5.2 Codex"
+    },
+    {
+      "id": "gpt-5.3-codex",
+      "name": "Gpt 5.3 Codex"
+    },
+    {
+      "id": "gpt-5.4",
+      "name": "Gpt 5.4"
+    },
+    {
+      "id": "gpt-5.4-mini",
+      "name": "Gpt 5.4 Mini"
+    },
+    {
+      "id": "gpt-5.4-pro",
+      "name": "Gpt 5.4 Pro"
+    },
+    {
+      "id": "gpt-5.4-nano",
+      "name": "Gpt 5.4 Nano"
+    },
+    {
+      "id": "gpt-5.5",
+      "name": "Gpt 5.5"
+    },
+    {
+      "id": "gpt-5.5-pro",
+      "name": "Gpt 5.5 Pro"
+    },
+    {
+      "id": "gpt-5-mini",
+      "name": "Gpt 5 Mini"
+    },
+    {
+      "id": "gpt-5-nano",
+      "name": "Gpt 5 Nano"
+    },
+    {
+      "id": "openai-gpt-oss-120b",
+      "name": "Openai Gpt Oss 120b"
+    },
+    {
+      "id": "gemini-3-6-flash",
+      "name": "Gemini 3 6 Flash"
+    },
+    {
+      "id": "gemini-3-flash-preview",
+      "name": "Gemini 3 Flash Preview"
+    },
+    {
+      "id": "gemini-3.1-pro-preview",
+      "name": "Gemini 3.1 Pro Preview"
+    },
+    {
+      "id": "gemini-3.1-flash-lite",
+      "name": "Gemini 3.1 Flash Lite"
+    },
+    {
+      "id": "gemini-2.5-pro",
+      "name": "Gemini 2.5 Pro"
+    },
+    {
+      "id": "gemini-2.5-flash",
+      "name": "Gemini 2.5 Flash"
+    },
+    {
+      "id": "gemma-3-27b-it",
+      "name": "Gemma 3 27b It"
+    },
+    {
+      "id": "grok-4-6",
+      "name": "Grok 4 6"
+    },
+    {
+      "id": "grok-4.5",
+      "name": "Grok 4.5"
+    },
+    {
+      "id": "grok-4.20-beta",
+      "name": "Grok 4.20 Beta"
+    },
+    {
+      "id": "grok-4.3",
+      "name": "Grok 4.3"
+    },
+    {
+      "id": "deepseek-v4-flash-0731",
+      "name": "Deepseek v4 Flash 0731"
+    },
+    {
+      "id": "deepseek-v3.2",
+      "name": "Deepseek v3.2"
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "name": "Deepseek v4 Pro"
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "Deepseek v4 Flash"
+    },
+    {
+      "id": "deepseek-r1",
+      "name": "Deepseek r1"
+    },
+    {
+      "id": "qwen-3-8-2-4t-a95b",
+      "name": "Qwen 3 8 2 4t a95b"
+    },
+    {
+      "id": "qwen-3-8-max",
+      "name": "Qwen 3 8 Max"
+    },
+    {
+      "id": "qwen-3-6-35b-a3b",
+      "name": "Qwen 3 6 35b a3b"
+    },
+    {
+      "id": "qwen3-235b-a22b-2507",
+      "name": "qwen3 235b a22b 2507"
+    },
+    {
+      "id": "qwen3-235b-a22b-thinking-2507",
+      "name": "qwen3 235b a22b Thinking 2507"
+    },
+    {
+      "id": "qwen3.5-397b-a17b",
+      "name": "qwen3.5 397b a17b"
+    },
+    {
+      "id": "qwen3.6-27b",
+      "name": "qwen3.6 27b"
+    },
+    {
+      "id": "qwen3-30b-a3b",
+      "name": "qwen3 30b a3b"
+    },
+    {
+      "id": "qwen3-5-35b-a3b",
+      "name": "qwen3 5 35b a3b"
+    },
+    {
+      "id": "qwen3-5-9b",
+      "name": "qwen3 5 9b"
+    },
+    {
+      "id": "qwen3-coder",
+      "name": "qwen3 Coder"
+    },
+    {
+      "id": "qwen3-next-80b-a3b-instruct",
+      "name": "qwen3 Next 80b a3b Instruct"
+    },
+    {
+      "id": "qwen3-vl-235b-a22b-thinking",
+      "name": "qwen3 Vl 235b a22b Thinking"
+    },
+    {
+      "id": "qwen3-vl-30b-a3b-thinking",
+      "name": "qwen3 Vl 30b a3b Thinking"
+    },
+    {
+      "id": "qwen3.5-flash",
+      "name": "qwen3.5 Flash"
+    },
+    {
+      "id": "qwen3.5-plus",
+      "name": "qwen3.5 Plus"
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi k3"
+    },
+    {
+      "id": "kimi-k2",
+      "name": "Kimi k2"
+    },
+    {
+      "id": "kimi-k2.5",
+      "name": "Kimi k2.5"
+    },
+    {
+      "id": "kimi-k2.6",
+      "name": "Kimi k2.6"
+    },
+    {
+      "id": "kimi-k2-thinking",
+      "name": "Kimi k2 Thinking"
+    },
+    {
+      "id": "glm-5.2",
+      "name": "Glm 5.2"
+    },
+    {
+      "id": "glm-4.7-flash",
+      "name": "Glm 4.7 Flash"
+    },
+    {
+      "id": "glm-5",
+      "name": "Glm 5"
+    },
+    {
+      "id": "glm-5.1",
+      "name": "Glm 5.1"
+    },
+    {
+      "id": "glm-4.7",
+      "name": "Glm 4.7"
+    },
+    {
+      "id": "glm-4.6",
+      "name": "Glm 4.6"
+    },
+    {
+      "id": "minimax-m2.1",
+      "name": "Minimax m2.1"
+    },
+    {
+      "id": "minimax-m2.5",
+      "name": "Minimax m2.5"
+    },
+    {
+      "id": "minimax-m2.7",
+      "name": "Minimax m2.7"
+    },
+    {
+      "id": "mistral-large",
+      "name": "Mistral Large"
+    },
+    {
+      "id": "mistral-small-3.2-24b-instruct",
+      "name": "Mistral Small 3.2 24b Instruct"
+    },
+    {
+      "id": "llama-3.2-3b-instruct",
+      "name": "Llama 3.2 3b Instruct"
+    },
+    {
+      "id": "llama-3.3-70b-instruct",
+      "name": "Llama 3.3 70b Instruct"
+    },
+    {
+      "id": "nvidia-nemotron-3-5-lightning-30b-a3b",
+      "name": "Nvidia Nemotron 3 5 Lightning 30b a3b"
+    },
+    {
+      "id": "nvidia-nemotron-3-nano-30b-a3b",
+      "name": "Nvidia Nemotron 3 Nano 30b a3b"
+    },
+    {
+      "id": "hermes-3-llama-3.1-405b",
+      "name": "Hermes 3 Llama 3.1 405b"
+    },
+    {
+      "id": "aion-labs.aion-2-0",
+      "name": "Aion labs.aion 2 0"
+    },
+    {
+      "id": "inkling",
+      "name": "Inkling"
+    }
+  ],
+  "synthetic": [
+    {
+      "id": "hf:openai/gpt-oss-120b",
+      "name": "Gpt Oss 120b"
+    },
+    {
+      "id": "hf:zai-org/GLM-5.2",
+      "name": "GLM 5.2"
+    },
+    {
+      "id": "hf:moonshotai/Kimi-K2.7-Code",
+      "name": "Kimi K2.7 Code"
+    },
+    {
+      "id": "hf:Qwen/Qwen3.6-27B",
+      "name": "Qwen3.6 27B"
+    },
+    {
+      "id": "hf:MiniMaxAI/MiniMax-M3",
+      "name": "MiniMax M3"
+    },
+    {
+      "id": "hf:zai-org/GLM-4.7-Flash",
+      "name": "GLM 4.7 Flash"
+    },
+    {
+      "id": "hf:nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4",
+      "name": "NVIDIA Nemotron 3 Super 120B A12B NVFP4"
     }
   ],
   "grok-web": [

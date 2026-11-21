@@ -1810,6 +1810,30 @@ var KnownProviders = map[string]ProviderConfig{
 		LocalByDesign: true,
 		AuthOptional: true,
 	},
+	"river": {
+		BaseURL:    "https://api.river.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	"nace": {
+		BaseURL:       "https://console.nace.ai",
+		AuthHeader:    "Authorization",
+		AuthScheme:    "bearer",
+		SystemoneURL:  "https://console.nace.ai/v1/systemone",
+		SystemonePath: "/v1/systemone",
+	},
+	"uc-direct": {
+		BaseURL:    "https://api.uncensored.com/api/v1/chat/completions",
+		AuthHeader: "x-api-key",
+		AuthScheme: "raw",
+	},
+	// Synthetic: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"synthetic": {
+		BaseURL:    "https://api.synthetic.new/openai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
 	"zcode": {
 		BaseURL: "https://zcode.z.ai/api/v1/zcode-plan/anthropic/v1/messages",
 		Format:  FormatClaude,
