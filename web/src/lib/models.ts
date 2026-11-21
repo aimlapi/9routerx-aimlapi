@@ -79,6 +79,16 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "notion-web": "nw",
   "uc-web": "uc",
   "veoaifree-web": "veo-free",
+  "aion": "aion",
+  "ainative": "ainative",
+  "anyapi": "anyapi",
+  "aimlapi": "aiml",
+  "agentrouter": "agentrouter",
+  "naga-ai": "naga-ai",
+  "speka": "speka",
+  "tabitoken": "tabitoken",
+  "seekai": "ska",
+  "ainetcafe": "ainetcafe",
   "nube": "nube",
   "scaleway": "scw",
   "openvecta": "openvecta",
@@ -4376,6 +4386,124 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "gpt-oss-120b",
       "name": "Gpt Oss 120b"
+    }
+  ],
+  "tabitoken": [
+    {
+      "id": "claude-opus-5",
+      "name": "Claude Opus 5"
+    },
+    {
+      "id": "claude-opus-5-thinking",
+      "name": "Claude Opus 5 Thinking"
+    },
+    {
+      "id": "claude-opus-4-8",
+      "name": "Claude Opus 4 8"
+    },
+    {
+      "id": "claude-opus-4-8-thinking",
+      "name": "Claude Opus 4 8 Thinking"
+    }
+  ],
+  "agentrouter": [
+    {
+      "id": "claude-opus-4-8",
+      "name": "Claude Opus 4 8"
+    },
+    {
+      "id": "claude-opus-5",
+      "name": "Claude Opus 5"
+    },
+    {
+      "id": "gpt-5.6-sol",
+      "name": "Gpt 5.6 Sol"
+    }
+  ],
+  "aimlapi": [
+    {
+      "id": "gpt-5",
+      "name": "Gpt 5"
+    },
+    {
+      "id": "claude-sonnet-4.6",
+      "name": "Claude Sonnet 4.6"
+    },
+    {
+      "id": "gemini-2.5-pro",
+      "name": "Gemini 2.5 Pro"
+    },
+    {
+      "id": "glm-5",
+      "name": "Glm 5"
+    },
+    {
+      "id": "deepseek-chat",
+      "name": "Deepseek Chat"
+    },
+    {
+      "id": "mistral-large",
+      "name": "Mistral Large"
+    }
+  ],
+  "ainative": [
+    {
+      "id": "qwen3-235b-cerebras",
+      "name": "qwen3 235b Cerebras"
+    },
+    {
+      "id": "qwen3-32b",
+      "name": "qwen3 32b"
+    },
+    {
+      "id": "qwen3-14b",
+      "name": "qwen3 14b"
+    },
+    {
+      "id": "qwen3-8b",
+      "name": "qwen3 8b"
+    },
+    {
+      "id": "llama-4-maverick",
+      "name": "Llama 4 Maverick"
+    },
+    {
+      "id": "llama3.1-8b-cerebras",
+      "name": "llama3.1 8b Cerebras"
+    },
+    {
+      "id": "deepseek-r1",
+      "name": "Deepseek r1"
+    },
+    {
+      "id": "nous-coder",
+      "name": "Nous Coder"
+    },
+    {
+      "id": "gemini-flash",
+      "name": "Gemini Flash"
+    }
+  ],
+  "aion": [
+    {
+      "id": "aion-labs/aion-3.0",
+      "name": "Aion 3.0"
+    },
+    {
+      "id": "aion-labs/aion-3.0-mini",
+      "name": "Aion 3.0 Mini"
+    },
+    {
+      "id": "aion-labs/aion-2.5",
+      "name": "Aion 2.5"
+    },
+    {
+      "id": "aion-labs/aion-2.0",
+      "name": "Aion 2.0"
+    },
+    {
+      "id": "aion-labs/aion-rp-llama-3.1-8b",
+      "name": "Aion Rp Llama 3.1 8b"
     }
   ],
   "grok-web": [

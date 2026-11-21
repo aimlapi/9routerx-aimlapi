@@ -1245,6 +1245,78 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 	},
+	// ainetcafe: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"ainetcafe": {
+		BaseURL:    "https://microquickjs.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// SeekAi: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"seekai": {
+		BaseURL:    "https://seekai.cc/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// TabiToken: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"tabitoken": {
+		BaseURL:    "https://tabitoken.com/v1/messages",
+		AuthHeader: "x-api-key",
+		AuthScheme: "raw",
+		UpstreamIsAnthropic: true,
+	},
+	// Speka AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"speka": {
+		BaseURL:    "https://speka.me/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Naga AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"naga-ai": {
+		BaseURL:    "https://api.naga.ac/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// AgentRouter: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"agentrouter": {
+		BaseURL:    "https://agentrouter.org/v1/messages",
+		AuthHeader: "x-api-key",
+		AuthScheme: "raw",
+		UpstreamIsAnthropic: true,
+	},
+	// AI/ML API: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"aimlapi": {
+		BaseURL:    "https://api.aimlapi.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// AnyAPI AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"anyapi": {
+		BaseURL:    "https://api.anyapi.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// AINative Studio: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"ainative": {
+		BaseURL:    "https://api.ainative.studio/api/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Aion Labs: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"aion": {
+		BaseURL:    "https://api.aionlabs.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
 	"zcode": {
 		BaseURL: "https://zcode.z.ai/api/v1/zcode-plan/anthropic/v1/messages",
 		Format:  FormatClaude,
