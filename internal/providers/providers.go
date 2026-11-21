@@ -1528,6 +1528,76 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthScheme: "raw",
 		UpstreamIsAnthropic: true,
 	},
+	// Helyx AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"helyxai": {
+		BaseURL:    "https://helyxai.space/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// LiteRouter: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"literouter": {
+		BaseURL:    "https://api.literouter.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// LLM.Kiwi: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"llm-kiwi": {
+		BaseURL:    "https://api.llm.kiwi/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// LLM Gateway: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"llmgateway": {
+		BaseURL:    "https://api.llmgateway.io/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Logfare: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"logfare": {
+		BaseURL:    "https://logfare.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Lyceum: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"lyceum": {
+		BaseURL:    "https://api.lyceum.technology/openai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Mixlayer: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"mixlayer": {
+		BaseURL:    "https://models.mixlayer.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// MNN AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"mnn-ai": {
+		BaseURL:    "https://api.mnnai.ru/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Naga.ac: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"naga-ac": {
+		BaseURL:    "https://api.naga.ac/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// NanoGPT: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"nanogpt": {
+		BaseURL:    "https://nano-gpt.com/api/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
 	"zcode": {
 		BaseURL: "https://zcode.z.ai/api/v1/zcode-plan/anthropic/v1/messages",
 		Format:  FormatClaude,

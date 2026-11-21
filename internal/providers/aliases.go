@@ -165,6 +165,8 @@ var ProviderAliasMap = map[string]string{
 	"kepler-ai":          "ovh",
 	"ovh-kepler":         "ovh",
 	"cpw":                "copilot-web",
+	"naga":            "naga-ac",
+	"llmkiwi":         "llm-kiwi",
 	"glb":             "gitlawb",
 	"g4fpol":          "g4f-pollinations",
 	"g4foll":          "g4f-ollama",

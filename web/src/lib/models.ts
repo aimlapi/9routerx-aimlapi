@@ -79,6 +79,16 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "notion-web": "nw",
   "uc-web": "uc",
   "veoaifree-web": "veo-free",
+  "nanogpt": "nanogpt",
+  "naga-ac": "naga",
+  "mnn-ai": "mnn-ai",
+  "mixlayer": "mixlayer",
+  "lyceum": "lyceum",
+  "logfare": "logfare",
+  "llmgateway": "llmgateway",
+  "llm-kiwi": "llmkiwi",
+  "literouter": "literouter",
+  "helyxai": "helyxai",
   "helixmind": "helixmind",
   "greenpt": "greenpt",
   "gitlawb": "glb",
@@ -5022,6 +5032,36 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "gitlawb",
       "name": "Gitlawb"
+    }
+  ],
+  "llm-kiwi": [
+    {
+      "id": "auto",
+      "name": "Auto"
+    },
+    {
+      "id": "hrLLM",
+      "name": "hrLLM"
+    }
+  ],
+  "mixlayer": [
+    {
+      "id": "qwen/qwen3.5-4b-free",
+      "name": "qwen3.5 4b Free"
+    }
+  ],
+  "nanogpt": [
+    {
+      "id": "chatgpt-4o-latest",
+      "name": "Chatgpt 4o Latest"
+    },
+    {
+      "id": "claude-3.5-sonnet",
+      "name": "Claude 3.5 Sonnet"
+    },
+    {
+      "id": "gpt-4o-mini",
+      "name": "Gpt 4o Mini"
     }
   ],
   "grok-web": [
