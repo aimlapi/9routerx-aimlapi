@@ -830,7 +830,9 @@ func workbuddyPoll(ctx context.Context, state string) (deviceTokens, error) {
 		Code float64 `json:"code"`
 		Msg  string  `json:"msg"`
 		Data struct {
-			AccessToken string `json:"accessToken"`
+			AccessToken  string `json:"accessToken"`
+			RefreshToken string `json:"refreshToken"`
+			ExpiresIn    int    `json:"expiresIn"`
 		} `json:"data"`
 	}
 	if json.Unmarshal(out, &data) != nil {
@@ -845,10 +847,12 @@ func workbuddyPoll(ctx context.Context, state string) (deviceTokens, error) {
 		return t, fmt.Errorf("poll_failed: code %v: %s", data.Code, data.Msg)
 	}
 	t.access = data.Data.AccessToken
-	// The gateway issues a long-lived token (~361 days) and does not always
-	// report expiresIn; a long default keeps the connection out of a
-	// refresh loop it does not need.
-	t.expiresIn = 31104000
+	t.refresh = data.Data.RefreshToken
+	t.expiresIn = data.Data.ExpiresIn
+	// Some gateway versions omit expiry for long-lived account tokens.
+	if t.expiresIn <= 0 {
+		t.expiresIn = 31104000
+	}
 	return t, nil
 }
 

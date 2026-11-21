@@ -720,6 +720,7 @@ var KnownProviders = map[string]ProviderConfig{
 		BaseURL:    "https://www.workbuddy.ai/v2/chat/completions",
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
+		StaticHeaders: map[string]string{"X-Product": "SaaS"},
 	},
 	"nanobanana": {
 		BaseURL:    "https://api.nanobananaapi.ai/v1/chat/completions",

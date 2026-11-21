@@ -168,6 +168,7 @@
     providerId === 'kimi-coding' || providerId === 'codebuddy-cn' || providerId === 'codebuddy-intl' ||
     providerId === 'minimax-code' || providerId === 'minimax-code-global' || providerId === 'muse' ||
     providerId === 'nous' || providerId === 'glm' ||
+    providerId === 'megabrain' || providerId === 'workbuddy' || providerId === 'amazon-q' ||
     providerId === 'zcode'
   )
   // Upstream parity: only the explicit noAuth flag hides the Connections card

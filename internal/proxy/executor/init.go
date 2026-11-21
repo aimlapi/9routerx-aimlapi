@@ -179,7 +179,7 @@ func RegisterAll() {
 	Register("codestral", func() Executor { return ForwardOpenAI })
 	Register("ai21", func() Executor { return ForwardOpenAI })
 	Register("openference", func() Executor { return ForwardOpenAI })
-	Register("workbuddy", func() Executor { return ForwardOpenAI })
+	Register("workbuddy", func() Executor { return ForwardWorkbuddy })
 	Register("nanobanana", func() Executor { return ForwardOpenAI })
 	Register("opencode-go", func() Executor { return ForwardOpencodeGo })
 	Register("opencode-zen", func() Executor { return ForwardOpencodeZen })
