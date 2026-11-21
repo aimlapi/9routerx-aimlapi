@@ -22,7 +22,7 @@ import (
 // deviceProviders lists providers supporting the device-code family.
 // kimi-coding aliases to kimi (dual-auth merge, like upstream).
 var deviceProviders = []string{
-	"qoder", "qoder-cn", "kilocode", "megabrain", "workbuddy", "grok-cli", "github", "kiro", "kimi", "kimi-coding",
+	"qoder", "qoder-cn", "kilocode", "megabrain", "workbuddy", "grok-cli", "github", "kiro", "amazon-q", "kimi", "kimi-coding",
 	"codebuddy-cn", "codebuddy-intl", "muse", "minimax-code", "minimax-code-global", "nous",
 	"glm", "zcode",
 }
@@ -200,6 +200,11 @@ func deviceStart(ctx context.Context, provider, region, startURL, authMethod str
 	case "github":
 		return githubStart(ctx)
 	case "kiro":
+		return kiroStart(ctx, region, startURL, authMethod)
+	case "amazon-q":
+		// Amazon Q shares Kiro's AWS Builder ID / IDC device flow (OmniRoute
+		// providers/index.ts: "shares KiroExecutor + OAuth wiring with kiro
+		// but has no discovery config or registry catalog of its own").
 		return kiroStart(ctx, region, startURL, authMethod)
 	case "kimi":
 		return kimiStart(ctx)
@@ -543,6 +548,8 @@ func devicePoll(ctx context.Context, provider, code string, session map[string]a
 		t, err = githubPoll(ctx, code)
 	case "kiro":
 		t, err = kiroPoll(ctx, session, code)
+	case "amazon-q":
+		t, err = kiroPoll(ctx, session, code)
 	case "kimi":
 		t, err = kimiPoll(ctx, session, code)
 	case "codebuddy-cn", "codebuddy-intl":
@@ -585,7 +592,7 @@ func (h *OAuthHandler) saveDeviceConnection(provider string, t deviceTokens) sav
 	}
 	name := connectionDisplayName(provider, t.name, email, map[string]string{
 		"qoder": "Qoder", "qoder-cn": "Qoder CN", "kilocode": "KiloCode", "megabrain": "MegaBrain", "workbuddy": "WorkBuddy", "grok-cli": "Grok CLI",
-		"github": "GitHub", "kiro": "Kiro", "kimi": "Kimi", "muse": "Muse",
+		"github": "GitHub", "kiro": "Kiro", "amazon-q": "Amazon Q", "kimi": "Kimi", "muse": "Muse",
 		"codebuddy-cn": "CodeBuddy", "codebuddy-intl": "CodeBuddy",
 		"zcode": "ZCode",
 		"nous":  "Nous Research", "glm": "Zai GLM Coding",

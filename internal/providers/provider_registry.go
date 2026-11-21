@@ -357,6 +357,21 @@ var ProviderRegistry = map[string]ProviderMeta{
 		AuthHint:          "Tencent WorkBuddy (www.workbuddy.ai). Authorize the CLI device flow in the popup; the gateway then polls for the one-shot token and attaches the required X-Product: SaaS header. The model roster is discovered live from the authenticated catalogue. WorkBuddy only accepts streaming requests, which the gateway accumulates back into a JSON response for non-streaming callers.",
 		PassthroughModels: true,
 	},
+	"amazon-q": {
+		// Amazon Q Developer shares the Kiro executor and its AWS Builder ID /
+		// IDC device flow (OmniRoute providers/index.ts + oauth.ts, pinned
+		// 632d84f5); connections stay separate from Kiro's.
+		ID:       "amazon-q",
+		Name:     "Amazon Q",
+		Alias:    "aq",
+		Category: CategoryOAuth,
+		Color:    "#FF9900",
+		Icon:     "cloud",
+		ServiceKinds: []string{"llm"},
+		Website:  "https://aws.amazon.com/q/developer/",
+		AuthHint: "Uses the same AWS Builder ID or imported refresh-token flow as Kiro, but keeps Amazon Q connections separate. Choose the AWS region and sign in with Builder ID (or an IAM Identity Center start URL).",
+		Notice:   &Notice{SignupURL: "https://aws.amazon.com/q/developer/"},
+	},
 	// ZCode (zcode.z.ai) rides the same Z.ai account as glm-coding but is its
 	// own gateway: it serves the Start Plan / Weekend Build quota, which the
 	// coding-plan lane does not. Registered here because the catalog the

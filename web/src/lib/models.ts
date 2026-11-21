@@ -84,6 +84,7 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "gitlab-duo": "gitlab",
   "openference": "of",
   "workbuddy": "wb",
+  "amazon-q": "aq",
   "aihorde": "horde",
   "arena-ai": "arena",
   "grok-cli": "gcli",
@@ -2977,6 +2978,12 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "Llama 3.2 3B",
       "name": "Llama 3.2 3B"
+    }
+  ],
+  "amazon-q": [
+    {
+      "id": "amazon-q",
+      "name": "Amazon Q Developer"
     }
   ],
   "grok-web": [

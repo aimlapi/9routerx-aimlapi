@@ -70,6 +70,8 @@ func RegisterAll() {
 	Register("iflow", func() Executor { return ForwardIflow })
 	Register("kimchi", func() Executor { return ForwardKimchi })
 	Register("kiro", func() Executor { return ForwardKiro })
+	// Amazon Q rides the same Kiro executor (OmniRoute KiroExecutor("amazon-q")).
+	Register("amazon-q", func() Executor { return ForwardKiro })
 	// deepseek-web authenticates with a browser-login userToken exchanged for a
 	// short-lived access token, and gates every completion on a proof of work, so
 	// it needs the full executor rather than the shared passthrough.

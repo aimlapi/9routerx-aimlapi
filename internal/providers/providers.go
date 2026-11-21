@@ -996,6 +996,13 @@ var KnownProviders = map[string]ProviderConfig{
 		// reasoning dialect the envelope does not carry.
 		ThinkingFormat: "kiro",
 	},
+	// Amazon Q rides the same Kiro AWS endpoint (OmniRoute KiroExecutor("amazon-q")
+	// pattern, pinned 632d84f5).
+	"amazon-q": {
+		BaseURL:    "https://q.us-east-1.amazonaws.com/generateAssistantResponse",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
 	"bedrock": {
 		// The executor substitutes the region per request and signs each request with
 		// SigV4, so AuthHeader/AuthScheme are absent by design: there is no static
