@@ -1598,6 +1598,76 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 	},
+	// NaraRouter: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"nara": {
+		BaseURL:    "https://router.bynara.id/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// NavyAI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"navy": {
+		BaseURL:    "https://api.navy/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// OfoxAI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"ofoxai": {
+		BaseURL:    "https://api.ofox.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// 1min.AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"oneminai": {
+		BaseURL:    "https://api.1min.ai/api/chat-with-ai/chat/completions",
+		AuthHeader: "api-key",
+		AuthScheme: "raw",
+	},
+	// onomeo: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"onomeo": {
+		BaseURL:    "https://onomeo.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Openference API: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"openference-api": {
+		BaseURL:    "https://api.openference.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Opper: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"opper": {
+		BaseURL:    "https://api.opper.ai/v3/compat/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// ParalonCloud: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"paraloncloud": {
+		BaseURL:    "https://paraloncloud.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Poixe AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"poixe-ai": {
+		BaseURL:    "https://api.poixe.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Qiniu: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"qiniu": {
+		BaseURL:    "https://api.qnaigc.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
 	"zcode": {
 		BaseURL: "https://zcode.z.ai/api/v1/zcode-plan/anthropic/v1/messages",
 		Format:  FormatClaude,

@@ -79,6 +79,16 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "notion-web": "nw",
   "uc-web": "uc",
   "veoaifree-web": "veo-free",
+  "qiniu": "qiniu",
+  "poixe-ai": "poixe-ai",
+  "paraloncloud": "paralon",
+  "opper": "opper",
+  "openference-api": "ofa",
+  "onomeo": "onomeo",
+  "oneminai": "1min",
+  "ofoxai": "ofoxai",
+  "navy": "navy",
+  "nara": "nara",
   "nanogpt": "nanogpt",
   "naga-ac": "naga",
   "mnn-ai": "mnn-ai",
@@ -5062,6 +5072,96 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "gpt-4o-mini",
       "name": "Gpt 4o Mini"
+    }
+  ],
+  "nara": [
+    {
+      "id": "agnes-2.0-flash",
+      "name": "Agnes 2.0 Flash"
+    },
+    {
+      "id": "agnes-2.5-flash",
+      "name": "Agnes 2.5 Flash"
+    },
+    {
+      "id": "laguna-s-2.1",
+      "name": "Laguna S 2.1"
+    },
+    {
+      "id": "minimax-m3-free",
+      "name": "Minimax m3 Free"
+    },
+    {
+      "id": "mistral-large",
+      "name": "Mistral Large"
+    },
+    {
+      "id": "mistral-medium-3-5",
+      "name": "Mistral Medium 3 5"
+    },
+    {
+      "id": "qwen3.8-27b",
+      "name": "qwen3.8 27b"
+    },
+    {
+      "id": "stepfun-3.7-flash",
+      "name": "Stepfun 3.7 Flash"
+    }
+  ],
+  "navy": [
+    {
+      "id": "llama-3.3-70b-instruct",
+      "name": "Llama 3.3 70b Instruct"
+    },
+    {
+      "id": "gemma-4-31b-it",
+      "name": "Gemma 4 31b It"
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "Deepseek v4 Flash"
+    },
+    {
+      "id": "deepseek-chat",
+      "name": "Deepseek Chat"
+    },
+    {
+      "id": "mistral-small-latest",
+      "name": "Mistral Small Latest"
+    },
+    {
+      "id": "llama-4-scout",
+      "name": "Llama 4 Scout"
+    }
+  ],
+  "oneminai": [
+    {
+      "id": "gpt-4o-mini",
+      "name": "Gpt 4o Mini"
+    }
+  ],
+  "openference-api": [
+    {
+      "id": "GLM-5.2",
+      "name": "GLM 5.2"
+    },
+    {
+      "id": "Qwen3.8 27b",
+      "name": "Qwen3.8 27b"
+    },
+    {
+      "id": "Llama 3.2 3B",
+      "name": "Llama 3.2 3B"
+    }
+  ],
+  "paraloncloud": [
+    {
+      "id": "qwen3.8-27b",
+      "name": "qwen3.8 27b"
+    },
+    {
+      "id": "qwen3-3b",
+      "name": "qwen3 3b"
     }
   ],
   "grok-web": [
