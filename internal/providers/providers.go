@@ -1457,6 +1457,77 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 	},
+	// FreeTheAi: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"freetheai": {
+		BaseURL:    "https://api.freetheai.org/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// g4f.space — Gemini: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"g4f-gemini": {
+		BaseURL:    "https://g4f.space/api/gemini/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// g4f.space — Groq: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"g4f-groq": {
+		BaseURL:    "https://g4f.space/api/groq/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// g4f.space — NVIDIA: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"g4f-nvidia": {
+		BaseURL:    "https://g4f.space/api/nvidia/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// g4f.space — Ollama: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"g4f-ollama": {
+		BaseURL:    "https://g4f.space/api/ollama/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// g4f.space — Pollinations: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"g4f-pollinations": {
+		BaseURL:    "https://g4f.space/api/pollinations/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Gisoo: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"gisoo": {
+		BaseURL:    "https://gisoo.pro/api/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Gitlawb Opengateway (MiMo): mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"gitlawb": {
+		BaseURL:    "https://opengateway.gitlawb.com/v1/xiaomi-mimo/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// GreenPT: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"greenpt": {
+		BaseURL:    "https://api.greenpt.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// HelixMind: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"helixmind": {
+		BaseURL:    "https://helixmind.online/v1/chat/completions",
+		AuthHeader: "x-api-key",
+		AuthScheme: "raw",
+		UpstreamIsAnthropic: true,
+	},
 	"zcode": {
 		BaseURL: "https://zcode.z.ai/api/v1/zcode-plan/anthropic/v1/messages",
 		Format:  FormatClaude,

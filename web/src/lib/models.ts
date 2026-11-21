@@ -79,6 +79,16 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "notion-web": "nw",
   "uc-web": "uc",
   "veoaifree-web": "veo-free",
+  "helixmind": "helixmind",
+  "greenpt": "greenpt",
+  "gitlawb": "glb",
+  "gisoo": "gisoo",
+  "g4f-pollinations": "g4fpol",
+  "g4f-ollama": "g4foll",
+  "g4f-nvidia": "g4fnv",
+  "g4f-groq": "g4fgroq",
+  "g4f-gemini": "g4fgem",
+  "freetheai": "fta",
   "freemodel-dev": "fmd",
   "freeinference": "freeinference",
   "freeaiapikey": "faik",
@@ -4908,6 +4918,110 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "gpt-5.3-codex",
       "name": "Gpt 5.3 Codex"
+    }
+  ],
+  "freetheai": [
+    {
+      "id": "fta/zai/glm-5.3",
+      "name": "Glm 5.3"
+    },
+    {
+      "id": "fta/kimi/k3",
+      "name": "k3"
+    }
+  ],
+  "g4f-gemini": [
+    {
+      "id": "models/gemini-2.5-flash",
+      "name": "Gemini 2.5 Flash"
+    },
+    {
+      "id": "models/gemini-2.5-pro",
+      "name": "Gemini 2.5 Pro"
+    }
+  ],
+  "g4f-groq": [
+    {
+      "id": "llama-3.3-70b-versatile",
+      "name": "Llama 3.3 70b Versatile"
+    },
+    {
+      "id": "llama-3.1-8b-instant",
+      "name": "Llama 3.1 8b Instant"
+    }
+  ],
+  "g4f-nvidia": [
+    {
+      "id": "nvidia/nemotron-3-nano-30b-a3b",
+      "name": "Nemotron 3 Nano 30b a3b"
+    },
+    {
+      "id": "z-ai/glm-5.2",
+      "name": "Glm 5.2"
+    },
+    {
+      "id": "minimaxai/minimax-m2.7",
+      "name": "Minimax m2.7"
+    }
+  ],
+  "g4f-ollama": [
+    {
+      "id": "gemma3:4b",
+      "name": "gemma3:4b"
+    }
+  ],
+  "g4f-pollinations": [
+    {
+      "id": "openai",
+      "name": "Openai"
+    },
+    {
+      "id": "openai-fast",
+      "name": "Openai Fast"
+    }
+  ],
+  "gisoo": [
+    {
+      "id": "claude-opus-5-5",
+      "name": "Claude Opus 5 5"
+    },
+    {
+      "id": "claude-sonnet-5-5",
+      "name": "Claude Sonnet 5 5"
+    },
+    {
+      "id": "claude-haiku-5-5",
+      "name": "Claude Haiku 5 5"
+    },
+    {
+      "id": "gpt-5.6-sol",
+      "name": "Gpt 5.6 Sol"
+    },
+    {
+      "id": "gpt-5.5",
+      "name": "Gpt 5.5"
+    },
+    {
+      "id": "gemini-3.8-flash",
+      "name": "Gemini 3.8 Flash"
+    },
+    {
+      "id": "gemini-3.1-pro-preview",
+      "name": "Gemini 3.1 Pro Preview"
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "name": "Deepseek v4 Pro"
+    },
+    {
+      "id": "deepseek-flash",
+      "name": "Deepseek Flash"
+    }
+  ],
+  "gitlawb": [
+    {
+      "id": "gitlawb",
+      "name": "Gitlawb"
     }
   ],
   "grok-web": [
