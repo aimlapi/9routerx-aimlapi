@@ -79,6 +79,15 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "notion-web": "nw",
   "uc-web": "uc",
   "veoaifree-web": "veo-free",
+  "zai": "zai",
+  "doubao": "doubao",
+  "volcengine": "volcengine",
+  "baichuan": "baichuan",
+  "xiaomi-mimo-token-plan": "mimotp",
+  "qwen-cloud-token-plan": "qct",
+  "alibaba": "ali",
+  "qwen-cloud": "qwc",
+  "gigachat": "gigachat",
   "typhoon": "typhoon",
   "sarvam": "sarvam",
   "plamo": "plamo",
@@ -3321,6 +3330,296 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "typhoon-v2.5-30b-a3b-instruct",
       "name": "Typhoon v2.5 30b a3b Instruct"
+    }
+  ],
+  "gigachat": [
+    {
+      "id": "GigaChat-2-Max",
+      "name": "GigaChat 2 Max"
+    },
+    {
+      "id": "GigaChat-2-Pro",
+      "name": "GigaChat 2 Pro"
+    },
+    {
+      "id": "GigaChat-2-Lite",
+      "name": "GigaChat 2 Lite"
+    }
+  ],
+  "qwen-cloud": [
+    {
+      "id": "qwen3.8-max",
+      "name": "qwen3.8 Max"
+    },
+    {
+      "id": "qwen3.7-max-2026-06-08",
+      "name": "qwen3.7 Max 2026 06 08"
+    },
+    {
+      "id": "qwen3.7-plus",
+      "name": "qwen3.7 Plus"
+    },
+    {
+      "id": "qwen3.6-plus",
+      "name": "qwen3.6 Plus"
+    },
+    {
+      "id": "qwen3.6-27b",
+      "name": "qwen3.6 27b"
+    },
+    {
+      "id": "qwen3.6-35b-a3b",
+      "name": "qwen3.6 35b a3b"
+    },
+    {
+      "id": "qwen3.5-plus-2026-04-20",
+      "name": "qwen3.5 Plus 2026 04 20"
+    },
+    {
+      "id": "qwen3.5-122b-a10b",
+      "name": "qwen3.5 122b a10b"
+    },
+    {
+      "id": "qwen3.5-397b-a17b",
+      "name": "qwen3.5 397b a17b"
+    },
+    {
+      "id": "glm-5.2",
+      "name": "Glm 5.2"
+    },
+    {
+      "id": "glm-5.2-fast-preview",
+      "name": "Glm 5.2 Fast Preview"
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "name": "Deepseek v4 Pro"
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "Deepseek v4 Flash"
+    },
+    {
+      "id": "kimi-k2.7-code",
+      "name": "Kimi k2.7 Code"
+    }
+  ],
+  "alibaba": [
+    {
+      "id": "qwen3.8-max",
+      "name": "qwen3.8 Max"
+    },
+    {
+      "id": "qwen3.7-max",
+      "name": "qwen3.7 Max"
+    },
+    {
+      "id": "qwen3.7-plus",
+      "name": "qwen3.7 Plus"
+    },
+    {
+      "id": "qwen3.6-plus",
+      "name": "qwen3.6 Plus"
+    },
+    {
+      "id": "qwen3.6-27b",
+      "name": "qwen3.6 27b"
+    },
+    {
+      "id": "qwen3.6-35b-a3b",
+      "name": "qwen3.6 35b a3b"
+    },
+    {
+      "id": "qwen3.5-plus",
+      "name": "qwen3.5 Plus"
+    },
+    {
+      "id": "qwen3.5-122b-a10b",
+      "name": "qwen3.5 122b a10b"
+    },
+    {
+      "id": "qwen3.5-397b-a17b",
+      "name": "qwen3.5 397b a17b"
+    },
+    {
+      "id": "glm-5.2",
+      "name": "Glm 5.2"
+    },
+    {
+      "id": "glm-5.2-fast-preview",
+      "name": "Glm 5.2 Fast Preview"
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "name": "Deepseek v4 Pro"
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "Deepseek v4 Flash"
+    },
+    {
+      "id": "kimi-k2.7-code",
+      "name": "Kimi k2.7 Code"
+    }
+  ],
+  "qwen-cloud-token-plan": [
+    {
+      "id": "qwen3.8-max",
+      "name": "qwen3.8 Max"
+    },
+    {
+      "id": "qwen3.7-max",
+      "name": "qwen3.7 Max"
+    },
+    {
+      "id": "qwen3.7-plus",
+      "name": "qwen3.7 Plus"
+    },
+    {
+      "id": "qwen3.6-flash",
+      "name": "qwen3.6 Flash"
+    },
+    {
+      "id": "glm-5.2",
+      "name": "Glm 5.2"
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "name": "Deepseek v4 Pro"
+    },
+    {
+      "id": "deepseek-v4-flash-0731",
+      "name": "Deepseek v4 Flash 0731"
+    }
+  ],
+  "xiaomi-mimo-token-plan": [
+    {
+      "id": "xiaomi-mimo-token-plan",
+      "name": "Xiaomi Mimo Token Plan"
+    }
+  ],
+  "baichuan": [
+    {
+      "id": "Baichuan4-Turbo",
+      "name": "Baichuan4 Turbo"
+    },
+    {
+      "id": "Baichuan4-Air",
+      "name": "Baichuan4 Air"
+    },
+    {
+      "id": "Baichuan4",
+      "name": "Baichuan4"
+    },
+    {
+      "id": "Baichuan3-Turbo",
+      "name": "Baichuan3 Turbo"
+    },
+    {
+      "id": "Baichuan3-Turbo-128k",
+      "name": "Baichuan3 Turbo 128k"
+    }
+  ],
+  "volcengine": [
+    {
+      "id": "deepseek-v3-2-251201",
+      "name": "Deepseek v3 2 251201"
+    },
+    {
+      "id": "doubao-seed-2-0-pro-260215",
+      "name": "Doubao Seed 2 0 Pro 260215"
+    },
+    {
+      "id": "doubao-seed-2-0-code-preview-260215",
+      "name": "Doubao Seed 2 0 Code Preview 260215"
+    },
+    {
+      "id": "kimi-k2-5-260127",
+      "name": "Kimi k2 5 260127"
+    },
+    {
+      "id": "glm-4-7-251222",
+      "name": "Glm 4 7 251222"
+    },
+    {
+      "id": "DeepSeek-V4-Flash",
+      "name": "DeepSeek V4 Flash"
+    },
+    {
+      "id": "DeepSeek-V4-Pro",
+      "name": "DeepSeek V4 Pro"
+    }
+  ],
+  "doubao": [
+    {
+      "id": "doubao-seed-2-0-pro-260215",
+      "name": "Doubao Seed 2 0 Pro 260215"
+    },
+    {
+      "id": "doubao-seed-2-0-lite-260215",
+      "name": "Doubao Seed 2 0 Lite 260215"
+    },
+    {
+      "id": "doubao-seed-2-0-mini-260215",
+      "name": "Doubao Seed 2 0 Mini 260215"
+    },
+    {
+      "id": "doubao-seed-2-0-code-preview-260215",
+      "name": "Doubao Seed 2 0 Code Preview 260215"
+    },
+    {
+      "id": "doubao-seed-1-8-251228",
+      "name": "Doubao Seed 1 8 251228"
+    },
+    {
+      "id": "doubao-seed-1-6-251015",
+      "name": "Doubao Seed 1 6 251015"
+    },
+    {
+      "id": "doubao-seed-1-6-flash-250828",
+      "name": "Doubao Seed 1 6 Flash 250828"
+    },
+    {
+      "id": "doubao-1-5-pro-32k-250115",
+      "name": "Doubao 1 5 Pro 32k 250115"
+    },
+    {
+      "id": "doubao-pro-32k",
+      "name": "Doubao Pro 32k"
+    }
+  ],
+  "zai": [
+    {
+      "id": "glm-5.3",
+      "name": "Glm 5.3"
+    },
+    {
+      "id": "glm-5.3-flash",
+      "name": "Glm 5.3 Flash"
+    },
+    {
+      "id": "glm-5.2",
+      "name": "Glm 5.2"
+    },
+    {
+      "id": "glm-5.1",
+      "name": "Glm 5.1"
+    },
+    {
+      "id": "glm-5",
+      "name": "Glm 5"
+    },
+    {
+      "id": "glm-5-turbo",
+      "name": "Glm 5 Turbo"
+    },
+    {
+      "id": "glm-4.7-flash",
+      "name": "Glm 4.7 Flash"
+    },
+    {
+      "id": "glm-4.7",
+      "name": "Glm 4.7"
     }
   ],
   "grok-web": [

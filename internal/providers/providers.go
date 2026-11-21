@@ -971,6 +971,70 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 	},
+	// GigaChat (Sber): mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"gigachat": {
+		BaseURL:    "https://gigachat.devices.sberbank.ru/api/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Qwen Cloud: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"qwen-cloud": {
+		BaseURL:    "https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Alibaba Cloud Model Studio: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"alibaba": {
+		BaseURL:    "https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Qwen Cloud Token Plan: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"qwen-cloud-token-plan": {
+		BaseURL:    "https://token-plan.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Xiaomi MiMo Token Plan: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"xiaomi-mimo-token-plan": {
+		BaseURL:    "https://token-plan-sgp.xiaomimimo.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Baichuan: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"baichuan": {
+		BaseURL:    "https://api.baichuan-ai.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Volcengine: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"volcengine": {
+		BaseURL:    "https://ark.cn-beijing.volces.com/api/v3/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Doubao: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"doubao": {
+		BaseURL:    "https://ark.cn-beijing.volces.com/api/v3/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Z.AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"zai": {
+		BaseURL:    "https://api.z.ai/api/anthropic/v1/messages?beta=true",
+		AuthHeader: "x-api-key",
+		AuthScheme: "raw",
+		UpstreamIsAnthropic: true,
+	},
 	"zcode": {
 		BaseURL: "https://zcode.z.ai/api/v1/zcode-plan/anthropic/v1/messages",
 		Format:  FormatClaude,
