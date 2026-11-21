@@ -2053,6 +2053,27 @@ var ProviderRegistry = map[string]ProviderMeta{
 		Website:      "https://endpoints.kepler.ai.cloud.ovh.net",
 		Notice:       &Notice{Text: "Keyless OVH Kepler AI endpoint — anonymous OpenAI-compatible chat. Free tier; rate limits apply per IP.", APIKeyURL: "https://endpoints.kepler.ai.cloud.ovh.net"},
 	},
+	"aihorde": {
+		// AI Horde crowdsourced inference (OmniRoute noauth metadata, pinned
+		// 632d84f5): OpenAI-compatible chat over oai.aihorde.net with the
+		// documented anonymous key; the live catalog endpoint feeds the model
+		// list. Verified live today: GET /v1/models -> 200 and a POST that
+		// passes auth (400 on a too-small max_tokens, not on credentials).
+		ID:                "aihorde",
+		Name:              "AI Horde",
+		Alias:             "horde",
+		Category:          CategoryFree,
+		AuthType:          "none",
+		Color:             "#8B5CF6",
+		Icon:              "diversity_3",
+		NoAuth:            true,
+		PassthroughModels: true,
+		ServiceKinds:      []string{"llm"},
+		Website:           "https://aihorde.net",
+		AuthHint:          "No API key required — uses AI Horde's documented anonymous key. Adding a free aihorde.net key is optional and only buys higher queue priority (kudos).",
+		Notice:            &Notice{Text: "AI Horde routes to volunteer-run workers, so chat jobs can take minutes and tool calling is unavailable. Chat models come from the live oai.aihorde.net catalog. An optional aihorde.net API key raises queue priority (kudos)."},
+		ModelsFetcher:     &Fetcher{URL: "https://oai.aihorde.net/v1/models", Type: "openai"},
+	},
 	"gemini-web": {
 		ID:           "gemini-web",
 		Name:         "Gemini Web",

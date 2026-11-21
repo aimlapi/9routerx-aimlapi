@@ -80,6 +80,7 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "uc-web": "uc",
   "veoaifree-web": "veo-free",
   "ovh": "ovh",
+  "aihorde": "horde",
   "arena-ai": "arena",
   "grok-cli": "gcli",
   "grok-web": "gw",

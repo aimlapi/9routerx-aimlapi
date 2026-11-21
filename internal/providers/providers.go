@@ -1281,6 +1281,15 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthScheme: "bearer",
 		NoAuth:     true,
 	},
+	// AI Horde crowdsourced inference: OpenAI-compatible chat over
+	// oai.aihorde.net; the documented anonymous key rides when a connection
+	// carries one, and NoAuth lets keyless requests through.
+	"aihorde": {
+		BaseURL:    "https://oai.aihorde.net/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+		NoAuth:     true,
+	},
 	// arena.ai evaluation lane: the executor owns the wire protocol; the
 	// BaseURL only lets an operator repoint the endpoint.
 	"arena-ai": {
