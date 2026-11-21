@@ -817,6 +817,76 @@ var KnownProviders = map[string]ProviderConfig{
 	// connection (device-flow login), never a shared key — the same shape as
 	// kimi and muse. Format=claude: the plan endpoint speaks Anthropic Messages,
 	// so the dispatcher converts OpenAI bodies and flags the reply lane.
+	// AI21 Labs: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"ai21": {
+		BaseURL:    "https://api.ai21.com/studio/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Codestral: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"codestral": {
+		BaseURL:    "https://codestral.mistral.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Writer: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"writer": {
+		BaseURL:    "https://api.writer.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Upstage: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"upstage": {
+		BaseURL:    "https://api.upstage.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Reka: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"reka": {
+		BaseURL:    "https://api.reka.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Liquid AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"liquid": {
+		BaseURL:    "https://inference.liquid.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Inception: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"inception": {
+		BaseURL:    "https://api.inceptionlabs.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Galadriel: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"galadriel": {
+		BaseURL:    "https://api.galadriel.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Pioneer AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"pioneer": {
+		BaseURL:    "https://api.pioneer.ai/v1/chat/completions",
+		AuthHeader: "x-api-key",
+		AuthScheme: "raw",
+	},
+	// Yi (01.AI): mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"yi": {
+		BaseURL:    "https://api.lingyiwanwu.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
 	"zcode": {
 		BaseURL: "https://zcode.z.ai/api/v1/zcode-plan/anthropic/v1/messages",
 		Format:  FormatClaude,

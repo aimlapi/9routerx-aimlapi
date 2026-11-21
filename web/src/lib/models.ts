@@ -79,6 +79,16 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "notion-web": "nw",
   "uc-web": "uc",
   "veoaifree-web": "veo-free",
+  "yi": "yi",
+  "pioneer": "pn",
+  "galadriel": "galadriel",
+  "inception": "inception",
+  "liquid": "liquid",
+  "reka": "reka",
+  "upstage": "upstage",
+  "writer": "writer",
+  "codestral": "codestral",
+  "ai21": "ai21",
   "ovh": "ovh",
   "megabrain": "mb",
   "gitlab-duo": "gitlab",
@@ -2984,6 +2994,130 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "amazon-q",
       "name": "Amazon Q Developer"
+    }
+  ],
+  "ai21": [
+    {
+      "id": "jamba-large-1.7",
+      "name": "Jamba Large 1.7"
+    },
+    {
+      "id": "jamba-mini-2",
+      "name": "Jamba Mini 2"
+    }
+  ],
+  "codestral": [
+    {
+      "id": "codestral-2508",
+      "name": "Codestral 2508"
+    },
+    {
+      "id": "codestral-latest",
+      "name": "Codestral Latest"
+    }
+  ],
+  "writer": [
+    {
+      "id": "palmyra-x5",
+      "name": "Palmyra x5"
+    },
+    {
+      "id": "palmyra-x4",
+      "name": "Palmyra x4"
+    }
+  ],
+  "upstage": [
+    {
+      "id": "solar-pro3",
+      "name": "Solar pro3"
+    },
+    {
+      "id": "solar-mini",
+      "name": "Solar Mini"
+    }
+  ],
+  "reka": [
+    {
+      "id": "reka-flash-3",
+      "name": "Reka Flash 3"
+    },
+    {
+      "id": "reka-flash",
+      "name": "Reka Flash"
+    },
+    {
+      "id": "reka-edge-2603",
+      "name": "Reka Edge 2603"
+    }
+  ],
+  "liquid": [
+    {
+      "id": "liquid-lfm-40b",
+      "name": "Liquid Lfm 40b"
+    }
+  ],
+  "inception": [
+    {
+      "id": "mercury-2",
+      "name": "Mercury 2"
+    },
+    {
+      "id": "mercury-2.5",
+      "name": "Mercury 2.5"
+    }
+  ],
+  "galadriel": [
+    {
+      "id": "galadriel-latest",
+      "name": "Galadriel Latest"
+    }
+  ],
+  "pioneer": [
+    {
+      "id": "Qwen/Qwen3-32B",
+      "name": "Qwen3 32B"
+    },
+    {
+      "id": "Qwen/Qwen3.6-27B",
+      "name": "Qwen3.6 27B"
+    },
+    {
+      "id": "Qwen/Qwen3.5-9B",
+      "name": "Qwen3.5 9B"
+    },
+    {
+      "id": "Qwen/Qwen3-8B",
+      "name": "Qwen3 8B"
+    },
+    {
+      "id": "Qwen/Qwen3-4B-Base",
+      "name": "Qwen3 4B Base"
+    },
+    {
+      "id": "Qwen/Qwen3-1.7B-Base",
+      "name": "Qwen3 1.7B Base"
+    },
+    {
+      "id": "meta-llama/Llama-3.1-8B-Instruct",
+      "name": "Llama 3.1 8B Instruct"
+    },
+    {
+      "id": "meta-llama/Llama-3.2-1B-Instruct",
+      "name": "Llama 3.2 1B Instruct"
+    },
+    {
+      "id": "google/gemma-3-4b-pt",
+      "name": "Gemma 3 4b Pt"
+    },
+    {
+      "id": "HuggingFaceTB/SmolLM3-3B-Base",
+      "name": "SmolLM3 3B Base"
+    }
+  ],
+  "yi": [
+    {
+      "id": "yi-large",
+      "name": "Yi Large"
     }
   ],
   "grok-web": [
