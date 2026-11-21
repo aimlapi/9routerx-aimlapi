@@ -1112,6 +1112,69 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 	},
+	// Lambda AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"lambda-ai": {
+		BaseURL:    "https://api.lambda.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Bytez: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"bytez": {
+		BaseURL:    "https://api.bytez.com/models/v2/openai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Inference.net: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"inference-net": {
+		BaseURL:    "https://api.inference.net/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Hetzner Inference API: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"hetzner": {
+		BaseURL:    "https://inference.hetzner.com/api/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Modal: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"modal": {
+		BaseURL:    "https://api.modal.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Predibase: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"predibase": {
+		BaseURL:    "https://serving.app.predibase.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Grokified: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"grokified": {
+		BaseURL:    "https://api.grokified.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Featherless AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"featherless-ai": {
+		BaseURL:    "https://api.featherless.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// OVHcloud AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"ovhcloud": {
+		BaseURL:    "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
 	"zcode": {
 		BaseURL: "https://zcode.z.ai/api/v1/zcode-plan/anthropic/v1/messages",
 		Format:  FormatClaude,

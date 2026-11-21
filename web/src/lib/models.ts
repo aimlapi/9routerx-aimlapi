@@ -79,6 +79,15 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "notion-web": "nw",
   "uc-web": "uc",
   "veoaifree-web": "veo-free",
+  "ovhcloud": "ovh",
+  "featherless-ai": "featherless",
+  "grokified": "grokified",
+  "predibase": "predibase",
+  "modal": "mdl",
+  "hetzner": "hetzner",
+  "inference-net": "inet",
+  "bytez": "bytez",
+  "lambda-ai": "lambda",
   "digitalocean": "digitalocean",
   "modelscope": "ms",
   "ollama-cloud": "ollamacloud",
@@ -4117,6 +4126,76 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "qwen3.5:397b",
       "name": "qwen3.5:397b"
+    }
+  ],
+  "lambda-ai": [
+    {
+      "id": "lambda-ai",
+      "name": "Lambda Ai"
+    }
+  ],
+  "bytez": [
+    {
+      "id": "meta-llama/Llama-3.3-70B-Instruct",
+      "name": "Llama 3.3 70B Instruct"
+    },
+    {
+      "id": "mistralai/Mistral-7B-Instruct-v0.3",
+      "name": "Mistral 7B Instruct v0.3"
+    },
+    {
+      "id": "Qwen/Qwen2.5-72B-Instruct",
+      "name": "Qwen2.5 72B Instruct"
+    }
+  ],
+  "inference-net": [
+    {
+      "id": "inference-net",
+      "name": "Inference Net"
+    }
+  ],
+  "hetzner": [
+    {
+      "id": "hetzner",
+      "name": "Hetzner"
+    }
+  ],
+  "modal": [
+    {
+      "id": "google/gemini-2.0-flash",
+      "name": "Gemini 2.0 Flash"
+    }
+  ],
+  "predibase": [
+    {
+      "id": "llama-3.3-70b",
+      "name": "Llama 3.3 70b"
+    }
+  ],
+  "grokified": [
+    {
+      "id": "grokified",
+      "name": "Grokified"
+    }
+  ],
+  "featherless-ai": [
+    {
+      "id": "featherless-ai",
+      "name": "Featherless Ai"
+    }
+  ],
+  "ovhcloud": [
+    {
+      "id": "Meta-Llama-3_3-70B-Instruct",
+      "name": "Meta Llama 3 3 70B Instruct"
+    },
+    {
+      "id": "Qwen2.5-Coder-32B-Instruct",
+      "name": "Qwen2.5 Coder 32B Instruct"
+    },
+    {
+      "id": "Mistral-Small-3.2-24B-Instruct-2506",
+      "name": "Mistral Small 3.2 24B Instruct 2506"
     }
   ],
   "grok-web": [
