@@ -1317,6 +1317,76 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 	},
+	// Apmix: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"apmix": {
+		BaseURL:    "https://api.apmix.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Auriko: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"auriko": {
+		BaseURL:    "https://api.auriko.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// BeatAPI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"beatapi": {
+		BaseURL:    "https://api.beatapi.io/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// ChatAnywhere: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"chatanywhere": {
+		BaseURL:    "https://api.chatanywhere.org/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Chenzk API: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"chenzk": {
+		BaseURL:    "https://chenzk.top/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// CloudCode.ONE: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"cloudcode-one": {
+		BaseURL:    "https://api.cloudcode.one/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// CrofAI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"crof": {
+		BaseURL:    "https://crof.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Demon Route: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"demonroute": {
+		BaseURL:    "https://api.demonroute.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// DGrid: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"dgrid": {
+		BaseURL:    "https://api.dgrid.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// DIT.ai: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"dit": {
+		BaseURL:    "https://api.dit.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
 	"zcode": {
 		BaseURL: "https://zcode.z.ai/api/v1/zcode-plan/anthropic/v1/messages",
 		Format:  FormatClaude,

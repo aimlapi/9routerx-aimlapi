@@ -79,6 +79,16 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "notion-web": "nw",
   "uc-web": "uc",
   "veoaifree-web": "veo-free",
+  "dit": "dai",
+  "dgrid": "dgrid",
+  "demonroute": "demonroute",
+  "crof": "crof",
+  "cloudcode-one": "cloudcode-one",
+  "chenzk": "chenzk",
+  "chatanywhere": "chatanywhere",
+  "beatapi": "beatapi",
+  "auriko": "auriko",
+  "apmix": "apmix",
   "aion": "aion",
   "ainative": "ainative",
   "anyapi": "anyapi",
@@ -4504,6 +4514,294 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "aion-labs/aion-rp-llama-3.1-8b",
       "name": "Aion Rp Llama 3.1 8b"
+    }
+  ],
+  "apmix": [
+    {
+      "id": "claude-haiku-4-5",
+      "name": "Claude Haiku 4 5"
+    },
+    {
+      "id": "claude-sonnet-5",
+      "name": "Claude Sonnet 5"
+    },
+    {
+      "id": "claude-opus-5",
+      "name": "Claude Opus 5"
+    },
+    {
+      "id": "claude-opus-4-8",
+      "name": "Claude Opus 4 8"
+    },
+    {
+      "id": "claude-opus-4-7",
+      "name": "Claude Opus 4 7"
+    },
+    {
+      "id": "claude-opus-4-6",
+      "name": "Claude Opus 4 6"
+    },
+    {
+      "id": "claude-fable-5",
+      "name": "Claude Fable 5"
+    },
+    {
+      "id": "claude-sonnet-4-6",
+      "name": "Claude Sonnet 4 6"
+    },
+    {
+      "id": "gpt-5.6-terra",
+      "name": "Gpt 5.6 Terra"
+    },
+    {
+      "id": "gpt-5.6-sol",
+      "name": "Gpt 5.6 Sol"
+    },
+    {
+      "id": "gpt-5.6-luna",
+      "name": "Gpt 5.6 Luna"
+    },
+    {
+      "id": "gpt-5.5",
+      "name": "Gpt 5.5"
+    },
+    {
+      "id": "gpt-6-astra",
+      "name": "Gpt 6 Astra"
+    },
+    {
+      "id": "gpt-6-sol",
+      "name": "Gpt 6 Sol"
+    },
+    {
+      "id": "gpt-6-luna",
+      "name": "Gpt 6 Luna"
+    },
+    {
+      "id": "gpt-6-luna-free",
+      "name": "Gpt 6 Luna Free"
+    },
+    {
+      "id": "gemini-3.8-flash",
+      "name": "Gemini 3.8 Flash"
+    },
+    {
+      "id": "gemini-3.7-flash",
+      "name": "Gemini 3.7 Flash"
+    },
+    {
+      "id": "gemini-3.6-flash",
+      "name": "Gemini 3.6 Flash"
+    },
+    {
+      "id": "gemini-3.1-pro",
+      "name": "Gemini 3.1 Pro"
+    },
+    {
+      "id": "grok-4.5",
+      "name": "Grok 4.5"
+    },
+    {
+      "id": "grok-4.6",
+      "name": "Grok 4.6"
+    },
+    {
+      "id": "grok-4.7",
+      "name": "Grok 4.7"
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "name": "Deepseek v4 Pro"
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "Deepseek v4 Flash"
+    },
+    {
+      "id": "deepseek-v4.1-flash",
+      "name": "Deepseek v4.1 Flash"
+    },
+    {
+      "id": "deepseek-v4-flash-free",
+      "name": "Deepseek v4 Flash Free"
+    },
+    {
+      "id": "qwen3.8-flash",
+      "name": "qwen3.8 Flash"
+    },
+    {
+      "id": "qwen3.8-max",
+      "name": "qwen3.8 Max"
+    },
+    {
+      "id": "glm-5.3-flash",
+      "name": "Glm 5.3 Flash"
+    },
+    {
+      "id": "glm-5.3",
+      "name": "Glm 5.3"
+    },
+    {
+      "id": "glm-5.2",
+      "name": "Glm 5.2"
+    },
+    {
+      "id": "glm-5-turbo",
+      "name": "Glm 5 Turbo"
+    },
+    {
+      "id": "kimi-k2.7-code",
+      "name": "Kimi k2.7 Code"
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi k3"
+    },
+    {
+      "id": "mimo-v2.5-pro",
+      "name": "Mimo v2.5 Pro"
+    },
+    {
+      "id": "mimo-v2.5",
+      "name": "Mimo v2.5"
+    },
+    {
+      "id": "hy4-preview",
+      "name": "hy4 Preview"
+    },
+    {
+      "id": "composer-2.5-fast",
+      "name": "Composer 2.5 Fast"
+    },
+    {
+      "id": "minimax-m3",
+      "name": "Minimax m3"
+    },
+    {
+      "id": "MiniMax M3",
+      "name": "MiniMax M3"
+    },
+    {
+      "id": "muse-spark-1.3",
+      "name": "Muse Spark 1.3"
+    }
+  ],
+  "cloudcode-one": [
+    {
+      "id": "glm-4.7-flash",
+      "name": "Glm 4.7 Flash"
+    },
+    {
+      "id": "glm-4.6v-flash",
+      "name": "Glm 4.6v Flash"
+    }
+  ],
+  "crof": [
+    {
+      "id": "deepseek-v4-pro",
+      "name": "Deepseek v4 Pro"
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "Deepseek v4 Flash"
+    },
+    {
+      "id": "deepseek-v4-flash-0731",
+      "name": "Deepseek v4 Flash 0731"
+    },
+    {
+      "id": "deepseek-v3.2",
+      "name": "Deepseek v3.2"
+    },
+    {
+      "id": "kimi-k2.6",
+      "name": "Kimi k2.6"
+    },
+    {
+      "id": "kimi-k2.7-code",
+      "name": "Kimi k2.7 Code"
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi k3"
+    },
+    {
+      "id": "kimi-k3-eco",
+      "name": "Kimi k3 Eco"
+    },
+    {
+      "id": "glm-5.1",
+      "name": "Glm 5.1"
+    },
+    {
+      "id": "glm-5.2",
+      "name": "Glm 5.2"
+    },
+    {
+      "id": "mimo-v2.5-pro",
+      "name": "Mimo v2.5 Pro"
+    },
+    {
+      "id": "gemma-4-31b-it",
+      "name": "Gemma 4 31b It"
+    },
+    {
+      "id": "qwen3.6-27b",
+      "name": "qwen3.6 27b"
+    },
+    {
+      "id": "qwen3.5-397b-a17b",
+      "name": "qwen3.5 397b a17b"
+    },
+    {
+      "id": "qwen3.5-9b",
+      "name": "qwen3.5 9b"
+    }
+  ],
+  "demonroute": [
+    {
+      "id": "dphn/Dolphin3.0-Llama3.1-8B",
+      "name": "Dolphin3.0 Llama3.1 8B"
+    },
+    {
+      "id": "dphn/Dolphin-Mistral-24B-Venice-Edition",
+      "name": "Dolphin Mistral 24B Venice Edition"
+    },
+    {
+      "id": "TheDrummer/Artemis-31B-v1.2",
+      "name": "Artemis 31B v1.2"
+    },
+    {
+      "id": "TheDrummer/Cydonia-24B-v4.3",
+      "name": "Cydonia 24B v4.3"
+    },
+    {
+      "id": "huihui-ai/Huihui-Qwen3.6-35B-A3B-abliterated",
+      "name": "Huihui Qwen3.6 35B A3B Abliterated"
+    },
+    {
+      "id": "huihui-ai/Huihui-gemma-4-31B-it-abliterated-v2",
+      "name": "Huihui Gemma 4 31B It Abliterated v2"
+    },
+    {
+      "id": "dphn/dolphin-2.9.3-mistral-nemo-12b",
+      "name": "Dolphin 2.9.3 Mistral Nemo 12b"
+    }
+  ],
+  "dgrid": [
+    {
+      "id": "dgridai/free",
+      "name": "Free"
+    }
+  ],
+  "dit": [
+    {
+      "id": "gpt-5.4",
+      "name": "Gpt 5.4"
+    },
+    {
+      "id": "claude-sonnet-4-6",
+      "name": "Claude Sonnet 4 6"
     }
   ],
   "grok-web": [
