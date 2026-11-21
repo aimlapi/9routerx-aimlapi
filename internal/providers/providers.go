@@ -1767,6 +1767,86 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 	},
+	// Docker Model Runner: local self-host lane from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"docker-model-runner": {
+		BaseURL:    "http://localhost:12434/engines/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+		LocalByDesign: true,
+	},
+	// Lemonade Server: local self-host lane from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"lemonade": {
+		BaseURL:    "http://localhost:13305/api/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+		LocalByDesign: true,
+	},
+	// llama.cpp: local self-host lane from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"llama-cpp": {
+		BaseURL:    "http://127.0.0.1:8080/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+		LocalByDesign: true,
+	},
+	// Llamafile: local self-host lane from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"llamafile": {
+		BaseURL:    "http://127.0.0.1:8080/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+		LocalByDesign: true,
+	},
+	// LM Studio: local self-host lane from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"lm-studio": {
+		BaseURL:    "http://localhost:1234/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+		LocalByDesign: true,
+	},
+	// MLX Gemma 26B: local self-host lane from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"mlx-gemma": {
+		BaseURL:    "http://localhost:11435/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+		LocalByDesign: true,
+	},
+	// MLX Qwen 3.8 27B: local self-host lane from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"mlx-qwen": {
+		BaseURL:    "http://localhost:11436/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+		LocalByDesign: true,
+	},
+	// oobabooga: local self-host lane from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"oobabooga": {
+		BaseURL:    "http://localhost:5000/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+		LocalByDesign: true,
+	},
+	// NVIDIA Triton: local self-host lane from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"triton": {
+		BaseURL:    "http://localhost:8000/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+		LocalByDesign: true,
+	},
+	// XInference: local self-host lane from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"xinference": {
+		BaseURL:    "http://localhost:9997/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+		LocalByDesign: true,
+	},
 	"zcode": {
 		BaseURL: "https://zcode.z.ai/api/v1/zcode-plan/anthropic/v1/messages",
 		Format:  FormatClaude,
