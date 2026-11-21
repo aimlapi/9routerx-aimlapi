@@ -169,6 +169,7 @@ var ProviderAliasMap = map[string]string{
 	"zw":                 "zai-web",
 	"nw":                 "notion-web",
 	"arena":              "arena-ai",
+	"mb":                 "megabrain",
 	"lmarena":            "arena-ai",
 }
 

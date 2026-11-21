@@ -672,6 +672,13 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 	},
+	// MegaBrain: OpenRouter-compatible gateway on its own host (OmniRoute
+	// validation/megabrain.ts, pinned 632d84f5).
+	"megabrain": {
+		BaseURL:    "https://api.getmegabrain.com/api/openrouter/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
 	"nanobanana": {
 		BaseURL:    "https://api.nanobananaapi.ai/v1/chat/completions",
 		AuthHeader: "Authorization",

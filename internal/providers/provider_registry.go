@@ -296,6 +296,23 @@ var ProviderRegistry = map[string]ProviderMeta{
 		Notice:        &Notice{SignupURL: "https://kilocode.ai"},
 		ModelsFetcher: &Fetcher{URL: "https://api.kilo.ai/api/gateway/models", Type: "openrouter-free"},
 	},
+	"megabrain": {
+		// MegaBrain's gateway is built on Kilo's: the same device-auth
+		// protocol on its own host and an OpenRouter-compatible chat
+		// endpoint (OmniRoute megabrain.ts + validation/megabrain.ts,
+		// pinned 632d84f5). The model list comes from the gateway's
+		// unauthenticated /api/openrouter/models catalog.
+		ID:           "megabrain",
+		Name:         "MegaBrain",
+		Alias:        "mb",
+		Category:     CategoryOAuth,
+		Color:        "#6D5DF6",
+		Icon:         "psychology",
+		ServiceKinds: []string{"llm"},
+		Website:      "https://getmegabrain.com",
+		AuthHint:     "Sign in with your MegaBrain account (device code), or paste an mb-v1-... MegaBrain API key. A paid plan covers the included models (Auto, GLM, Kimi, MiniMax, Grok, DeepSeek, Qwen) within its session and weekly limits; Claude, GPT and Gemini are paid from the account's credits.",
+		ModelsFetcher: &Fetcher{URL: "https://api.getmegabrain.com/api/openrouter/models", Type: "openrouter-free"},
+	},
 	// ZCode (zcode.z.ai) rides the same Z.ai account as glm-coding but is its
 	// own gateway: it serves the Start Plan / Weekend Build quota, which the
 	// coding-plan lane does not. Registered here because the catalog the

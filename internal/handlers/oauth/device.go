@@ -22,7 +22,7 @@ import (
 // deviceProviders lists providers supporting the device-code family.
 // kimi-coding aliases to kimi (dual-auth merge, like upstream).
 var deviceProviders = []string{
-	"qoder", "qoder-cn", "kilocode", "grok-cli", "github", "kiro", "kimi", "kimi-coding",
+	"qoder", "qoder-cn", "kilocode", "megabrain", "grok-cli", "github", "kiro", "kimi", "kimi-coding",
 	"codebuddy-cn", "codebuddy-intl", "muse", "minimax-code", "minimax-code-global", "nous",
 	"glm", "zcode",
 }
@@ -191,6 +191,8 @@ func deviceStart(ctx context.Context, provider, region, startURL, authMethod str
 		return qoderStart(ctx, provider)
 	case "kilocode":
 		return kilocodeStart(ctx)
+	case "megabrain":
+		return megabrainStart(ctx)
 	case "grok-cli":
 		return grokcliStart(ctx)
 	case "github":
@@ -256,6 +258,31 @@ func firstN(s string, n int) string {
 
 func kilocodeStart(ctx context.Context) (map[string]any, error) {
 	data, status, err := postJSON(ctx, "https://api.kilo.ai/api/device-auth/codes", map[string]string{}, nil)
+	if err != nil {
+		return nil, fmt.Errorf("device auth initiation failed: %v", err)
+	}
+	if status == http.StatusTooManyRequests {
+		return nil, fmt.Errorf("too many pending authorization requests, try again later")
+	}
+	if status != http.StatusOK {
+		return nil, fmt.Errorf("device auth initiation failed: status %d", status)
+	}
+	return map[string]any{
+		"device_code": strVal(data, "code"), "user_code": strVal(data, "code"),
+		"verification_uri":          strVal(data, "verificationUrl"),
+		"verification_uri_complete": strVal(data, "verificationUrl"),
+		"expires_in":                300, "interval": 3,
+		"session": map[string]any{},
+	}, nil
+}
+
+// --- megabrain: MegaBrain's gateway is built on Kilo's, so the device
+// protocol is the same POST initiate / GET poll on its own host
+// (OmniRoute megabrain.ts = kilocode spread with MEGABRAIN_CONFIG, pinned
+// 632d84f5) ---
+
+func megabrainStart(ctx context.Context) (map[string]any, error) {
+	data, status, err := postJSON(ctx, "https://api.getmegabrain.com/api/device-auth/codes", map[string]string{}, nil)
 	if err != nil {
 		return nil, fmt.Errorf("device auth initiation failed: %v", err)
 	}
@@ -472,6 +499,8 @@ func devicePoll(ctx context.Context, provider, code string, session map[string]a
 		t, err = qoderPoll(ctx, provider, session, code)
 	case "kilocode":
 		t, err = kilocodePoll(ctx, code)
+	case "megabrain":
+		t, err = megabrainPoll(ctx, code)
 	case "grok-cli":
 		t, err = grokcliPoll(ctx, code)
 	case "github":
@@ -519,7 +548,7 @@ func (h *OAuthHandler) saveDeviceConnection(provider string, t deviceTokens) sav
 		email = extractEmailFromJWT(t.access)
 	}
 	name := connectionDisplayName(provider, t.name, email, map[string]string{
-		"qoder": "Qoder", "qoder-cn": "Qoder CN", "kilocode": "KiloCode", "grok-cli": "Grok CLI",
+		"qoder": "Qoder", "qoder-cn": "Qoder CN", "kilocode": "KiloCode", "megabrain": "MegaBrain", "grok-cli": "Grok CLI",
 		"github": "GitHub", "kiro": "Kiro", "kimi": "Kimi", "muse": "Muse",
 		"codebuddy-cn": "CodeBuddy", "codebuddy-intl": "CodeBuddy",
 		"zcode": "ZCode",
@@ -706,6 +735,39 @@ func kilocodePoll(ctx context.Context, code string) (deviceTokens, error) {
 			}
 		}
 	}
+	return t, nil
+}
+
+func megabrainPoll(ctx context.Context, code string) (deviceTokens, error) {
+	var t deviceTokens
+	req, _ := http.NewRequestWithContext(ctx, http.MethodGet, "https://api.getmegabrain.com/api/device-auth/codes/"+code, nil)
+	req.Header.Set("Accept", "application/json")
+	resp, err := deviceClient.Do(req)
+	if err != nil {
+		return t, fmt.Errorf("poll_failed: %v", err)
+	}
+	defer resp.Body.Close()
+	switch resp.StatusCode {
+	case 202:
+		return t, fmt.Errorf("authorization_pending")
+	case 403:
+		return t, fmt.Errorf("access_denied: authorization denied by user")
+	case 410:
+		return t, fmt.Errorf("expired_token: authorization code expired")
+	}
+	out, _ := io.ReadAll(io.LimitReader(resp.Body, 1<<20))
+	if resp.StatusCode != http.StatusOK {
+		return t, fmt.Errorf("poll_failed: %d", resp.StatusCode)
+	}
+	var data map[string]any
+	if json.Unmarshal(out, &data) != nil {
+		return t, fmt.Errorf("poll_failed: invalid JSON")
+	}
+	if strVal(data, "status") != "approved" || strVal(data, "token") == "" {
+		return t, fmt.Errorf("authorization_pending")
+	}
+	t.access = strVal(data, "token")
+	t.email = strVal(data, "userEmail")
 	return t, nil
 }
 
