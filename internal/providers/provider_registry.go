@@ -488,6 +488,35 @@ var ProviderRegistry = map[string]ProviderMeta{
 		ServiceKinds: []string{"llm"},
 		Website:      "https://01.ai",
 	},
+	"arcee-ai": {
+		// OpenAI-compatible passthrough (OmniRoute
+		// buildOpenAiCompatibleRegistryEntry, pinned 632d84f5) — the model
+		// roster is the upstream's own; no static catalog.
+		ID:                "arcee-ai",
+		Name:              "Arcee AI",
+		Alias:             "arcee",
+		Category:          CategoryAPIKey,
+		AuthType:          "apikey",
+		Color:             "#8B5CF6",
+		Icon:              "auto_awesome",
+		ServiceKinds:      []string{"llm"},
+		Website:           "https://arcee.ai",
+		PassthroughModels: true,
+	},
+	"maritalk": {
+		// Maritaca (Brazil): OpenAI-compatible chat whose credential rides a
+		// literal header named "key" (OmniRoute registry authHeader "key",
+		// pinned 632d84f5; default base https://chat.maritaca.ai/api).
+		ID:           "maritalk",
+		Name:         "Maritalk",
+		Alias:        "maritalk",
+		Category:     CategoryAPIKey,
+		AuthType:     "apikey",
+		Color:        "#1D4ED8",
+		Icon:         "auto_awesome",
+		ServiceKinds: []string{"llm"},
+		Website:      "https://chat.maritaca.ai",
+	},
 	"zcode": {
 		ID:           "zcode",
 		Name:         "ZCode (Z.ai)",

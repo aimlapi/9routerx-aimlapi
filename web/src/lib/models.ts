@@ -79,6 +79,7 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "notion-web": "nw",
   "uc-web": "uc",
   "veoaifree-web": "veo-free",
+  "arcee-ai": "arcee",
   "yi": "yi",
   "pioneer": "pn",
   "galadriel": "galadriel",
@@ -95,6 +96,8 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "openference": "of",
   "workbuddy": "wb",
   "amazon-q": "aq",
+  "arcee-ai": "arcee",
+  "maritalk": "maritalk",
   "aihorde": "horde",
   "arena-ai": "arena",
   "grok-cli": "gcli",
@@ -3118,6 +3121,20 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "yi-large",
       "name": "Yi Large"
+    }
+  ],
+  "maritalk": [
+    {
+      "id": "sabia-4",
+      "name": "Sabia 4"
+    },
+    {
+      "id": "sabia-4-thinking",
+      "name": "Sabia 4 Thinking"
+    },
+    {
+      "id": "sabiazinho-4",
+      "name": "Sabiazinho 4"
     }
   ],
   "grok-web": [

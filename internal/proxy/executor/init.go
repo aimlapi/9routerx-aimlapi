@@ -34,6 +34,7 @@ func RegisterAll() {
 	Register("hyperbolic", func() Executor { return ForwardOpenAI })
 	Register("kilocode", func() Executor { return ForwardOpenAI })
 	Register("megabrain", func() Executor { return ForwardOpenAI })
+	Register("arcee-ai", func() Executor { return ForwardOpenAI })
 	Register("yi", func() Executor { return ForwardOpenAI })
 	Register("pioneer", func() Executor { return ForwardOpenAI })
 	Register("galadriel", func() Executor { return ForwardOpenAI })
@@ -80,6 +81,8 @@ func RegisterAll() {
 	Register("iflow", func() Executor { return ForwardIflow })
 	Register("kimchi", func() Executor { return ForwardKimchi })
 	Register("kiro", func() Executor { return ForwardKiro })
+	Register("arcee-ai", func() Executor { return ForwardOpenAI })
+	Register("maritalk", func() Executor { return ForwardOpenAI })
 	// Amazon Q rides the same Kiro executor (OmniRoute KiroExecutor("amazon-q")).
 	Register("amazon-q", func() Executor { return ForwardKiro })
 	// deepseek-web authenticates with a browser-login userToken exchanged for a

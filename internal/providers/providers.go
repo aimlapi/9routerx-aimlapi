@@ -679,6 +679,13 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 	},
+	// Maritalk: the credential rides a literal header named "key" (OmniRoute
+	// registry authHeader "key", pinned 632d84f5).
+	"maritalk": {
+		BaseURL:    "https://chat.maritaca.ai/api/chat/completions",
+		AuthHeader: "key",
+		AuthScheme: "raw",
+	},
 	// Openference: OpenAI-compatible gateway (OmniRoute open-sse registry,
 	// pinned 632d84f5).
 	"openference": {
@@ -884,6 +891,13 @@ var KnownProviders = map[string]ProviderConfig{
 	// (pinned 632d84f5).
 	"yi": {
 		BaseURL:    "https://api.lingyiwanwu.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Arcee AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"arcee-ai": {
+		BaseURL:    "https://api.arcee.ai/api/v1/chat/completions",
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 	},
