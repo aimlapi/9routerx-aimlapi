@@ -1668,6 +1668,77 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 	},
+	// Regolo AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"regolo": {
+		BaseURL:    "https://api.regolo.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Requesty: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"requesty": {
+		BaseURL:    "https://router.requesty.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Routeway: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"routeway": {
+		BaseURL:    "https://api.routeway.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// UnoRouter: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"unorouter": {
+		BaseURL:    "https://api.unorouter.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Void AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"void-ai": {
+		BaseURL:    "https://api.voidai.app/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Wafer AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"wafer": {
+		BaseURL:    "https://pass.wafer.ai/v1/messages",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+		UpstreamIsAnthropic: true,
+	},
+	// xKiro: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"xkiro": {
+		BaseURL:    "https://api.xkiro.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Y-API: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"y-api": {
+		BaseURL:    "https://api.y-api.bestvirtualgoods.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Yolo-Auto: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"yolo-auto": {
+		BaseURL:    "https://yolo-auto.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// ZenMux: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"zenmux": {
+		BaseURL:    "https://zenmux.ai/api/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
 	"zcode": {
 		BaseURL: "https://zcode.z.ai/api/v1/zcode-plan/anthropic/v1/messages",
 		Format:  FormatClaude,

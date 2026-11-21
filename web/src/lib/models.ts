@@ -79,6 +79,16 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "notion-web": "nw",
   "uc-web": "uc",
   "veoaifree-web": "veo-free",
+  "zenmux": "zm",
+  "yolo-auto": "yolo-auto",
+  "y-api": "y-api",
+  "xkiro": "xkiro",
+  "wafer": "wafer",
+  "void-ai": "void-ai",
+  "unorouter": "unorouter",
+  "routeway": "routeway",
+  "requesty": "requesty",
+  "regolo": "regolo",
   "qiniu": "qiniu",
   "poixe-ai": "poixe-ai",
   "paraloncloud": "paralon",
@@ -5162,6 +5172,260 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "qwen3-3b",
       "name": "qwen3 3b"
+    }
+  ],
+  "routeway": [
+    {
+      "id": "llama-3.3-70b-instruct:free",
+      "name": "Llama 3.3 70b instruct:free"
+    },
+    {
+      "id": "nemotron-3-nano-30b-a3b:free",
+      "name": "Nemotron 3 Nano 30b a3b:free"
+    },
+    {
+      "id": "nemotron-nano-9b-v2:free",
+      "name": "Nemotron Nano 9b v2:free"
+    },
+    {
+      "id": "step-3.7-flash:free",
+      "name": "Step 3.7 flash:free"
+    },
+    {
+      "id": "step-3.5-flash:free",
+      "name": "Step 3.5 flash:free"
+    },
+    {
+      "id": "laguna-m.1:free",
+      "name": "Laguna m.1:free"
+    },
+    {
+      "id": "laguna-xs.2:free",
+      "name": "Laguna xs.2:free"
+    },
+    {
+      "id": "llama-3.2-3b-instruct:free",
+      "name": "Llama 3.2 3b instruct:free"
+    }
+  ],
+  "wafer": [
+    {
+      "id": "DeepSeek-V4-Pro",
+      "name": "DeepSeek V4 Pro"
+    },
+    {
+      "id": "MiniMax-M2.7",
+      "name": "MiniMax M2.7"
+    },
+    {
+      "id": "Qwen3.5-397B-A17B",
+      "name": "Qwen3.5 397B A17B"
+    },
+    {
+      "id": "GLM-5.1",
+      "name": "GLM 5.1"
+    }
+  ],
+  "xkiro": [
+    {
+      "id": "qwen/qwen3-vl-plus:free",
+      "name": "qwen3 Vl plus:free"
+    },
+    {
+      "id": "sensenova/sensenova-6.8-flash-lite",
+      "name": "Sensenova 6.8 Flash Lite"
+    },
+    {
+      "id": "minimax/minimax-m2.7:free",
+      "name": "Minimax m2.7:free"
+    },
+    {
+      "id": "minimax/minimax-m2.7-highspeed:free",
+      "name": "Minimax m2.7 highspeed:free"
+    },
+    {
+      "id": "minimax/minimax-m2.5:free",
+      "name": "Minimax m2.5:free"
+    },
+    {
+      "id": "minimax/minimax-m3:free",
+      "name": "Minimax m3:free"
+    },
+    {
+      "id": "minimax/minimax-m2.1-highspeed:free",
+      "name": "Minimax m2.1 highspeed:free"
+    },
+    {
+      "id": "minimax/minimax-m2.5-highspeed:free",
+      "name": "Minimax m2.5 highspeed:free"
+    },
+    {
+      "id": "minimax/minimax-m2.1:free",
+      "name": "Minimax m2.1:free"
+    },
+    {
+      "id": "minimax/minimax-m2:free",
+      "name": "Minimax m2:free"
+    },
+    {
+      "id": "qwen/qwen3.5-flash:free",
+      "name": "qwen3.5 flash:free"
+    },
+    {
+      "id": "qwen/qwen3.6-plus:free",
+      "name": "qwen3.6 plus:free"
+    },
+    {
+      "id": "qwen/qwen3.5-397b-a17b:free",
+      "name": "qwen3.5 397b a17b:free"
+    },
+    {
+      "id": "qwen/qwen3.5-omni-flash:free",
+      "name": "qwen3.5 Omni flash:free"
+    },
+    {
+      "id": "mistralai/mistral-large-2512",
+      "name": "Mistral Large 2512"
+    },
+    {
+      "id": "mistralai/mistral-medium-3.5",
+      "name": "Mistral Medium 3.5"
+    },
+    {
+      "id": "mistralai/mistral-small-2603",
+      "name": "Mistral Small 2603"
+    },
+    {
+      "id": "mistralai/codestral-2508",
+      "name": "Codestral 2508"
+    },
+    {
+      "id": "mistralai/devstral-medium",
+      "name": "Devstral Medium"
+    },
+    {
+      "id": "mistralai/ministral-8b",
+      "name": "Ministral 8b"
+    },
+    {
+      "id": "mistralai/ministral-3b",
+      "name": "Ministral 3b"
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro",
+      "name": "Deepseek v4 Pro"
+    },
+    {
+      "id": "deepseek/deepseek-v3.2",
+      "name": "Deepseek v3.2"
+    },
+    {
+      "id": "deepseek/deepseek-chat-v3.1",
+      "name": "Deepseek Chat v3.1"
+    },
+    {
+      "id": "qwen/qwen3.7-plus:free",
+      "name": "qwen3.7 plus:free"
+    },
+    {
+      "id": "mistralai/ministral-14b",
+      "name": "Ministral 14b"
+    },
+    {
+      "id": "qwen/qwen3.6-max-preview:free",
+      "name": "qwen3.6 Max preview:free"
+    },
+    {
+      "id": "qwen/qwen3.5-plus:free",
+      "name": "qwen3.5 plus:free"
+    },
+    {
+      "id": "qwen/qwen3.5-omni-plus:free",
+      "name": "qwen3.5 Omni plus:free"
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash",
+      "name": "Deepseek v4 Flash"
+    },
+    {
+      "id": "sensenova/sensenova-6.7-flash-lite",
+      "name": "Sensenova 6.7 Flash Lite"
+    },
+    {
+      "id": "qwen/qwen3.8-max:free",
+      "name": "qwen3.8 max:free"
+    },
+    {
+      "id": "qwen/qwen3.7-max:free",
+      "name": "qwen3.7 max:free"
+    },
+    {
+      "id": "qwen/qwen3.6-27b:free",
+      "name": "qwen3.6 27b:free"
+    },
+    {
+      "id": "qwen/qwen3.6-35b-a3b:free",
+      "name": "qwen3.6 35b a3b:free"
+    },
+    {
+      "id": "qwen/qwen3-max:free",
+      "name": "qwen3 max:free"
+    },
+    {
+      "id": "qwen/qwen3-coder-plus:free",
+      "name": "qwen3 Coder plus:free"
+    },
+    {
+      "id": "qwen/qwen-plus-2025-07-28:free",
+      "name": "Qwen Plus 2025 07 28:free"
+    },
+    {
+      "id": "qwen/qwen3-omni-flash:free",
+      "name": "qwen3 Omni flash:free"
+    }
+  ],
+  "yolo-auto": [
+    {
+      "id": "qwen3.6-35b-a3b",
+      "name": "qwen3.6 35b a3b"
+    }
+  ],
+  "zenmux": [
+    {
+      "id": "google/gemini-3.1-pro-preview",
+      "name": "Gemini 3.1 Pro Preview"
+    },
+    {
+      "id": "google/gemini-3-flash-preview",
+      "name": "Gemini 3 Flash Preview"
+    },
+    {
+      "id": "openai/gpt-5",
+      "name": "Gpt 5"
+    },
+    {
+      "id": "anthropic/claude-sonnet-4.5",
+      "name": "Claude Sonnet 4.5"
+    },
+    {
+      "id": "anthropic/claude-opus-4.5",
+      "name": "Claude Opus 4.5"
+    },
+    {
+      "id": "deepseek/deepseek-chat",
+      "name": "Deepseek Chat"
+    },
+    {
+      "id": "x-ai/grok-4.1-fast",
+      "name": "Grok 4.1 Fast"
+    },
+    {
+      "id": "mistralai/mistral-large-2512",
+      "name": "Mistral Large 2512"
+    },
+    {
+      "id": "z-ai/glm-4.6v-flash",
+      "name": "Glm 4.6v Flash"
     }
   ],
   "grok-web": [
