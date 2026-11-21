@@ -79,6 +79,10 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "notion-web": "nw",
   "uc-web": "uc",
   "veoaifree-web": "veo-free",
+  "meganova-ai": "meganova-ai",
+  "orcarouter": "orcarouter",
+  "zylo-api": "zylo",
+  "zerolimitai": "zerolimitai",
   "zenmux": "zm",
   "yolo-auto": "yolo-auto",
   "y-api": "y-api",
@@ -5426,6 +5430,40 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "z-ai/glm-4.6v-flash",
       "name": "Glm 4.6v Flash"
+    }
+  ],
+  "orcarouter": [
+    {
+      "id": "orcarouter/auto",
+      "name": "Auto"
+    },
+    {
+      "id": "openai/gpt-5.5",
+      "name": "Gpt 5.5"
+    },
+    {
+      "id": "google/gemini-3.6-flash",
+      "name": "Gemini 3.6 Flash"
+    },
+    {
+      "id": "anthropic/claude-opus-4.8",
+      "name": "Claude Opus 4.8"
+    },
+    {
+      "id": "grok/grok-4.3",
+      "name": "Grok 4.3"
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro",
+      "name": "Deepseek v4 Pro"
+    },
+    {
+      "id": "minimax/minimax-m2.7",
+      "name": "Minimax m2.7"
+    },
+    {
+      "id": "qwen/qwen3.7-max",
+      "name": "qwen3.7 Max"
     }
   ],
   "grok-web": [

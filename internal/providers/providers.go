@@ -1739,6 +1739,34 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 	},
+	// ZeroLimitAI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"zerolimitai": {
+		BaseURL:    "https://www.zerolimitai.com/api/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Zylo API: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"zylo-api": {
+		BaseURL:    "https://api.zyloai.net/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// OrcaRouter: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"orcarouter": {
+		BaseURL:    "https://api.orcarouter.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// MegaNova AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"meganova-ai": {
+		BaseURL:    "https://api.meganova.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
 	"zcode": {
 		BaseURL: "https://zcode.z.ai/api/v1/zcode-plan/anthropic/v1/messages",
 		Format:  FormatClaude,

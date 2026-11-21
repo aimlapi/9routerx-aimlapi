@@ -165,6 +165,7 @@ var ProviderAliasMap = map[string]string{
 	"kepler-ai":          "ovh",
 	"ovh-kepler":         "ovh",
 	"cpw":                "copilot-web",
+	"zylo":            "zylo-api",
 	"zm":              "zenmux",
 	"paralon":         "paraloncloud",
 	"ofa":             "openference-api",
