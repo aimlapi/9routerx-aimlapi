@@ -97,10 +97,10 @@ var pkceProviders = map[string]*pkceConfig{
 		providers:    []string{"gitlab"},
 		authorizeURL: "https://gitlab.com/oauth/authorize",
 		tokenURL:     "https://gitlab.com/oauth/token",
-		scope:        "api read_user",
+		scope:        "api read_user ai_features",
 		userInfoPath: "/api/v4/user",
 		connPrefix:   "gl-",
-		display:      "GitLab",
+		display:      "GitLab Duo",
 	},
 	// gitlab-duo is the same GitLab PKCE flow with the ai_features scope the
 	// Duo Workflow models need (OmniRoute gitlab-duo.ts, pinned 632d84f5) —
@@ -134,6 +134,9 @@ var pkceProviders = map[string]*pkceConfig{
 }
 
 func pkceLookup(provider string) *pkceConfig {
+	if provider == "gitlab-duo" {
+		provider = "gitlab"
+	}
 	if cfg, ok := pkceProviders[provider]; ok {
 		return cfg
 	}
@@ -298,6 +301,7 @@ func resolvePKCEExchange(body pkceExchangeBody, r *http.Request) (*pkceExchange,
 		tokenURL:     cfg.tokenURL,
 	}
 	if body.Provider == "gitlab" || body.Provider == "gitlab-duo" {
+		ex.provider = "gitlab"
 		ex.base = strings.TrimSuffix(body.BaseURL, "/")
 		if ex.base == "" {
 			ex.base = "https://gitlab.com"
@@ -413,6 +417,14 @@ func (ex *pkceExchange) buildConnectionData(ctx context.Context, tokens *pkceTok
 			}
 			extra["providerSpecificData"] = psd
 		}
+	}
+	if ex.provider == "gitlab" {
+		psd := map[string]any{"baseUrl": ex.base, "clientId": ex.clientID}
+		if ex.clientSecret != "" {
+			psd["clientSecret"] = ex.clientSecret
+		}
+		extra["providerSpecificData"] = psd
+		extra["gitlabBaseUrl"] = ex.base
 	}
 	if ex.cfg.userInfoPath != "" && ex.base != "" { // GitLab: fetch user profile
 		if u, err := fetchOAuthUserInfo(ctx, ex.base+ex.cfg.userInfoPath, tokens.AccessToken); err == nil {
