@@ -79,6 +79,16 @@ export const PROVIDER_ID_TO_ALIAS: Record<string, string> = {
   "notion-web": "nw",
   "uc-web": "uc",
   "veoaifree-web": "veo-free",
+  "freemodel-dev": "fmd",
+  "freeinference": "freeinference",
+  "freeaiapikey": "faik",
+  "free-ai": "free-ai",
+  "fastrouter": "fastrouter",
+  "factory": "factory",
+  "eurouter": "eurouter",
+  "empiriolabs": "empiriolabs",
+  "electronhub": "electronhub",
+  "dxnt": "dxnt",
   "dit": "dai",
   "dgrid": "dgrid",
   "demonroute": "demonroute",
@@ -4802,6 +4812,102 @@ export const BUILTIN_MODELS_BY_PROVIDER: Record<string, ProviderModel[]> = {
     {
       "id": "claude-sonnet-4-6",
       "name": "Claude Sonnet 4 6"
+    }
+  ],
+  "empiriolabs": [
+    {
+      "id": "qwen3-8-flash",
+      "name": "qwen3 8 Flash"
+    },
+    {
+      "id": "qwen3-7-max",
+      "name": "qwen3 7 Max"
+    },
+    {
+      "id": "glm-5-3",
+      "name": "Glm 5 3"
+    },
+    {
+      "id": "kimi-k2-7-code",
+      "name": "Kimi k2 7 Code"
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "name": "Deepseek v4 Pro"
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "Deepseek v4 1 Flash"
+    },
+    {
+      "id": "minimax-m3",
+      "name": "Minimax m3"
+    }
+  ],
+  "factory": [
+    {
+      "id": "auto",
+      "name": "Auto"
+    }
+  ],
+  "freeaiapikey": [
+    {
+      "id": "openai/gpt-4o",
+      "name": "Gpt 4o"
+    },
+    {
+      "id": "openai/gpt-5.4",
+      "name": "Gpt 5.4"
+    },
+    {
+      "id": "openai/gpt-5.5",
+      "name": "Gpt 5.5"
+    },
+    {
+      "id": "openai/gpt-5.6-sol",
+      "name": "Gpt 5.6 Sol"
+    },
+    {
+      "id": "anthropic/claude-opus-4.6",
+      "name": "Claude Opus 4.6"
+    },
+    {
+      "id": "anthropic/claude-opus-4.7",
+      "name": "Claude Opus 4.7"
+    },
+    {
+      "id": "anthropic/claude-opus-4.8",
+      "name": "Claude Opus 4.8"
+    },
+    {
+      "id": "anthropic/claude-opus-5",
+      "name": "Claude Opus 5"
+    },
+    {
+      "id": "anthropic/claude-sonnet-4.6",
+      "name": "Claude Sonnet 4.6"
+    },
+    {
+      "id": "anthropic/claude-sonnet-5",
+      "name": "Claude Sonnet 5"
+    }
+  ],
+  "freemodel-dev": [
+    {
+      "id": "gpt-5.5",
+      "name": "Gpt 5.5"
+    },
+    {
+      "id": "gpt-5.4",
+      "name": "Gpt 5.4"
+    },
+    {
+      "id": "gpt-5.4-mini",
+      "name": "Gpt 5.4 Mini"
+    },
+    {
+      "id": "gpt-5.3-codex",
+      "name": "Gpt 5.3 Codex"
     }
   ],
   "grok-web": [

@@ -1387,6 +1387,76 @@ var KnownProviders = map[string]ProviderConfig{
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
 	},
+	// DXNT / DX Token: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"dxnt": {
+		BaseURL:    "https://www.dxnt.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Electron Hub: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"electronhub": {
+		BaseURL:    "https://api.electronhub.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// EmpirioLabs AI: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"empiriolabs": {
+		BaseURL:    "https://api.empiriolabs.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// EURouter: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"eurouter": {
+		BaseURL:    "https://api.eurouter.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Factory: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"factory": {
+		BaseURL:    "https://api.factory.ai/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// FastRouter: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"fastrouter": {
+		BaseURL:    "https://api.fastrouter.ai/api/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// Free.ai: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"free-ai": {
+		BaseURL:    "https://api.free.ai/v1/chat/",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// FreeAIAPIKey: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"freeaiapikey": {
+		BaseURL:    "https://api.freeaiapikey.com/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// FreeInference: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"freeinference": {
+		BaseURL:    "https://freeinference.org/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
+	// FreeModel.dev: mechanical passthrough from the OmniRoute open-sse registry
+	// (pinned 632d84f5).
+	"freemodel-dev": {
+		BaseURL:    "https://api.freemodel.dev/v1/chat/completions",
+		AuthHeader: "Authorization",
+		AuthScheme: "bearer",
+	},
 	"zcode": {
 		BaseURL: "https://zcode.z.ai/api/v1/zcode-plan/anthropic/v1/messages",
 		Format:  FormatClaude,

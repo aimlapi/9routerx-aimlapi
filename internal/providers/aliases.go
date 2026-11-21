@@ -165,6 +165,8 @@ var ProviderAliasMap = map[string]string{
 	"kepler-ai":          "ovh",
 	"ovh-kepler":         "ovh",
 	"cpw":                "copilot-web",
+	"fmd":             "freemodel-dev",
+	"faik":            "freeaiapikey",
 	"dai":             "dit",
 	"aiml":            "aimlapi",
 	"ska":             "seekai",
