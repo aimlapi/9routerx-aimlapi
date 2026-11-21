@@ -1489,9 +1489,10 @@ var KnownProviders = map[string]ProviderConfig{
 	// Gitlawb Opengateway (MiMo): mechanical passthrough from the OmniRoute open-sse registry
 	// (pinned 632d84f5).
 	"gitlawb": {
-		BaseURL:    "https://opengateway.gitlawb.com/v1/xiaomi-mimo/chat/completions",
+		BaseURL:    "https://opengateway.gitlawb.com/v1/xiaomi-mimo",
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
+		StaticHeaders: map[string]string{"User-Agent": "OpenClaude/1.0 (linux; x86_64)", "X-Title": "OpenClaude CLI", "HTTP-Referer": "https://github.com/Gitlawb/openclaude"},
 	},
 	// GreenPT: mechanical passthrough from the OmniRoute open-sse registry
 	// (pinned 632d84f5).
@@ -1733,6 +1734,7 @@ var KnownProviders = map[string]ProviderConfig{
 		BaseURL:    "https://api.orcarouter.ai/v1/chat/completions",
 		AuthHeader: "Authorization",
 		AuthScheme: "bearer",
+		StaticHeaders: map[string]string{"HTTP-Referer": "https://endpoint-proxy.local", "X-Title": "Endpoint Proxy"},
 	},
 	// MegaNova AI: mechanical passthrough from the OmniRoute open-sse registry
 	// (pinned 632d84f5).
